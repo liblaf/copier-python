@@ -7,6 +7,8 @@ _jinja_extensions:
 
 _skip_if_exists:
   - .ruff.toml
+  - "!.github/linters/.ruff.toml"
+  - "!.github/linters/pyrightconfig.json"
   - pyrightconfig.json
 
 _subdirectory: template
