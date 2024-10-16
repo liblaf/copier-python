@@ -1,0 +1,12 @@
+# ref: [Configuring a template - copier](https://copier.readthedocs.io/en/stable/configuring/)
+
+_answers_file: .github/copier/.copier-answers.python.yaml
+
+_jinja_extensions:
+  - cookiecutter.extensions.SlugifyExtension
+
+_skip_if_exists:
+  - .ruff.toml
+  - pyrightconfig.json
+
+_subdirectory: template
