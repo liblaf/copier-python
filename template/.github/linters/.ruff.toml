@@ -19,6 +19,9 @@ ignore = [
   "D102",
   "D103",
   "D104",
+  "D105",
+  "D106",
+  "D107",
   "E501",
   "ERA001",
   "FIX002",
@@ -53,11 +56,25 @@ allow-star-arg-any = true
 "pandas" = "pd"
 "polars" = "pl"
 "pyvista" = "pv"
+"qtk.typing" = "tp"
 "seaborn" = "sns"
 "subprocess" = "sp"
 "taichi" = "ti"
 "trimesh" = "tm"
 "trimesh.transformations" = "tf"
+
+[lint.flake8-type-checking]
+runtime-evaluated-base-classes = [
+  "pydantic.BaseModel",
+  "pydantic_settings.BaseSettings",
+  "qtk.BaseConfig",
+  "sqlalchemy.orm.DeclarativeBase",
+]
+runtime-evaluated-decorators = [
+  "attrs.define",
+  "pydantic.validate_call",
+  "qtk.main",
+]
 
 [lint.pydocstyle]
 convention = "google"
