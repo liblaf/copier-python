@@ -33,6 +33,10 @@ ignore = [
   "S603",
   "S607",
   "T201",
+  "TCH001",
+  "TCH002",
+  "TCH003",
+  "TCH005",
   "TD002",
   "TD003",
   "TD004",
@@ -56,10 +60,15 @@ allow-star-arg-any = true
 "pandas" = "pd"
 "polars" = "pl"
 "pyvista" = "pv"
-"qtk.typing" = "tp"
 "seaborn" = "sns"
 "subprocess" = "sp"
 "taichi" = "ti"
+"toolkit" = "tk"
+"toolkit.array_types" = "at"
+"toolkit.array_types.jax" = "tj"
+"toolkit.array_types.numpy" = "tn"
+"toolkit.array_types.torch" = "tt"
+"toolkit.typing" = "tp"
 "trimesh" = "tm"
 "trimesh.transformations" = "tf"
 
@@ -67,13 +76,13 @@ allow-star-arg-any = true
 runtime-evaluated-base-classes = [
   "pydantic.BaseModel",
   "pydantic_settings.BaseSettings",
-  "qtk.BaseConfig",
   "sqlalchemy.orm.DeclarativeBase",
+  "toolkit.BaseConfig",
 ]
 runtime-evaluated-decorators = [
   "attrs.define",
   "pydantic.validate_call",
-  "qtk.main",
+  "toolkit.main",
 ]
 
 [lint.pydocstyle]
