@@ -41,17 +41,16 @@ ignore = [
   "TD004",
   "TD005",
 ]
-preview = true
-select = ["ALL", "RUF022"]
+select = ["ALL"]
 
 [lint.flake8-annotations]
 allow-star-arg-any = true
 
 [lint.flake8-import-conventions.aliases]
 "array_typing" = "at"
-"array_typing.jax" = "tj"
-"array_typing.numpy" = "tn"
-"array_typing.torch" = "tt"
+"array_typing.jax" = "atj"
+"array_typing.numpy" = "atn"
+"array_typing.torch" = "att"
 "asyncio.subprocess" = "asp"
 "jax.numpy" = "jnp"
 "jax.typing" = "jxt"
