@@ -33,9 +33,9 @@ ignore = [
   "S603",
   "S607",
   "T201",
-  "TCH001",
-  "TCH002",
-  "TCH003",
+  "TC001",
+  "TC002",
+  "TC003",
   "TD002",
   "TD003",
   "TD004",
@@ -48,6 +48,10 @@ select = ["ALL", "RUF022"]
 allow-star-arg-any = true
 
 [lint.flake8-import-conventions.aliases]
+"array_typing" = "at"
+"array_typing.jax" = "tj"
+"array_typing.numpy" = "tn"
+"array_typing.torch" = "tt"
 "asyncio.subprocess" = "asp"
 "jax.numpy" = "jnp"
 "jax.typing" = "jxt"
@@ -64,11 +68,11 @@ allow-star-arg-any = true
 "taichi" = "ti"
 "toolkit" = "tk"
 "toolkit.array" = "at"
-"toolkit.validation" = "tv"
 "toolkit.array.jax" = "tj"
 "toolkit.array.numpy" = "tn"
 "toolkit.array.torch" = "tt"
 "toolkit.typing" = "tp"
+"toolkit.validation" = "tv"
 "trimesh" = "tm"
 "trimesh.transformations" = "tf"
 
