@@ -8,6 +8,7 @@ _skip_if_exists:
   - .vscode/settings.json
   - "!.github/linters/.ruff.toml"
   - "!.github/linters/pyrightconfig.json"
+  - pyproject.toml
   - pyrightconfig.json
 
 _subdirectory: template
