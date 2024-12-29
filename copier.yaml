@@ -2,9 +2,6 @@
 
 _answers_file: .github/copier/.copier-answers.python.yaml
 
-_jinja_extensions:
-  - cookiecutter.extensions.SlugifyExtension
-
 _skip_if_exists:
   - .ruff.toml
   - "!.github/linters/.ruff.toml"
