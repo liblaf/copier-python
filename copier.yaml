@@ -4,6 +4,7 @@ _answers_file: .github/copier/.copier-answers.python.yaml
 
 _skip_if_exists:
   - .ruff.toml
+  - .vscode/settings.json
   - "!.github/linters/.ruff.toml"
   - "!.github/linters/pyrightconfig.json"
   - pyrightconfig.json
