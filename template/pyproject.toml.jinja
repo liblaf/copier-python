@@ -1,0 +1,25 @@
+#:schema https://json.schemastore.org/pyproject.json
+# vim: syntax=toml
+# https://packaging.python.org/en/latest/specifications/pyproject-toml/
+
+[build-system]
+build-backend = "hatchling.build"
+requires = ["hatchling"]
+
+[project]
+authors = [{ email = "{{ email }}", name = "{{ author }}" }]
+dependencies = []
+description = "Add your description here"
+keywords = []
+license = "{{ license }}"
+name = "{{ name }}"
+readme = "README.md"
+requires-python = ">=3.12"
+version = "0.0.0"
+
+[project.urls]
+"Changelog" = "https://github.com/{{ owner }}/{{ repo }}/blob/main/CHANGELOG.md"
+"Homepage" = "https://github.com/{{ owner }}/{{ repo }}"
+"Issue Tracker" = "https://github.com/{{ owner }}/{{ repo }}/issues"
+"Release Notes" = "https://github.com/{{ owner }}/{{ repo }}/releases"
+"Source Code" = "https://github.com/{{ owner }}/{{ repo }}"

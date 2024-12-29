@@ -10,3 +10,37 @@ _skip_if_exists:
   - pyrightconfig.json
 
 _subdirectory: template
+
+email:
+  type: str
+  help: Author's e-mail address.
+  default: 30631553+liblaf@users.noreply.github.com
+
+license:
+  type: str
+  help: Add a license to your project.
+  choices:
+    MIT License:
+      value: MIT
+    Other:
+      value: other
+  default: MIT
+
+owner:
+  type: str
+  help: The account owner of the repository.
+  default: liblaf
+
+repo:
+  type: str
+  help: The name of the repository.
+
+author:
+  type: str
+  help: Author's name
+  default: "{{ owner }}"
+
+name:
+  type: str
+  help: The name of the project.
+  default: "{{ repo }}"
