@@ -4,15 +4,23 @@
   "language": "en",
   "words": [
     "asyncio",
+    "direnv",
+    "envrc",
     "liblaf",
     "numpy",
+    "pixi",
     "pydantic",
     "pydocstyle",
+    "pypa",
+    "pypi",
     "pyplot",
     "pyrightconfig",
+    "pyvenv",
     "pyvista",
     "stefanzweifel",
-    "trimesh"
+    "trimesh",
+    "ubelt",
+    "venv"
   ],
   "ignorePaths": [
     "**/.cspell.*",

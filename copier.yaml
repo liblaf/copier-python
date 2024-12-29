@@ -1,8 +1,9 @@
-# ref: [Configuring a template - copier](https://copier.readthedocs.io/en/stable/configuring/)
+# https://copier.readthedocs.io/en/stable/configuring/
 
 _answers_file: .github/copier/.copier-answers.python.yaml
 
 _skip_if_exists:
+  - .envrc
   - .ruff.toml
   - .vscode/settings.json
   - "!.github/linters/.ruff.toml"
