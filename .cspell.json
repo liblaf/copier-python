@@ -4,8 +4,8 @@
   "language": "en",
   "words": [
     "asyncio",
-    "direnv",
     "envrc",
+    "hynek",
     "liblaf",
     "numpy",
     "pixi",
@@ -14,6 +14,7 @@
     "pypa",
     "pypi",
     "pyplot",
+    "pyproject",
     "pyrightconfig",
     "pyvenv",
     "pyvista",
