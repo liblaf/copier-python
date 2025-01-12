@@ -13,8 +13,8 @@ description = "Add your description here"
 keywords = []
 license = "{{ license }}"
 name = "{{ name }}"
-readme = "README.md"
-requires-python = ">=3.12"
+readme = "docs/README.md"
+requires-python = "~=3.12"
 version = "0.0.0"
 
 [project.urls]
@@ -23,3 +23,6 @@ version = "0.0.0"
 "Issue Tracker" = "https://github.com/{{ owner }}/{{ repo }}/issues"
 "Release Notes" = "https://github.com/{{ owner }}/{{ repo }}/releases"
 "Source Code" = "https://github.com/{{ owner }}/{{ repo }}"
+
+[tool.check-wheel-contents]
+ignore = ["W002"]
