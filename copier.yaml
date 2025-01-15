@@ -34,7 +34,7 @@ owner:
   help: The account owner of the repository.
   default: liblaf
 
-package_namager:
+package_manager:
   type: str
   help: package manager
   choices:
