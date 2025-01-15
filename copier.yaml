@@ -6,11 +6,11 @@ _skip_if_exists:
   - .envrc
   - .ruff.toml
   - .vscode/settings.json
-  - "!.github/linters/.ruff.toml"
-  - "!.github/linters/pyrightconfig.json"
   - docs/README.md
   - pyproject.toml
   - pyrightconfig.json
+  - "!.github/linters/.ruff.toml"
+  - "!.github/linters/pyrightconfig.json"
 
 _subdirectory: template
 
