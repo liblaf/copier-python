@@ -14,7 +14,7 @@ keywords = []
 license = "{{ license }}"
 name = "{{ name }}"
 readme = "docs/README.md"
-requires-python = "~=3.12"
+requires-python = ">=3.12"
 version = "0.0.0"
 
 [project.urls]
@@ -26,3 +26,18 @@ version = "0.0.0"
 
 [tool.check-wheel-contents]
 ignore = ["W002"]
+
+# {% if package_manager == "pixi" %}
+[tool.pixi.project]
+channel-priority = "disabled"
+channels = ["conda-forge"]
+platforms = ["linux-64"]
+
+[tool.pixi.pypi-dependencies]
+"liblaf.grapes" = { editable = true, path = "." }
+
+[tool.pixi.system-requirements]
+cuda = "12"
+libc = { family = "glibc", version = "2.40" }
+linux = "6.6"
+# {% endif %}
