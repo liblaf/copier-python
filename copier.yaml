@@ -34,6 +34,14 @@ owner:
   help: The account owner of the repository.
   default: liblaf
 
+package_namager:
+  type: str
+  help: package manager
+  choices:
+    - pixi
+    - uv
+  default: pixi
+
 repo:
   type: str
   help: The name of the repository.
