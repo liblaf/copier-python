@@ -1,7 +1,12 @@
 #!/bin/bash
 # {% if package_manager == "pixi" %}
 watch_file "pyproject.toml" "pixi.toml" "pixi.lock"
-eval "$(pixi shell-hook)"
+if [[ -t 2 ]]; then
+  color="always"
+else
+  color="auto"
+fi
+eval "$(pixi --color "$color" shell-hook)"
 # {% elif package_manager == "uv" %}
 watch_file "pyproject.toml" "uv.toml" "uv.lock"
 if [[ ! -f ".venv/bin/activate" ]]; then
