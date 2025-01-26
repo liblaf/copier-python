@@ -116,10 +116,10 @@ Contributions of all types are more than welcome, if you are interested in contr
 
 ### More Copier Templates
 
-- **[Copier Python](https://github.com/liblaf/copier-python)** - TODO
-- **[Copier Release](https://github.com/liblaf/copier-release)** - TODO
-- **[Copier Share](https://github.com/liblaf/copier-share)** - TODO
-- **[Copier Typescript](https://github.com/liblaf/copier-typescript)** - TODO
+- **[Copier Python](https://github.com/liblaf/copier-python)** - 🚀 A comprehensive Python project template with automated workflows, CI/CD integration, and modern development tools. Features include MegaLinter for code quality, Copier for template updates, and Renovate for dependency management. Perfect for building scalable Python packages with best practices! 🐍✨
+- **[Copier Release](https://github.com/liblaf/copier-release)** - 🚀 Automated GitHub Repository Management Toolkit: A comprehensive set of workflows and templates for automating repository maintenance, PR management, and release processes. Includes Copier updates, MegaLinter integration, and Release Please automation. Perfect for maintaining clean, consistent, and efficient GitHub repositories! 🛠️✨
+- **[Copier Share](https://github.com/liblaf/copier-share)** - 🤖✨ A comprehensive GitHub repository template with automated workflows for PR management, repository maintenance, and code quality checks. Features include auto-merging PRs, Copier updates, label synchronization, and MegaLinter integration for consistent code standards. Perfect for maintaining clean, efficient, and well-organized repositories! 🚀🔧
+- **[Copier Typescript](https://github.com/liblaf/copier-typescript)** - 🚀 A robust TypeScript project template with automated workflows, CI/CD pipelines, and comprehensive linting. Features include auto-PR management, copier updates, and MegaLinter integration for code quality. Perfect for scalable, maintainable, and efficient TypeScript projects! 🛠️✨
 
 ### Credits
 
