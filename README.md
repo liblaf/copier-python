@@ -6,7 +6,7 @@
 
 <h1>Copier Python</h1>
 
-This repository provides a robust Python project template with advanced features including lazy loading, comprehensive linting, and flexible package management. It offers a streamlined development experience with automated initialization scripts, customizable build configurations, and support for modern Python tooling.
+This repository provides a comprehensive Python project template with automated workflows for CI/CD, dependency management, and code quality enforcement. It features advanced tools like MegaLinter for static analysis, Copier for template updates, and Pixi for package management, making it ideal for building maintainable Python projects with minimal setup.
 
 [![][copier-shield]][copier-link] <br />
 [![][github-contributors-shield]][github-contributors-link]
@@ -36,13 +36,16 @@ This repository provides a robust Python project template with advanced features
 
 ## ✨ Features
 
-- 🛠️ **Automated Initialization:** The `gen-init.sh` script automatically generates `__init__.py` files using `lazy_loader`, simplifying the process of setting up Python packages;
-- 📜 **Customizable Project Templates:** The repository provides flexible Jinja templates for `pyproject.toml` and `Justfile`, allowing for easy customization of project configurations;
-- 🔧 **Integrated Linting and Building:** The `Justfile` includes commands for linting (using `ruff`) and building Python packages, ensuring code quality and consistency;
-- 📦 **Package Manager Support:** The project supports both `pixi` and `uv` package managers, with configurations for `pixi` included in the `pyproject.toml` template;
-- 📄 **License Flexibility:** The repository includes a default MIT License but allows for customization through the `copier.yaml` configuration, making it easy to adapt to different licensing needs;
-- 🧩 **Stub File Integration:** The `__builtins__.pyi` file provides type hints and integrates with tools like `pyright` for enhanced static type checking;
-- 🔄 **Version Control Ready:** The `copier.yaml` file ensures that the repository is set up for version control, with options to skip existing files and manage project-specific answers.
+- 🤖 **Automated Workflows:** Comprehensive GitHub Actions workflows for automated PR management, repository maintenance, and CI/CD pipelines;
+- 🧹 **Code Quality Assurance:** Integrated MegaLinter for consistent code quality checks and automatic fixes across multiple languages and formats;
+- 🧩 **Template-Driven Development:** Built with Copier templates for easy project scaffolding and consistent project structure across repositories;
+- 📦 **Package Management:** Supports both Pixi and UV package managers for flexible dependency management and environment setup;
+- 🛠️ **Build & Release Automation:** Automated build, test, and release processes with pre-release and production release workflows;
+- 🔒 **Security-First Approach:** Default workflow permissions and repository settings configured for secure development practices;
+- 📚 **Documentation Ready:** Pre-configured documentation structure and tools for maintaining clear project documentation;
+- 🐍 **Python-Centric:** Optimized for Python development with pre-configured linting, type checking, and build tools;
+- 🔄 **Continuous Updates:** Automated repository updates through Copier and Renovate for keeping dependencies and templates up-to-date;
+- 🎨 **VS Code Integration:** Pre-configured VS Code settings for Python development with optimized workspace configurations.
 
 <div align="right">
 
@@ -132,3 +135,12 @@ Contributions of all types are more than welcome, if you are interested in contr
 </div>
 
 [back-to-top]: https://img.shields.io/badge/-BACK_TO_TOP-black?style=flat-square
+
+---
+
+#### 📝 License
+
+Copyright © 2024 [liblaf][profile-link]. <br />
+This project is [MIT](./LICENSE) licensed.
+
+[profile-link]: https://github.com/liblaf
