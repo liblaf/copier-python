@@ -75,7 +75,7 @@ $ cd copier-python
 
 ## 🤝 Contributing
 
-Contributions of all types are more than welcome, if you are interested in contributing code, feel free to check out our GitHub [Issues](https://github.com/liblaf/copier-python/issues) to get stuck in to show us what you’re made of.
+Contributions of all types are more than welcome, if you are interested in contributing code, feel free to check out our GitHub [Issues](https://github.com/liblaf/copier-python/issues) to get stuck in to show us what you're made of.
 
 [![PR Welcome](https://img.shields.io/badge/%F0%9F%A4%AF%20PR%20WELCOME-%E2%86%92-ffcb47?labelColor=black&style=for-the-badge)](https://github.com/liblaf/copier-python/pulls)
 
