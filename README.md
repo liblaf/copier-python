@@ -8,31 +8,18 @@
 
 This repository provides a comprehensive Python project template with automated workflows for CI/CD, dependency management, and code quality enforcement. It features advanced tools like MegaLinter for static analysis, Copier for template updates, and Pixi for package management, making it ideal for building maintainable Python projects with minimal setup.
 
-[![][copier-shield]][copier-link] <br />
-[![][github-contributors-shield]][github-contributors-link]
-[![][github-forks-shield]][github-forks-link]
-[![][github-stars-shield]][github-stars-link]
-[![][github-issues-shield]][github-issues-link]
-[![][github-license-shield]][github-license-link]
+[![](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/copier-org/copier/master/img/badge/badge-black.json)](https://github.com/copier-org/copier) <br />
+[![](https://img.shields.io/github/contributors/liblaf/copier-python)](https://github.com/liblaf/copier-python/graphs/contributors)
+[![](https://img.shields.io/github/forks/liblaf/copier-python)](https://github.com/liblaf/copier-python/forks)
+[![](https://img.shields.io/github/stars/liblaf/copier-python)](https://github.com/liblaf/copier-python/stargazers)
+[![](https://img.shields.io/github/issues/liblaf/copier-python)](https://github.com/liblaf/copier-python/issues)
+[![](https://img.shields.io/github/license/liblaf/copier-python)](https://github.com/liblaf/copier-python/blob/main/LICENSE)
 
-[Changelog](./CHANGELOG.md) · [Report Bug][github-issues-link] · [Request Feature][github-issues-link]
+[Changelog](https://github.com/liblaf/copier-python/blob/main/CHANGELOG.md) · [Report Bug](https://github.com/liblaf/copier-python/issues) · [Request Feature](https://github.com/liblaf/copier-python/issues)
 
 ![](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 </div>
-
-[copier-link]: https://github.com/copier-org/copier
-[copier-shield]: https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/copier-org/copier/master/img/badge/badge-black.json
-[github-contributors-link]: https://github.com/liblaf/copier-python/graphs/contributors
-[github-contributors-shield]: https://img.shields.io/github/contributors/liblaf/copier-python
-[github-forks-link]: https://github.com/liblaf/copier-python/forks
-[github-forks-shield]: https://img.shields.io/github/forks/liblaf/copier-python
-[github-issues-link]: https://github.com/liblaf/copier-python/issues
-[github-issues-shield]: https://img.shields.io/github/issues/liblaf/copier-python
-[github-license-link]: https://github.com/liblaf/copier-python/blob/main/LICENSE
-[github-license-shield]: https://img.shields.io/github/license/liblaf/copier-python
-[github-stars-link]: https://github.com/liblaf/copier-python/stargazers
-[github-stars-shield]: https://img.shields.io/github/stars/liblaf/copier-python
 
 ## ✨ Features
 
@@ -49,11 +36,9 @@ This repository provides a comprehensive Python project template with automated 
 
 <div align="right">
 
-[![][back-to-top]](#readme-top)
+[![](https://img.shields.io/badge/-BACK_TO_TOP-black?style=flat-square)](#readme-top)
 
 </div>
-
-[back-to-top]: https://img.shields.io/badge/-BACK_TO_TOP-black?style=flat-square
 
 ## 📦 Installation
 
@@ -65,17 +50,15 @@ $ copier copy --trust gh:liblaf/copier-python .
 
 <div align="right">
 
-[![][back-to-top]](#readme-top)
+[![](https://img.shields.io/badge/-BACK_TO_TOP-black?style=flat-square)](#readme-top)
 
 </div>
-
-[back-to-top]: https://img.shields.io/badge/-BACK_TO_TOP-black?style=flat-square
 
 ## ⌨️ Local Development
 
 You can use Github Codespaces for online development:
 
-[![][github-codespace-shield]][github-codespace-link]
+[![](https://github.com/codespaces/badge.svg)](https://codespaces.new/liblaf/copier-python)
 
 Or clone it for local development:
 
@@ -86,34 +69,23 @@ $ cd copier-python
 
 <div align="right">
 
-[![][back-to-top]](#readme-top)
+[![](https://img.shields.io/badge/-BACK_TO_TOP-black?style=flat-square)](#readme-top)
 
 </div>
-
-[github-codespace-shield]: https://github.com/codespaces/badge.svg
-[github-codespace-link]: https://codespaces.new/liblaf/copier-python
-[back-to-top]: https://img.shields.io/badge/-BACK_TO_TOP-black?style=flat-square
 
 ## 🤝 Contributing
 
-Contributions of all types are more than welcome, if you are interested in contributing code, feel free to check out our GitHub [Issues][github-issues-link] to get stuck in to show us what you’re made of.
+Contributions of all types are more than welcome, if you are interested in contributing code, feel free to check out our GitHub [Issues](https://github.com/liblaf/copier-python/issues) to get stuck in to show us what you’re made of.
 
-[![][pr-welcome-shield]][pr-welcome-link]
+[![](https://img.shields.io/badge/%F0%9F%A4%AF%20PR%20WELCOME-%E2%86%92-ffcb47?labelColor=black&style=for-the-badge)](https://github.com/liblaf/copier-python/pulls)
 
-[![][github-contrib-shield]][github-contrib-link]
+[![](https://contrib.rocks/image?repo=liblaf%2Fcopier-python)](https://github.com/liblaf/copier-python/graphs/contributors)
 
 <div align="right">
 
-[![][back-to-top]](#readme-top)
+[![](https://img.shields.io/badge/-BACK_TO_TOP-black?style=flat-square)](#readme-top)
 
 </div>
-
-[github-issues-link]: https://github.com/liblaf/copier-python/issues
-[pr-welcome-shield]: https://img.shields.io/badge/%F0%9F%A4%AF%20PR%20WELCOME-%E2%86%92-ffcb47?labelColor=black&style=for-the-badge
-[pr-welcome-link]: https://github.com/liblaf/copier-python/pulls
-[github-contrib-shield]: https://contrib.rocks/image?repo=liblaf%2Fcopier-python
-[github-contrib-link]: https://github.com/liblaf/copier-python/graphs/contributors
-[back-to-top]: https://img.shields.io/badge/-BACK_TO_TOP-black?style=flat-square
 
 ## 🔗 Links
 
@@ -126,21 +98,17 @@ Contributions of all types are more than welcome, if you are interested in contr
 
 ### Credits
 
-- **copier** - <https://github.com/copier-org/copier>
+- **Copier** - <https://github.com/copier-org/copier>
 
 <div align="right">
 
-[![][back-to-top]](#readme-top)
+[![](https://img.shields.io/badge/-BACK_TO_TOP-black?style=flat-square)](#readme-top)
 
 </div>
-
-[back-to-top]: https://img.shields.io/badge/-BACK_TO_TOP-black?style=flat-square
 
 ---
 
 #### 📝 License
 
-Copyright © 2024 [liblaf][profile-link]. <br />
+Copyright © 2024 [liblaf](https://github.com/liblaf). <br />
 This project is [MIT](./LICENSE) licensed.
-
-[profile-link]: https://github.com/liblaf
