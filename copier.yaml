@@ -2,6 +2,9 @@
 
 _answers_file: .github/copier/.copier-answers.python.yaml
 
+_migrations:
+  - rm --force --verbose .github/workflows/release.yaml
+
 _skip_if_exists:
   - .envrc
   - .ruff.toml
@@ -14,6 +17,9 @@ _skip_if_exists:
   - "!.github/linters/pyrightconfig.json"
 
 _subdirectory: template
+
+_tasks:
+  - rm --force --verbose .github/workflows/release.yaml
 
 email:
   type: str
