@@ -2,11 +2,12 @@
 # {% if package_manager == "pixi" %}
 watch_file "pyproject.toml" "pixi.toml" "pixi.lock"
 if [[ -t 2 ]]; then
-  color="always"
+  export PIXI_COLOR="always"
 else
-  color="auto"
+  export PIXI_COLOR="auto"
 fi
-eval "$(pixi --color "$color" shell-hook)"
+eval "$(pixi shell-hook)"
+unset PIXI_COLOR
 # {% elif package_manager == "uv" %}
 watch_file "pyproject.toml" "uv.toml" "uv.lock"
 if [[ ! -f ".venv/bin/activate" ]]; then
