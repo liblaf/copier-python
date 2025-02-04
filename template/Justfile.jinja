@@ -10,16 +10,24 @@ build:
 gen-init:
     ./scripts/gen-init.sh
 
-lint: lint-python lint-toml
+lint: lint-toml lint-python
 
 lint-python:
+    ruff format
     ruff check --fix
 
 lint-toml:
     sort-toml .ruff.toml pyproject.toml
 
 # {% if package_manager == "pixi" %}
+
 upgrade:
     pixi upgrade
     just
+
+# {% elif package_manager == "uv" %}
+
+upgrade:
+    uv sync --upgrade
+
 # {% endif %}
