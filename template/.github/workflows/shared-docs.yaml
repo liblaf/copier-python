@@ -27,6 +27,9 @@ jobs:
       - if: hashFiles('uv.lock') != ''
         name: Setup uv
         uses: astral-sh/setup-uv@v5
+      - if: hashFiles('docs/scripts/prepare.sh') != ''
+        name: Prepare
+        run: docs/scripts/prepare.sh
       - name: Build
         run: mkdocs build
       - name: Upload Artifacts
