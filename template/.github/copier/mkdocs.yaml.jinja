@@ -60,15 +60,19 @@ theme:
       toggle:
         icon: material/brightness-auto
         name: Auto
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
+    - scheme: default
+      primary: teal
+      accent: purple
+      media: "(prefers-color-scheme: light)"
       toggle:
-        icon: material/brightness-7
+        icon: material/weather-sunny
         name: Light Mode
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
+    - scheme: slate
+      primary: black
+      accent: lime
+      media: "(prefers-color-scheme: dark)"
       toggle:
-        icon: material/brightness-4
+        icon: material/weather-night
         name: Dark Mode
 
 plugins:
@@ -110,6 +114,8 @@ plugins:
           summary: true
           # Docstrings
           docstring_style: google
+          docstring_options:
+            ignore_init_summary: true
           docstring_section_style: list
           merge_init_into_class: true
           show_if_no_docstring: true
@@ -117,6 +123,8 @@ plugins:
           show_signature_annotations: true
           separate_signature: true
           signature_crossrefs: true
+  # External plugins, schema not provided
+  autorefs:
 
 markdown_extensions:
   admonition:
@@ -127,6 +135,8 @@ markdown_extensions:
   pymdownx.superfences:
   pymdownx.tabbed:
     alternate_style: true
+  toc:
+    permalink: ¤
 
 watch:
   - docs/
