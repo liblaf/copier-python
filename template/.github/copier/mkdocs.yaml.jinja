@@ -16,9 +16,13 @@ repo_url: "https://github.com/{{ owner }}/{{ repo }}"
 edit_uri: edit/main/docs/
 
 extra_css:
-  - https://raw.githubusercontent.com/liblaf/copier-python/refs/heads/main/css/fonts.css
-  - https://raw.githubusercontent.com/liblaf/copier-python/refs/heads/main/css/mkdocstrings/material.css
-  - https://raw.githubusercontent.com/liblaf/copier-python/refs/heads/main/css/mkdocstrings/syntax-highlight-in-signatures.css
+  # - https://raw.githubusercontent.com/liblaf/copier-python/refs/heads/main/css/fonts.css
+  # - https://raw.githubusercontent.com/liblaf/copier-python/refs/heads/main/css/mkdocstrings/material.css
+  # - https://raw.githubusercontent.com/liblaf/copier-python/refs/heads/main/css/mkdocstrings/syntax-highlight-in-signatures.css
+  # I don't know why, but external CSS does not work.
+  - css/fonts.css
+  - css/mkdocstrings/material.css
+  - css/mkdocstrings/syntax-highlight-in-signatures.css
 
 theme:
   name: material
