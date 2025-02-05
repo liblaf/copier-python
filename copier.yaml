@@ -7,6 +7,7 @@ _migrations:
 
 _skip_if_exists:
   - .envrc
+  - .gitignore
   - .ruff.toml
   - .vscode/settings.json
   - docs/README.md
