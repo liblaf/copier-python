@@ -11,8 +11,10 @@ _skip_if_exists:
   - .vscode/settings.json
   - docs/README.md
   - Justfile
+  - mkdocs.yaml
   - pyproject.toml
   - pyrightconfig.json
+  - "!.github/copier/mkdocs.yaml"
   - "!.github/linters/.ruff.toml"
   - "!.github/linters/pyrightconfig.json"
 

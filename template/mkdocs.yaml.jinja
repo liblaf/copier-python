@@ -1,0 +1,17 @@
+# vim: syntax=yaml
+# yaml-language-server: $schema=https://squidfunk.github.io/mkdocs-material/schema.json
+
+INHERIT: .github/copier/mkdocs.yaml
+site_name: "{{ name }}"
+site_description: TODO
+
+theme:
+  favicon: favicon.ico
+  logo: logo.png
+
+plugins:
+  mkdocstrings:
+    handlers:
+      python:
+        import:
+          - https://docs.python.org/3/objects.inv
