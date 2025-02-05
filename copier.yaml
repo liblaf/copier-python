@@ -11,6 +11,7 @@ _skip_if_exists:
   - .ruff.toml
   - .vscode/settings.json
   - docs/README.md
+  - docs/SUMMARY.md
   - Justfile
   - mkdocs.yaml
   - pyproject.toml
