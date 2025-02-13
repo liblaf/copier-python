@@ -1,5 +1,4 @@
-# vim: syntax=just
-
+# -*- mode: just; -*-
 default: gen-init lint
 
 build:
@@ -20,14 +19,10 @@ lint-toml:
     sort-toml .ruff.toml pyproject.toml
 
 # {% if package_manager == "pixi" %}
-
 upgrade:
     pixi upgrade
-    just
-
+    just lint
 # {% elif package_manager == "uv" %}
-
 upgrade:
     uv sync --upgrade
-
 # {% endif %}
