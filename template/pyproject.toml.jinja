@@ -7,9 +7,25 @@ build-backend = "hatchling.build"
 requires = ["hatch-vcs", "hatchling"]
 
 [dependency-groups]
-build = []
-dev = []
-docs = []
+build = ["check-wheel-contents", "hatch", "twine"]
+dev = ["icecream"]
+docs = [
+  "gitpython",
+  "mdx-truly-sane-lists",
+  "mkdocs",
+  "mkdocs-autorefs",
+  "mkdocs-gen-files",
+  "mkdocs-git-committers-plugin-2",
+  "mkdocs-git-revision-date-localized-plugin",
+  "mkdocs-literate-nav",
+  "mkdocs-material[imaging]",
+  "mkdocs-section-index",
+  "mkdocstrings",
+  "mkdocstrings-python",
+  "pymdown-extensions",
+  "ruff",
+]
+test = ["pytest", "pytest-codspeed", "pytest-cov", "pytest-xdist"]
 
 [project]
 authors = [{ email = "{{ email }}", name = "{{ author }}" }]
@@ -19,7 +35,7 @@ classifiers = [
   "License :: OSI Approved :: MIT License",
   # {% endif %}
 ]
-dependencies = []
+dependencies = ["lazy-loader"]
 description = "Add your description here"
 dynamic = ["version"]
 keywords = []
@@ -39,17 +55,30 @@ requires-python = ">=3.12"
 [tool.check-wheel-contents]
 ignore = ["W002"]
 
-[tool.hatch]
+[tool.coverage.run]
+branch = true
+source = ["src/"]
+
+[tool.hatch.build.hooks.vcs]
+# version-file = "src/.../_version.py"
 
 [tool.hatch.build.targets.sdist]
-only-packages = true
+only-include = ["src/"]
+
+[tool.hatch.build.targets.wheel]
+# packages = ["src/..."]
 
 [tool.hatch.version]
 source = "vcs"
 
+[tool.pytest.ini_options]
+addopts = ["--numprocesses=auto"]
+junit_family = "legacy"
+testpaths = ["tests/"]
+
 # {% if package_manager == "pixi" %}
 [tool.pixi.environments]
-default = { features = ["build", "dev", "docs"] }
+default = { features = ["build", "dev", "docs", "test"] }
 
 [tool.pixi.project]
 channel-priority = "disabled"
@@ -62,6 +91,8 @@ platforms = ["linux-64"]
 [tool.pixi.system-requirements]
 cuda = "12"
 libc = { family = "glibc", version = "2.41" }
-linux = "6.12"
-
+linux = "6.13"
+# {% else if package_manager == "uv" %}
+[tool.uv]
+default-groups = ["build", "dev", "docs", "test"]
 # {% endif %}
