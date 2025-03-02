@@ -3,7 +3,8 @@
 _answers_file: .github/copier/.copier-answers.python.yaml
 
 _migrations:
-  - rm --force --verbose .github/workflows/release.yaml
+  - rm --force --verbose .github/workflows/shared-docs.yaml
+  - rm --force --verbose .github/workflows/shared-release.yaml
 
 _skip_if_exists:
   - .envrc
@@ -16,6 +17,7 @@ _skip_if_exists:
   - mkdocs.yaml
   - pyproject.toml
   - pyrightconfig.json
+  - src/
   - "!.github/copier/mkdocs.yaml"
   - "!.github/linters/.ruff.toml"
   - "!.github/linters/pyrightconfig.json"
@@ -23,7 +25,8 @@ _skip_if_exists:
 _subdirectory: template
 
 _tasks:
-  - rm --force --verbose .github/workflows/release.yaml
+  - rm --force --verbose .github/workflows/shared-docs.yaml
+  - rm --force --verbose .github/workflows/shared-release.yaml
 
 email:
   type: str

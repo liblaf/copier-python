@@ -60,13 +60,13 @@ branch = true
 source = ["src/"]
 
 [tool.hatch.build.hooks.vcs]
-# version-file = "src/.../_version.py"
+version-file = "src/{{ name }}/_version.py"
 
 [tool.hatch.build.targets.sdist]
 only-include = ["src/"]
 
 [tool.hatch.build.targets.wheel]
-# packages = ["src/..."]
+packages = ["src/{{ name }}/"]
 
 [tool.hatch.version]
 source = "vcs"
