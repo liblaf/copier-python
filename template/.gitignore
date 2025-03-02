@@ -177,3 +177,4 @@ poetry.toml
 
 _version.py
 junit.xml
+playground/
