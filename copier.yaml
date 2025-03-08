@@ -72,5 +72,10 @@ name:
 
 package:
   type: str
-  help: TODO
+  help: "package (example: liblaf)"
+  default: "{{ name }}"
+
+subpackage:
+  type: str
+  help: "sub-package (example: liblaf/grapes)"
   default: "{{ name }}"
