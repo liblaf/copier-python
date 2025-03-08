@@ -69,3 +69,8 @@ name:
   type: str
   help: The name of the project.
   default: "{{ repo }}"
+
+package:
+  type: str
+  help: TODO
+  default: "{{ name }}"
