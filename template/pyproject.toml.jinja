@@ -1,6 +1,6 @@
 # -*- mode: toml; -*-
 #:schema https://json.schemastore.org/pyproject.json
-# https://packaging.python.org/en/latest/specifications/pyproject-toml/
+# ref: <https://packaging.python.org/en/latest/specifications/pyproject-toml/>
 
 [build-system]
 build-backend = "hatchling.build"
@@ -28,29 +28,40 @@ docs = [
 test = ["pytest", "pytest-codspeed", "pytest-cov", "pytest-xdist"]
 
 [project]
-authors = [{ email = "{{ email }}", name = "{{ author }}" }]
+authors = [{ email = "{{ author_email }}", name = "{{ author_name }}" }]
 classifiers = [
+  # common classifiers
+  # ref: <https://pypi.org/classifiers/>
   "Development Status :: 4 - Beta",
-  # {% if license == "MIT" %}
+  "Intended Audience :: Developers",
+  "Intended Audience :: Science/Research",
+  "Intended Audience :: System Administrators",
   "License :: OSI Approved :: MIT License",
-  # {% endif %}
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+  "Topic :: Scientific/Engineering",
+  "Topic :: System",
+  "Topic :: Utilities",
+  "Typing :: Typed",
 ]
-dependencies = ["lazy-loader"]
+dependencies = ["lazy-loader", "loguru", "rich"]
 description = "Add your description here"
 dynamic = ["version"]
 keywords = []
 license = "{{ license }}"
-name = "{{ name }}"
+name = "{{ project_name_slug }}"
 readme = "docs/README.md"
 requires-python = ">=3.12"
 
 [project.urls]
-"Changelog" = "https://github.com/{{ owner }}/{{ repo }}/blob/main/CHANGELOG.md"
-"Documentation" = "https://{{ owner }}.github.io/{{ repo }}/"
-"Homepage" = "https://github.com/{{ owner }}/{{ repo }}"
-"Issue Tracker" = "https://github.com/{{ owner }}/{{ repo }}/issues"
-"Release Notes" = "https://github.com/{{ owner }}/{{ repo }}/releases"
-"Source Code" = "https://github.com/{{ owner }}/{{ repo }}"
+"Changelog" = "https://github.com/{{ github_user }}/{{ github_repo }}/blob/main/CHANGELOG.md"
+"Documentation" = "https://{{ github_user }}.github.io/{{ github_repo }}/"
+"Homepage" = "https://github.com/{{ github_user }}/{{ github_repo }}"
+"Issue Tracker" = "https://github.com/{{ github_user }}/{{ github_repo }}/issues"
+"Release Notes" = "https://github.com/{{ github_user }}/{{ github_repo }}/releases"
+"Source Code" = "https://github.com/{{ github_user }}/{{ github_repo }}"
 
 [tool.check-wheel-contents]
 ignore = ["W002"]
@@ -60,13 +71,13 @@ branch = true
 source = ["src/"]
 
 [tool.hatch.build.hooks.vcs]
-version-file = "src/{{ subpackage }}/_version.py"
+version-file = "src/{{ package }}/_version.py"
 
 [tool.hatch.build.targets.sdist]
 only-include = ["src/"]
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/{{ package }}/"]
+packages = ["src/{{ toplevel_package }}/"]
 
 [tool.hatch.version]
 source = "vcs"
@@ -92,7 +103,9 @@ platforms = ["linux-64"]
 cuda = "12"
 libc = { family = "glibc", version = "2.41" }
 linux = "6.13"
+
 # {% elif package_manager == "uv" %}
 [tool.uv]
 default-groups = ["build", "dev", "docs", "test"]
+
 # {% endif %}

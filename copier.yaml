@@ -1,10 +1,16 @@
-# https://copier.readthedocs.io/en/stable/configuring/
+# ref: <https://copier.readthedocs.io/en/stable/configuring/>
+# ref: <https://gitlab.com/dreamer-labs/libraries/jinja2-ansible-filters/>
+# ref: <https://jinja.palletsprojects.com/en/stable/templates/>
 
-_answers_file: .github/copier/.copier-answers.python.yaml
+_answers_file: .config/copier/.copier-answers.python.yaml
+
+_external_data_files:
+  shared: "{{ answers_file_shared }}"
 
 _migrations:
-  - rm --force --verbose .github/workflows/shared-docs.yaml
-  - rm --force --verbose .github/workflows/shared-release.yaml
+  - mv --force --no-target-directory --verbose ".github/copier/.copier-answers.python.yaml" ".config/copier/.copier-answers.python.yaml" || true
+  - rm --force --verbose ".github/workflows/shared-docs.yaml"
+  - rm --force --verbose ".github/workflows/shared-release.yaml"
 
 _skip_if_exists:
   - .envrc
@@ -18,64 +24,67 @@ _skip_if_exists:
   - pyproject.toml
   - pyrightconfig.json
   - src/
-  - "!.github/copier/mkdocs.yaml"
-  - "!.github/linters/.ruff.toml"
-  - "!.github/linters/pyrightconfig.json"
+  - "!.config/copier/mkdocs.yaml"
+  - "!.config/linters/.ruff.toml"
+  - "!.config/linters/pyrightconfig.json"
 
 _subdirectory: template
 
 _tasks:
-  - rm --force --verbose .github/workflows/shared-docs.yaml
-  - rm --force --verbose .github/workflows/shared-release.yaml
+  - mv --force --no-target-directory --verbose ".github/copier/.copier-answers.python.yaml" ".config/copier/.copier-answers.python.yaml" || true
+  - rm --force --verbose ".github/workflows/shared-docs.yaml"
+  - rm --force --verbose ".github/workflows/shared-release.yaml"
 
-email:
+answers_file_shared:
   type: str
-  help: Author's e-mail address.
-  default: 30631553+liblaf@users.noreply.github.com
+  default: .config/copier/.copier-answers.shared.yaml
+
+author_name:
+  type: str
+  default: "{{ _external_data.shared.author_name }}"
+  when: false
+
+author_email:
+  type: str
+  default: "{{ _external_data.shared.author_email }}"
+  when: false
+
+project_name:
+  type: str
+  default: "{{ _external_data.shared.project_name }}"
+  when: false
+
+project_name_slug:
+  type: str
+  default: "{{ _external_data.shared.project_name_slug }}"
+  when: false
 
 license:
   type: str
-  help: Add a license to your project.
-  choices:
-    MIT License:
-      value: MIT
-    Other:
-      value: other
-  default: MIT
+  default: "{{ _external_data.shared.license }}"
+  when: false
 
-owner:
+github_user:
   type: str
-  help: The account owner of the repository.
-  default: liblaf
+  default: "{{ _external_data.shared.github_user }}"
+  when: false
+
+github_repo:
+  type: str
+  default: "{{ _external_data.shared.github_repo }}"
+  when: false
 
 package_manager:
   type: str
-  help: package manager
   choices:
     - pixi
     - uv
   default: pixi
 
-repo:
-  type: str
-  help: The name of the repository.
-
-author:
-  type: str
-  help: Author's name
-  default: "{{ owner }}"
-
-name:
-  type: str
-  help: The name of the project.
-  default: "{{ repo }}"
-
 package:
   type: str
-  help: "package (example: liblaf)"
-  default: "{{ name }}"
+  default: "{{ project_name_slug | replace('-', '_') }}"
 
-subpackage:
+toplevel_package:
   type: str
-  help: "sub-package (example: liblaf/grapes)"
-  default: "{{ name }}"
+  default: '{{ package.split("/") | first }}'
