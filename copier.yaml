@@ -4,7 +4,7 @@
 
 _answers_file: .config/copier/.copier-answers.python.yaml
 
-_external_data_files:
+_external_data:
   shared: "{{ answers_file_shared }}"
 
 _migrations:
