@@ -8,7 +8,7 @@ _external_data:
   shared: "{{ answers_file_shared }}"
 
 _migrations:
-  - mv --force --no-target-directory --verbose ".github/copier/.copier-answers.python.yaml" ".config/copier/.copier-answers.python.yaml" || true
+  - rm --force --verbose ".github/copier/.copier-answers.python.yaml"
   - rm --force --verbose ".github/workflows/shared-docs.yaml"
   - rm --force --verbose ".github/workflows/shared-release.yaml"
 
@@ -31,7 +31,7 @@ _skip_if_exists:
 _subdirectory: template
 
 _tasks:
-  - mv --force --no-target-directory --verbose ".github/copier/.copier-answers.python.yaml" ".config/copier/.copier-answers.python.yaml" || true
+  - rm --force --verbose ".github/copier/.copier-answers.python.yaml"
   - rm --force --verbose ".github/workflows/shared-docs.yaml"
   - rm --force --verbose ".github/workflows/shared-release.yaml"
 
