@@ -125,6 +125,7 @@ plugins:
           signature_crossrefs: true
   # External plugins, schema not provided
   autorefs:
+  mike:
 
 markdown_extensions:
   admonition:
@@ -137,6 +138,10 @@ markdown_extensions:
     alternate_style: true
   toc:
     permalink: ¤
+
+extra:
+  version:
+    provider: mike
 
 watch:
   - docs/
