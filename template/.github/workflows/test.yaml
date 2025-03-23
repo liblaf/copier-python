@@ -21,6 +21,8 @@ jobs:
           fetch-depth: 0 # I don't know why, but it is present in the official example
       - name: Setup Python
         uses: liblaf/actions/setup-python@main
+        with:
+          python-version: ${{ vars.PYTHON_VERSION || '3.12' }}
       - name: Test
         run: pytest --junit-xml="junit.xml" --cov
       - name: Upload Coverage

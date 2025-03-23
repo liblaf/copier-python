@@ -42,6 +42,7 @@
     "scrapy",
     "sdist",
     "stefanzweifel",
+    "strftime",
     "trimesh",
     "ubelt",
     "venv",

@@ -22,6 +22,8 @@ jobs:
           fetch-depth: 0
       - name: Setup Python
         uses: liblaf/actions/setup-python@main
+        with:
+          python-version: ${{ vars.PYTHON_VERSION || '3.12' }}
       - if: hashFiles('docs/scripts/prepare.sh') != ''
         name: Prepare
         run: docs/scripts/prepare.sh
