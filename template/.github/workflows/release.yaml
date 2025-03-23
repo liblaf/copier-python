@@ -55,6 +55,12 @@ jobs:
       group: ${{ github.workflow }}-${{ github.ref }}-pre-release
       cancel-in-progress: true
     steps:
+      - id: auth
+        name: Auth App
+        uses: liblaf/actions/auth-app@main
+        with:
+          app-id: ${{ secrets.GH_APP_ID }}
+          private-key: ${{ secrets.GH_APP_PRIVATE_KEY }}
       - name: Checkout
         uses: actions/checkout@v4
         with:
@@ -70,7 +76,8 @@ jobs:
           clobber: true
           files: dist/*
           prerelease: true
-          tag: latest
+          tag: dev
+          token: ${{ steps.auth.outputs.token }}
 
   release:
     name: Release
