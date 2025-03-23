@@ -54,4 +54,4 @@ jobs:
       - name: Setup GitHub Pages
         uses: liblaf/actions/setup-pages@main
         with:
-          token: ${{ steps.auth.outputs.token }}
+          token: ${{ secrets.GH_PAT || steps.auth.outputs.token }}
