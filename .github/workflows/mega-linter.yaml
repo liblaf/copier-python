@@ -4,7 +4,7 @@
 # https://github.com/oxsecurity/megalinter/blob/main/mega-linter-runner/generators/mega-linter/templates/mega-linter.yml
 # https://megalinter.io
 
-name: (Shared) MegaLinter
+name: MegaLinter
 
 on:
   push:
@@ -24,12 +24,20 @@ jobs:
       group: ${{ github.workflow }}-${{ github.ref }}-mega-linter
       cancel-in-progress: true
     steps:
+      - id: auth
+        name: Auth App
+        uses: liblaf/actions/auth-app@main
+        with:
+          app-id: ${{ secrets.GH_APP_ID }}
+          private-key: ${{ secrets.GH_APP_PRIVATE_KEY }}
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          token: ${{ secrets.PAT || github.token }}
+          token: ${{ steps.auth.outputs.token }}
       - name: MegaLinter
         uses: liblaf/actions/mega-linter@main
+        with:
+          token: ${{ steps.auth.outputs.token }}
       - name: Remove MegaLinter Reports
         run: sudo rm --force --recursive "mega-linter.log" "megalinter-reports/"
       - name: Auto Commit
@@ -37,3 +45,6 @@ jobs:
         with:
           commit_message: "chore(mega-linter): apply linters fixes"
           add_options: --update
+          commit_user_name: ${{ steps.auth.outputs.committer-name }}
+          commit_user_email: ${{ steps.auth.outputs.committer-email }}
+          commit_author: ${{ steps.auth.outputs.author }}
