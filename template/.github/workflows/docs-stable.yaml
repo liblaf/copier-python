@@ -16,6 +16,7 @@ jobs:
     name: Docs
     permissions:
       contents: write
+      pages: write
     if: startsWith(github.ref, 'refs/tags/v')
     runs-on: ubuntu-latest
     concurrency:
@@ -50,3 +51,7 @@ jobs:
         env:
           MAJOR: ${{ steps.version.outputs.major }}
           MINOR: ${{ steps.version.outputs.minor }}
+      - name: Setup GitHub Pages
+        uses: liblaf/actions/setup-pages@main
+        with:
+          token: ${{ steps.auth.outputs.token }}

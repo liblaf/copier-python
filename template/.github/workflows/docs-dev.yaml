@@ -13,6 +13,7 @@ jobs:
     name: Docs
     permissions:
       contents: write
+      pages: write
     runs-on: ubuntu-latest
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}-docs
@@ -40,3 +41,7 @@ jobs:
         run: mike deploy --push dev
       - name: Set Default
         run: mike set-default --push dev
+      - name: Setup GitHub Pages
+        uses: liblaf/actions/setup-pages@main
+        with:
+          token: ${{ steps.auth.outputs.token }}
