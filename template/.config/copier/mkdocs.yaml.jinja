@@ -11,8 +11,8 @@ site_url:
     "https://{{ github_user }}.github.io/{{ github_repo }}/"
   ]
 site_author: "{{ author_name }}"
-repo_name: "{{ github_owner }}/{{ github_repo }}"
-repo_url: "https://github.com/{{ github_owner }}/{{ github_repo }}"
+repo_name: "{{ github_user }}/{{ github_repo }}"
+repo_url: "https://github.com/{{ github_user }}/{{ github_repo }}"
 edit_uri: blob/main/docs/
 
 extra_css:
@@ -87,7 +87,7 @@ plugins:
       - docs/scripts/gen-ref-pages.py
   git-committers:
     enabled: !ENV [READTHEDOCS, CI, false]
-    repository: "{{ github_owner }}/{{ github_repo }}"
+    repository: "{{ github_user }}/{{ github_repo }}"
     branch: main
   literate-nav:
   section-index:
@@ -99,7 +99,7 @@ plugins:
     enable_inventory: true
     handlers:
       python:
-        import:
+        inventories:
           - https://docs.python.org/3/objects.inv
         options:
           # General
