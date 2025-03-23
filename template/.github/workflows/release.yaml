@@ -29,7 +29,7 @@ jobs:
       id-token: write
     needs:
       - build
-    if: github.event_name == 'release' || startsWith(github.ref, 'refs/tags/v')
+    if: startsWith(github.ref, 'refs/tags/v')
     runs-on: ubuntu-latest
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}-publish
@@ -85,7 +85,7 @@ jobs:
       contents: write
     needs:
       - build
-    if: github.event_name == 'release' || startsWith(github.ref, 'refs/tags/v')
+    if: startsWith(github.ref, 'refs/tags/v')
     runs-on: ubuntu-latest
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}-release
@@ -104,4 +104,4 @@ jobs:
         uses: liblaf/actions/release@main
         with:
           files: dist/*
-          tag: ${{ github.event.release.tag_name || github.ref_name }}
+          tag: ${{ github.ref_name }}
