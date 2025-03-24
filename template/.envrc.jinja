@@ -5,8 +5,6 @@
 watch_file "pyproject.toml" "pixi.toml" "pixi.lock"
 if [[ -t 2 ]]; then
   export PIXI_COLOR="always"
-else
-  export PIXI_COLOR="auto"
 fi
 eval "$(pixi shell-hook)"
 unset PIXI_COLOR
@@ -18,8 +16,8 @@ if [[ ! -f ".venv/bin/activate" ]]; then
   uv sync --all-extras --all-groups
 fi
 # shellcheck disable=SC2016
-sd '^(\s*)?(?P<key>include-system-site-packages)(\s*)?=(\s*)?(?<val>.*)$' '$key = true' .venv/pyvenv.cfg
+sd '^(\s*)?(?P<key>include-system-site-packages)(\s*)?=(\s*)?(?<val>.*)$' '$key = true' ".venv/pyvenv.cfg"
 # shellcheck disable=SC1091
-source .venv/bin/activate
+source ".venv/bin/activate"
 
 # {% endif %}
