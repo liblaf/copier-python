@@ -32,7 +32,7 @@ jobs:
           token: ${{ steps.auth.outputs.token }}
           fetch-depth: 0
       - name: Fetch `gh-pages`
-        # ref: <https://github.com/jimporter/mike?tab=readme-ov-file#deploying-via-ci>
+        # ref: <https://github.com/jimporter/mike#deploying-via-ci>
         run: git fetch origin gh-pages --depth=1
       - name: Setup Python
         uses: liblaf/actions/setup-python@main

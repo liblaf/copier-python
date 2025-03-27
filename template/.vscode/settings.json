@@ -6,7 +6,8 @@
     "**/.pixi/": true,
     "**/.pytest_cache/": true,
     "**/.ruff_cache/": true,
-    "**/.venv/": true
+    "**/.venv/": true,
+    "**/junit.xml": true
   },
   "python.analysis.diagnosticMode": "workspace",
   "python.testing.pytestArgs": [

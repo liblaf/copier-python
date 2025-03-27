@@ -5,6 +5,9 @@ name: Docs (test)
 
 on:
   push:
+    branches-ignore:
+      - assets**
+      - gh-pages
 
 jobs:
   docs:
