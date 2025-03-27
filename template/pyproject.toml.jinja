@@ -46,7 +46,7 @@ description = "Add your description here"
 dynamic = ["version"]
 keywords = []
 license = "{{ license }}"
-name = "{{ project_name_slug }}"
+name = "{{ package_name }}"
 readme = "docs/README.md"
 requires-python = ">=3.12"
 
@@ -66,21 +66,21 @@ branch = true
 source = ["src/"]
 
 [tool.hatch.build.hooks.vcs]
-version-file = "src/{{ package }}/_version.py"
+version-file = "src/{{ package_dir }}/_version.py"
 
 [tool.hatch.build.targets.sdist]
 only-include = ["src/"]
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/{{ toplevel_package }}/"]
+packages = ["src/{{ wheel_package_dir }}/"]
 
 [tool.hatch.version]
 source = "vcs"
 
 [tool.pytest.ini_options]
-addopts = ["--numprocesses=auto"]
+addopts = ["--showlocals", "--strict-config", "--strict-markers"]
 junit_family = "legacy"
-testpaths = ["tests/"]
+testpaths = ["benches/", "tests/"]
 
 # {% if package_manager == "pixi" %}
 [tool.pixi.environments]

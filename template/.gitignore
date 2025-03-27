@@ -175,6 +175,9 @@ poetry.toml
 
 # End of https://www.toptal.com/developers/gitignore/api/python
 
+# pytest-benchmark
+.benchmarks/
+
 _version.py
 *.log.*
 junit.xml

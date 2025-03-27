@@ -9,6 +9,8 @@ _external_data:
 
 _migrations:
   - rm --force --verbose ".github/copier/.copier-answers.python.yaml"
+  - rm --force --verbose ".github/linters/.ruff.toml"
+  - rm --force --verbose ".github/linters/pyrightconfig.json"
   - rm --force --verbose ".github/workflows/docs.yaml"
   - rm --force --verbose ".github/workflows/shared-docs.yaml"
   - rm --force --verbose ".github/workflows/shared-release.yaml"
@@ -24,6 +26,7 @@ _skip_if_exists:
   - mkdocs.yaml
   - pyproject.toml
   - pyrightconfig.json
+  - README.md
   - src/
   - "!.config/copier/mkdocs.yaml"
   - "!.config/linters/.ruff.toml"
@@ -33,6 +36,8 @@ _subdirectory: template
 
 _tasks:
   - rm --force --verbose ".github/copier/.copier-answers.python.yaml"
+  - rm --force --verbose ".github/linters/.ruff.toml"
+  - rm --force --verbose ".github/linters/pyrightconfig.json"
   - rm --force --verbose ".github/workflows/docs.yaml"
   - rm --force --verbose ".github/workflows/shared-docs.yaml"
   - rm --force --verbose ".github/workflows/shared-release.yaml"
@@ -40,16 +45,6 @@ _tasks:
 answers_file_shared:
   type: str
   default: .config/copier/.copier-answers.shared.yaml
-
-author_name:
-  type: str
-  default: "{{ _external_data.shared.author_name }}"
-  when: false
-
-author_email:
-  type: str
-  default: "{{ _external_data.shared.author_email }}"
-  when: false
 
 project_name:
   type: str
@@ -59,6 +54,16 @@ project_name:
 project_name_slug:
   type: str
   default: "{{ _external_data.shared.project_name_slug }}"
+  when: false
+
+author_name:
+  type: str
+  default: "{{ _external_data.shared.author_name }}"
+  when: false
+
+author_email:
+  type: str
+  default: "{{ _external_data.shared.author_email }}"
   when: false
 
 license:
@@ -76,17 +81,36 @@ github_repo:
   default: "{{ _external_data.shared.github_repo }}"
   when: false
 
+namespace:
+  type: str
+  default: "{{ github_user }}"
+
+package_dir:
+  type: str
+  default: |-
+    {%- if namespace -%}
+      {{ namespace | replace('.', '/') | replace('-', '_') }}/{{ project_name_slug | replace('-', '_') }}
+    {%- else -%}
+      {{ project_name_slug | replace('-', '_') }}
+    {%- endif -%}
+
+package_name:
+  type: str
+  default: |-
+    {%- if namespace -%}
+      {{ namespace | replace('.', '-') | replace('/', '-') }}-{{ project_name_slug | replace('_', '-') }}
+    {% else %}
+      {{ project_name_slug | replace('_', '-') }}
+    {%- endif -%}
+
+wheel_package_dir:
+  type: str
+  default: |-
+    {{ package_dir.split('/') | first }}
+
 package_manager:
   type: str
   choices:
     - pixi
     - uv
   default: pixi
-
-package:
-  type: str
-  default: "{{ project_name_slug | replace('-', '_') }}"
-
-toplevel_package:
-  type: str
-  default: '{{ package.split("/") | first }}'

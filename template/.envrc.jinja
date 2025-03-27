@@ -3,10 +3,10 @@
 # {% if package_manager == "pixi" %}
 
 watch_file "pyproject.toml" "pixi.toml" "pixi.lock"
-if [[ -t 2 ]]; then
-  export PIXI_COLOR="always"
-fi
+if [[ -t 2 ]]; then export PIXI_COLOR="always"; fi
+set +o nounset
 eval "$(pixi shell-hook)"
+set -o nounset
 unset PIXI_COLOR
 
 # {% elif package_manager == "uv" %}
