@@ -54,7 +54,9 @@ jobs:
         with:
           python-version: ${{ vars.PYTHON_VERSION || '3.12' }}
       - name: Bench
-        run: just ci-bench
+        uses: CodSpeedHQ/action@v3
+        with:
+          run: just ci-bench
 
   test:
     name: Test
