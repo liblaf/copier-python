@@ -51,11 +51,10 @@ jobs:
           tool: just
       - name: Setup Python
         uses: liblaf/actions/setup-python@main
-        with:
-          python-version: ${{ vars.PYTHON_VERSION || '3.12' }}
       - name: Bench
         uses: CodSpeedHQ/action@v3
         with:
+          token: ${{ secrets.CODSPEED_TOKEN }}
           run: just ci-bench
 
   test:
@@ -77,8 +76,6 @@ jobs:
           tool: just
       - name: Setup Python
         uses: liblaf/actions/setup-python@main
-        with:
-          python-version: ${{ vars.PYTHON_VERSION || '3.12' }}
       - name: Test
         run: just ci-test
       - name: Upload Coverage
