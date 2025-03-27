@@ -43,6 +43,7 @@
     "sdist",
     "stefanzweifel",
     "strftime",
+    "taiki",
     "trimesh",
     "ubelt",
     "venv",

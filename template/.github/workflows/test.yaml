@@ -18,44 +18,16 @@ jobs:
     name: Detect
     runs-on: ubuntu-latest
     outputs:
-      bench: ${{ steps.bench.outcome == 'success' }}
       test: ${{ steps.test.outcome == 'success' }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - id: bench
-        name: Detect Benches
-        run: |-
-          find "benches/" -name "test_*.py" -type f -print -quit |
-            grep --quiet "benches/"
-        continue-on-error: true
       - id: test
         name: Detect Tests
         run: |-
           find "tests/" -name "test_*.py" -type f -print -quit |
             grep --quiet "tests/"
         continue-on-error: true
-
-  bench:
-    name: Bench
-    needs:
-      - detect
-    if: needs.detect.outputs.bench == 'true'
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Install Just
-        uses: taiki-e/install-action@v2
-        with:
-          tool: just
-      - name: Setup Python
-        uses: liblaf/actions/setup-python@main
-      - name: Bench
-        uses: CodSpeedHQ/action@v3
-        with:
-          token: ${{ secrets.CODSPEED_TOKEN }}
-          run: just ci-bench
 
   test:
     name: Test
