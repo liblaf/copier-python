@@ -99,7 +99,7 @@ package_name:
   default: |-
     {%- if namespace -%}
       {{ namespace | replace('.', '-') | replace('/', '-') }}-{{ project_name_slug | replace('_', '-') }}
-    {% else %}
+    {%- else -%}
       {{ project_name_slug | replace('_', '-') }}
     {%- endif -%}
 
