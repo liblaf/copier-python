@@ -17,8 +17,7 @@ jobs:
       pages: write
     runs-on: ubuntu-latest
     concurrency:
-      group: ${{ github.workflow }}-${{ github.ref }}-docs
-      cancel-in-progress: true
+      group: docs
     steps:
       - id: auth
         name: Auth App
