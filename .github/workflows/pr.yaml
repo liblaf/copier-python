@@ -6,7 +6,6 @@ name: PR
 on:
   schedule:
     - cron: "0 0 * * *"
-    - cron: "0 0 * * 0"
   workflow_dispatch:
 
 jobs:
@@ -14,11 +13,6 @@ jobs:
     name: Merge
     permissions:
       pull-requests: write
-    if: >-
-      (
-        github.event_name == 'schedule' &&
-        github.event.schedule == '0 0 * * 0'
-      ) || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     concurrency:
       group: ${{ github.workflow }}-merge
@@ -30,22 +24,23 @@ jobs:
         with:
           app-id: ${{ secrets.GH_APP_ID }}
           private-key: ${{ secrets.GH_APP_PRIVATE_KEY }}
-      - name: Merge
+      - name: Merge Release Please
         uses: liblaf/actions/pr-label@main
         with:
           add-label: automerge
           label: "autorelease: pending"
+          token: ${{ steps.auth.outputs.token }}
+      - name: Merge Renovate
+        uses: liblaf/actions/pr-label@main
+        with:
+          add-label: automerge
+          app: renovate
           token: ${{ steps.auth.outputs.token }}
 
   review:
     name: Review
     permissions:
       pull-requests: write
-    if: >-
-      (
-        github.event_name == 'schedule' &&
-        github.event.schedule == '0 0 * * *'
-      ) || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     concurrency:
       group: ${{ github.workflow }}-review
@@ -54,4 +49,9 @@ jobs:
       - name: Review
         uses: liblaf/actions/pr-review@main
         with:
+          author: |-
+            github-actions[bot]
+            liblaf-bot[bot]
+            release-please[bot]
+            renovate[bot]
           token: ${{ secrets.GH_PAT || github.token }}
