@@ -51,10 +51,6 @@ select = ["ALL"]
 allow-star-arg-any = true
 
 [lint.flake8-import-conventions.aliases]
-"array_typing" = "at"
-"array_typing.jax" = "atj"
-"array_typing.numpy" = "atn"
-"array_typing.torch" = "att"
 "asyncio.subprocess" = "asp"
 "boltons" = "bt"
 "jax.numpy" = "jnp"
@@ -66,34 +62,11 @@ allow-star-arg-any = true
 "open3d" = "o3d"
 "pandas" = "pd"
 "polars" = "pl"
-"pydantic_settings" = "ps"
 "pyvista" = "pv"
 "seaborn" = "sns"
-"subprocess" = "sp"
 "taichi" = "ti"
-"toolkit" = "tk"
-"toolkit.array" = "at"
-"toolkit.array.jax" = "tj"
-"toolkit.array.numpy" = "tn"
-"toolkit.array.torch" = "tt"
-"toolkit.typing" = "tp"
-"toolkit.validation" = "tv"
 "trimesh" = "tm"
-"trimesh.transformations" = "tf"
 "ubelt" = "ub"
-
-[lint.flake8-type-checking]
-runtime-evaluated-base-classes = [
-  "pydantic.BaseModel",
-  "pydantic_settings.BaseSettings",
-  "sqlalchemy.orm.DeclarativeBase",
-  "toolkit.BaseConfig",
-]
-runtime-evaluated-decorators = [
-  "attrs.define",
-  "pydantic.validate_call",
-  "toolkit.main",
-]
 
 [lint.pydocstyle]
 convention = "google"
