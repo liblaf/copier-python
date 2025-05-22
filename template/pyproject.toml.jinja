@@ -92,7 +92,7 @@ addopts = ["--showlocals", "--strict-config", "--strict-markers"]
 junit_family = "legacy"
 testpaths = ["benches/", "tests/"]
 
-# {% if package_manager == "pixi" %}
+# {%- if package_manager == "pixi" %}
 [tool.pixi.environments]
 default = { features = ["build", "dev", "docs", "test"] }
 
@@ -109,8 +109,8 @@ cuda = "12"
 libc = { family = "glibc", version = "2.41" }
 linux = "6.13"
 
-# {% elif package_manager == "uv" %}
+# {%- elif package_manager == "uv" %}
 [tool.uv]
-default-groups = ["build", "dev", "docs", "test"]
+default-groups = "all"
 
-# {% endif %}
+# {%- endif %}
