@@ -6,5 +6,6 @@
 jobs = 1
 
 [tools]
+pixi = "latest"
 ruff = "latest"
 uv = "latest"

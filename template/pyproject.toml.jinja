@@ -87,11 +87,6 @@ packages = ["src/{{ wheel_package_dir }}/"]
 [tool.hatch.version]
 source = "vcs"
 
-[tool.pytest.ini_options]
-addopts = ["--showlocals", "--strict-config", "--strict-markers"]
-testpaths = ["benches/", "tests/"]
-
-# {%- if package_manager == "pixi" %}
 [tool.pixi.environments]
 default = { features = ["build", "dev", "docs", "test"] }
 
@@ -108,8 +103,9 @@ cuda = "12"
 libc = { family = "glibc", version = "2.41" }
 linux = "6.13"
 
-# {%- elif package_manager == "uv" %}
+[tool.pytest.ini_options]
+addopts = ["--showlocals", "--strict-config", "--strict-markers"]
+testpaths = ["benches/", "tests/"]
+
 [tool.uv]
 default-groups = "all"
-
-# {%- endif %}
