@@ -36,14 +36,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Install Just
-        uses: taiki-e/install-action@v2
-        with:
-          tool: just
+      - name: Install Mise
+        uses: jdx/mise-action@v2
       - name: Setup Python
         uses: liblaf/actions/setup-python@main
       - name: Bench
         uses: CodSpeedHQ/action@v3
         with:
-          token: ${{ secrets.CODSPEED_TOKEN }}
-          run: just ci-bench
+          run: mise run bench

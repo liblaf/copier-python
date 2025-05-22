@@ -42,14 +42,12 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0 # I don't know why, but it is present in the official example
-      - name: Install Just
-        uses: taiki-e/install-action@v2
-        with:
-          tool: just
+      - name: Install Mise
+        uses: jdx/mise-action@v2
       - name: Setup Python
         uses: liblaf/actions/setup-python@main
       - name: Test
-        run: just ci-test
+        run: mise run test
       - name: Upload Coverage
         uses: codecov/codecov-action@v5
         with:
