@@ -16,6 +16,9 @@ function is-true() {
   esac
 }
 
+# ref: <https://github.com/scientific-python/lazy-loader#early-failure>
+export EAGER_IMPORT=1
+
 if is-true "${CI-}"; then
   pytest --junit-xml="junit.xml" --cov --cov-branch --benchmark-disable --numprocesses="auto" "$@"
 else
