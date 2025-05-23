@@ -1,8 +1,5 @@
 #:schema https://mise.jdx.dev/schema/mise.json
 
-[hooks]
-enter = "mise run install"
-
 [task_config]
 includes = [".config/mise/tasks/", ".config/copier/mise/tasks/"]
 
