@@ -21,7 +21,7 @@ date "+%s" > "${DEBOUNCE_FILE}"
 if [[ -f "pixi.lock" ]]; then
   args=()
   if [[ -t 2 ]]; then args+=(--color=always); fi
-  "$(pixi shell-hook "${args[@]}")"
+  eval "$(pixi shell-hook "${args[@]}")"
 fi
 
 if [[ -f "uv.lock" ]]; then
