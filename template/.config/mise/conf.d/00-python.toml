@@ -3,12 +3,15 @@
 # DO NOT EDIT!
 
 [[env]]
-_.source = { path = ".config/copier/mise/env/setup-python.sh", tools = true }
+_.source = { path = ".config/copier/mise/scripts/setup-python.sh", tools = true }
 
 [settings]
 jobs = 1
 
 [tools]
-pixi = "latest"
 ruff = "latest"
+# {%- if package_manager == "pixi" %}
+pixi = "latest"
+# {%- elif package_manager == "uv" %}
 uv = "latest"
+# {%- endif %}
