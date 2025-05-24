@@ -40,11 +40,11 @@ jobs:
           token: ${{ steps.auth.outputs.token }}
       - name: Remove MegaLinter Reports
         run: sudo rm --force --recursive "mega-linter.log" "megalinter-reports/"
-      - name: Git Auto Commit
-        uses: stefanzweifel/git-auto-commit-action@v5
+      - name: Git Add
+        run: git add --update
+      - name: Commit
+        uses: dsanders11/github-app-commit-action@v1
         with:
-          commit_message: "chore(mega-linter): apply linters fixes"
-          add_options: --update
-          commit_user_name: ${{ steps.auth.outputs.committer-name }}
-          commit_user_email: ${{ steps.auth.outputs.committer-email }}
-          commit_author: ${{ steps.auth.outputs.author }}
+          fail-on-no-changes: false
+          message: "chore(mega-linter): apply linters fixes"
+          token: ${{ steps.auth.outputs.token }}
