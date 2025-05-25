@@ -8,6 +8,7 @@ _external_data:
   shared: "{{ answers_file_shared }}"
 
 _migrations:
+  - rm --force --verbose ".config/copier/mise/scripts/00-setup-python.sh"
   - rm --force --verbose ".config/copier/python.just"
   - rm --force --verbose ".github/copier/.copier-answers.python.yaml"
   - rm --force --verbose ".github/copier/mkdocs.yaml"
@@ -20,13 +21,11 @@ _migrations:
 
 _skip_if_exists:
   - .config/mise/config.toml
-  - .envrc
   - .gitignore
   - .ruff.toml
   - .vscode/settings.json
   - docs/README.md
   - docs/SUMMARY.md
-  - Justfile
   - mkdocs.yaml
   - pyproject.toml
   - pyrightconfig.json
@@ -39,6 +38,7 @@ _skip_if_exists:
 _subdirectory: template
 
 _tasks:
+  - rm --force --verbose ".config/copier/mise/scripts/00-setup-python.sh"
   - rm --force --verbose ".config/copier/python.just"
   - rm --force --verbose ".github/copier/.copier-answers.python.yaml"
   - rm --force --verbose ".github/copier/mkdocs.yaml"

@@ -6,6 +6,7 @@
     "asyncio",
     "cuda",
     "cython",
+    "direnv",
     "dmypy",
     "dsanders",
     "elif",
