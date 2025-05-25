@@ -8,8 +8,10 @@ _external_data:
   shared: "{{ answers_file_shared }}"
 
 _migrations:
-  - rm --force --verbose ".config/copier/mise/scripts/00-setup-python.sh"
+  - rm --force --verbose ".config/copier/direnv/00-python.sh"
+  - rm --force --verbose ".config/copier/mise/scripts/setup-python.sh"
   - rm --force --verbose ".config/copier/python.just"
+  - rm --force --verbose ".config/mise/conf.d/00-python.toml"
   - rm --force --verbose ".github/copier/.copier-answers.python.yaml"
   - rm --force --verbose ".github/copier/mkdocs.yaml"
   - rm --force --verbose ".github/linters/.ruff.toml"
@@ -38,8 +40,10 @@ _skip_if_exists:
 _subdirectory: template
 
 _tasks:
-  - rm --force --verbose ".config/copier/mise/scripts/00-setup-python.sh"
+  - rm --force --verbose ".config/copier/direnv/00-python.sh"
+  - rm --force --verbose ".config/copier/mise/scripts/setup-python.sh"
   - rm --force --verbose ".config/copier/python.just"
+  - rm --force --verbose ".config/mise/conf.d/00-python.toml"
   - rm --force --verbose ".github/copier/.copier-answers.python.yaml"
   - rm --force --verbose ".github/copier/mkdocs.yaml"
   - rm --force --verbose ".github/linters/.ruff.toml"
