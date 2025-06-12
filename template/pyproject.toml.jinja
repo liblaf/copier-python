@@ -10,15 +10,20 @@ requires = ["hatch-vcs", "hatchling"]
 build = ["check-wheel-contents", "hatch", "twine"]
 dev = ["icecream"]
 docs = [
-  "gitpython",
+  "docstring-inheritance",
+  "griffe-fieldz",
+  "griffe-generics",
+  "griffe-inherited-docstrings",
+  "griffe-modernized-annotations",
+  "griffe-pydantic",
+  "griffe-warnings-deprecated",
   "mdx-truly-sane-lists",
   "mkdocs",
+  "mkdocs-api-autonav",
   "mkdocs-autorefs",
-  "mkdocs-gen-files",
   "mkdocs-git-committers-plugin-2",
   "mkdocs-git-revision-date-localized-plugin",
   "mkdocs-include-markdown-plugin",
-  "mkdocs-literate-nav",
   "mkdocs-material[imaging]",
   "mkdocs-section-index",
   "mkdocstrings",
@@ -62,6 +67,7 @@ requires-python = ">=3.12"
 [project.urls]
 "Changelog" = "https://github.com/{{ github_user }}/{{ github_repo }}/blob/main/CHANGELOG.md"
 "Documentation" = "https://{{ github_user }}.github.io/{{ github_repo }}/"
+"Funding" = "https://github.com/{{ github_user }}/{{ github_repo }}?sponsor=1"
 "Homepage" = "https://github.com/{{ github_user }}/{{ github_repo }}"
 "Issue Tracker" = "https://github.com/{{ github_user }}/{{ github_repo }}/issues"
 "Release Notes" = "https://github.com/{{ github_user }}/{{ github_repo }}/releases"
@@ -111,4 +117,4 @@ linux = "6.12"
 [tool.uv]
 default-groups = "all"
 
-# {% endif %}
+# {%- endif %}
