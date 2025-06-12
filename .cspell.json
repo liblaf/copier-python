@@ -47,6 +47,7 @@
     "strftime",
     "trimesh",
     "ubelt",
+    "unshallow",
     "venv",
     "virtualenv",
     "xdist"
