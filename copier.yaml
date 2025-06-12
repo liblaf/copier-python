@@ -7,7 +7,7 @@ _answers_file: .config/copier/.copier-answers.python.yaml
 _external_data:
   shared: "{{ answers_file_shared }}"
 
-_migrations:
+_migrations: &migrations
   - rm --force --verbose ".config/copier/direnv/00-python.sh"
   - rm --force --verbose ".config/copier/mise/scripts/setup-python.sh"
   - rm --force --verbose ".config/copier/python.just"
@@ -16,10 +16,18 @@ _migrations:
   - rm --force --verbose ".github/copier/mkdocs.yaml"
   - rm --force --verbose ".github/linters/.ruff.toml"
   - rm --force --verbose ".github/linters/pyrightconfig.json"
+  - rm --force --verbose ".github/workflows/docs-dev.yaml"
   - rm --force --verbose ".github/workflows/docs-stable.yaml"
-  - rm --force --verbose ".github/workflows/docs.yaml"
+  - rm --force --verbose ".github/workflows/docs-test.yaml"
   - rm --force --verbose ".github/workflows/shared-docs.yaml"
   - rm --force --verbose ".github/workflows/shared-release.yaml"
+  - rm --force --verbose "docs/css/fonts.css"
+  - rm --force --verbose "docs/css/mkdocstrings/api-autonav.css"
+  - rm --force --verbose "docs/css/mkdocstrings/material.css"
+  - rm --force --verbose "docs/css/mkdocstrings/syntax-highlight-in-signatures.css"
+  - rm --force --verbose "docs/javascript/mathjax.js"
+  - rm --force --verbose "docs/scripts/gen-ref-pages.py"
+  - rm --force --verbose "docs/SUMMARY.md"
 
 _skip_if_exists:
   - .config/mise/config.toml
@@ -27,7 +35,6 @@ _skip_if_exists:
   - .ruff.toml
   - .vscode/settings.json
   - docs/README.md
-  - docs/SUMMARY.md
   - mkdocs.yaml
   - pyproject.toml
   - pyrightconfig.json
@@ -39,19 +46,7 @@ _skip_if_exists:
 
 _subdirectory: template
 
-_tasks:
-  - rm --force --verbose ".config/copier/direnv/00-python.sh"
-  - rm --force --verbose ".config/copier/mise/scripts/setup-python.sh"
-  - rm --force --verbose ".config/copier/python.just"
-  - rm --force --verbose ".config/mise/conf.d/00-python.toml"
-  - rm --force --verbose ".github/copier/.copier-answers.python.yaml"
-  - rm --force --verbose ".github/copier/mkdocs.yaml"
-  - rm --force --verbose ".github/linters/.ruff.toml"
-  - rm --force --verbose ".github/linters/pyrightconfig.json"
-  - rm --force --verbose ".github/workflows/docs-stable.yaml"
-  - rm --force --verbose ".github/workflows/docs.yaml"
-  - rm --force --verbose ".github/workflows/shared-docs.yaml"
-  - rm --force --verbose ".github/workflows/shared-release.yaml"
+_tasks: *migrations
 
 answers_file_shared:
   type: str

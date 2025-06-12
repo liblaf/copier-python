@@ -19,6 +19,7 @@
   "python.testing.pytestEnabled": true,
   "python.testing.unittestEnabled": false,
   "yaml.customTags": [
+    // ref: <https://squidfunk.github.io/mkdocs-material/creating-your-site/#minimal-configuration>
     "!ENV scalar",
     "!ENV sequence",
     "!relative scalar",
