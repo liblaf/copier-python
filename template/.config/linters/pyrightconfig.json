@@ -1,12 +1,15 @@
 {
   "$schema": "https://raw.githubusercontent.com/microsoft/pyright/main/packages/vscode-pyright/schemas/pyrightconfig.schema.json",
 
+  "exclude": ["**/node_modules", "**/__pycache__", "**/.*", "marimo/"],
+
   "enableTypeIgnoreComments": false,
 
   "typeCheckingMode": "standard",
 
   "reportArgumentType": "information",
   "reportAssignmentType": "information",
-  "reportPrivateImportUsage": "none",
-  "reportRedeclaration": "none"
+  "reportRedeclaration": "none",
+  "reportIncompatibleMethodOverride": "warning",
+  "reportIncompatibleVariableOverride": "warning"
 }
