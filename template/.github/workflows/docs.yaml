@@ -43,3 +43,4 @@ jobs:
         uses: liblaf/actions/setup-pages@main
         with:
           token: ${{ secrets.GH_PAT || steps.auth.outputs.token }}
+        continue-on-error: true
