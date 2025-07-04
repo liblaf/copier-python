@@ -1,4 +1,5 @@
 // ref: <https://squidfunk.github.io/mkdocs-material/reference/math/#mathjax>
+
 window.MathJax = {
   tex: {
     inlineMath: [["\\(", "\\)"]],
