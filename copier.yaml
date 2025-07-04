@@ -8,6 +8,7 @@ _external_data:
   shared: "{{ answers_file_shared }}"
 
 _migrations: &migrations
+  - rm --force --verbose "__builtins__.pyi"
   - rm --force --verbose ".config/copier/direnv/00-python.sh"
   - rm --force --verbose ".config/copier/mise/scripts/setup-python.sh"
   - rm --force --verbose ".config/copier/python.just"
