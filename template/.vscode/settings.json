@@ -10,12 +10,7 @@
     "**/junit.xml": true
   },
   "python.analysis.diagnosticMode": "workspace",
-  "python.testing.pytestArgs": [
-    "--color=yes",
-    "--cov",
-    "--benchmark-disable",
-    "--numprocesses=auto"
-  ],
+  "python.testing.pytestArgs": ["--color=yes", "--cov", "--numprocesses=auto"],
   "python.testing.pytestEnabled": true,
   "python.testing.unittestEnabled": false,
   "yaml.customTags": [
