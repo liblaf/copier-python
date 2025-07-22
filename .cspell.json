@@ -4,7 +4,6 @@
   "language": "en",
   "words": [
     "arithmatex",
-    "asyncio",
     "cuda",
     "cython",
     "direnv",
@@ -32,6 +31,7 @@
     "pydocstyle",
     "pyenv",
     "pyflow",
+    "pylint",
     "pymdownx",
     "pypa",
     "pypackages",
@@ -47,7 +47,6 @@
     "sdist",
     "strftime",
     "trimesh",
-    "ubelt",
     "unshallow",
     "venv",
     "virtualenv",

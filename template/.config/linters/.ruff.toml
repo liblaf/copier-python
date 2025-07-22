@@ -67,3 +67,6 @@ allow-star-arg-any = true
 
 [lint.pydocstyle]
 convention = "google"
+
+[lint.pylint]
+max-args = 10
