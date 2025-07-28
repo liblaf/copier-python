@@ -46,6 +46,7 @@
     "scrapy",
     "sdist",
     "strftime",
+    "tombi",
     "trimesh",
     "unshallow",
     "venv",
