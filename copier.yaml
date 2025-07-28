@@ -8,27 +8,28 @@ _external_data:
   shared: "{{ answers_file_shared }}"
 
 _migrations: &migrations
-  - rm --force --verbose "__builtins__.pyi"
-  - rm --force --verbose ".config/copier/direnv/00-python.sh"
-  - rm --force --verbose ".config/copier/mise/scripts/setup-python.sh"
-  - rm --force --verbose ".config/copier/python.just"
-  - rm --force --verbose ".config/mise/conf.d/00-python.toml"
-  - rm --force --verbose ".github/copier/.copier-answers.python.yaml"
-  - rm --force --verbose ".github/copier/mkdocs.yaml"
-  - rm --force --verbose ".github/linters/.ruff.toml"
-  - rm --force --verbose ".github/linters/pyrightconfig.json"
-  - rm --force --verbose ".github/workflows/docs-dev.yaml"
-  - rm --force --verbose ".github/workflows/docs-stable.yaml"
-  - rm --force --verbose ".github/workflows/docs-test.yaml"
-  - rm --force --verbose ".github/workflows/shared-docs.yaml"
-  - rm --force --verbose ".github/workflows/shared-release.yaml"
-  - rm --force --verbose "docs/css/fonts.css"
-  - rm --force --verbose "docs/css/mkdocstrings/api-autonav.css"
-  - rm --force --verbose "docs/css/mkdocstrings/material.css"
-  - rm --force --verbose "docs/css/mkdocstrings/syntax-highlight-in-signatures.css"
-  - rm --force --verbose "docs/javascript/mathjax.js"
-  - rm --force --verbose "docs/scripts/gen-ref-pages.py"
-  - rm --force --verbose "docs/SUMMARY.md"
+  - rm --force --verbose '__builtins__.pyi'
+  - rm --force --verbose '.config/copier/direnv/00-python.sh'
+  - rm --force --verbose '.config/copier/direnv/10-python.sh'
+  - rm --force --verbose '.config/copier/mise/scripts/setup-python.sh'
+  - rm --force --verbose '.config/copier/python.just'
+  - rm --force --verbose '.config/mise/conf.d/00-python.toml'
+  - rm --force --verbose '.github/copier/.copier-answers.python.yaml'
+  - rm --force --verbose '.github/copier/mkdocs.yaml'
+  - rm --force --verbose '.github/linters/.ruff.toml'
+  - rm --force --verbose '.github/linters/pyrightconfig.json'
+  - rm --force --verbose '.github/workflows/docs-dev.yaml'
+  - rm --force --verbose '.github/workflows/docs-stable.yaml'
+  - rm --force --verbose '.github/workflows/docs-test.yaml'
+  - rm --force --verbose '.github/workflows/shared-docs.yaml'
+  - rm --force --verbose '.github/workflows/shared-release.yaml'
+  - rm --force --verbose 'docs/css/fonts.css'
+  - rm --force --verbose 'docs/css/mkdocstrings/api-autonav.css'
+  - rm --force --verbose 'docs/css/mkdocstrings/material.css'
+  - rm --force --verbose 'docs/css/mkdocstrings/syntax-highlight-in-signatures.css'
+  - rm --force --verbose 'docs/javascript/mathjax.js'
+  - rm --force --verbose 'docs/scripts/gen-ref-pages.py'
+  - rm --force --verbose 'docs/SUMMARY.md'
 
 _skip_if_exists:
   - .config/mise/config.toml
