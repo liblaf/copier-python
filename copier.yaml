@@ -129,4 +129,4 @@ package_manager:
   choices:
     - pixi
     - uv
-  default: pixi
+  default: uv
