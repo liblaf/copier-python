@@ -7,6 +7,7 @@
     "**/.pytest_cache/": true,
     "**/.ruff_cache/": true,
     "**/.venv/": true,
+    "**/*.dvc": true,
     "**/junit.xml": true
   },
   "python.analysis.diagnosticMode": "workspace",

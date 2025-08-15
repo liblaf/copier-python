@@ -1,4 +1,4 @@
-# -*- mode: toml; -*-
+# ## -*- mode: toml; -*-
 #:schema https://json.schemastore.org/pyproject.json
 # ref: <https://packaging.python.org/en/latest/specifications/pyproject-toml/>
 
@@ -86,7 +86,7 @@ packages = ["src/{{ wheel_package_dir }}/"]
 [tool.hatch.version]
 source = "vcs"
 
-# {%- if package_manager == "pixi" %}
+# %% if package_manager == "pixi":
 [tool.pixi.environments]
 default = { features = ["build", "dev", "docs", "test"] }
 
@@ -102,13 +102,13 @@ platforms = ["linux-64"]
 cuda = "12"
 libc = { family = "glibc", version = "2.41" }
 linux = "6.12"
-# {%- endif %}
+# %% endif
 
 [tool.pytest.ini_options]
 addopts = ["--showlocals", "--strict-config", "--strict-markers"]
 testpaths = ["benches/", "tests/"]
 
-# {%- if package_manager == "uv" %}
+# %% if package_manager == "uv":
 [tool.uv]
 default-groups = "all"
-# {%- endif %}
+# %% endif

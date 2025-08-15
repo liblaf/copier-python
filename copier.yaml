@@ -7,6 +7,10 @@ _answers_file: .config/copier/.copier-answers.python.yaml
 _external_data:
   shared: "{{ answers_file_shared }}"
 
+_envops:
+  line_statement_prefix: "# %%"
+  line_comment_prefix: "# ##"
+
 _migrations: &migrations
   - rm --force --verbose '__builtins__.pyi'
   - rm --force --verbose '.config/copier/direnv/00-python.sh'
