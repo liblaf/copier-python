@@ -9,6 +9,7 @@
     "direnv",
     "dmypy",
     "elif",
+    "envops",
     "fieldz",
     "getattr",
     "hynek",

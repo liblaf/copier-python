@@ -8,8 +8,8 @@ _external_data:
   shared: "{{ answers_file_shared }}"
 
 _envops:
+  comment_start_string: "# {#"
   line_statement_prefix: "# %%"
-  line_comment_prefix: "# ##"
 
 _migrations: &migrations
   - rm --force --verbose '__builtins__.pyi'
