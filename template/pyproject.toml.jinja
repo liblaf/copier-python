@@ -3,29 +3,28 @@
 # ref: <https://packaging.python.org/en/latest/specifications/pyproject-toml/>
 
 [project]
-authors = [{ email = "{{ author_email }}", name = "{{ author_name }}" }]
+name = "{{ package_name }}"
+description = "TODO"
+readme = "README.md"
+requires-python = ">=3.12"
+license = "{{ license }}"
+authors = [{ name = "{{ author_name }}", email = "{{ author_email }}" }]
+keywords = []
 classifiers = [
-  # common classifiers
   # ref: <https://pypi.org/classifiers/>
   "Development Status :: 4 - Beta",
   "Intended Audience :: Developers",
-  "License :: OSI Approved :: MIT License",
   "License :: OSI Approved",
+  "License :: OSI Approved :: MIT License",
   "Operating System :: OS Independent",
+  "Programming Language :: Python",
   "Programming Language :: Python :: 3",
   "Programming Language :: Python :: 3.12",
   "Programming Language :: Python :: 3.13",
-  "Programming Language :: Python",
   "Typing :: Typed",
 ]
-dependencies = ["lazy-loader", "loguru"]
-description = "TODO"
+dependencies = ["lazy-loader>=0.4,<0.5", "loguru>=0.7,<0.8"]
 dynamic = ["version"]
-keywords = []
-license = "{{ license }}"
-name = "{{ package_name }}"
-readme = "README.md"
-requires-python = ">=3.12"
 
 [project.urls]
 "Changelog" = "https://github.com/{{ github_user }}/{{ github_repo }}/blob/main/CHANGELOG.md"
@@ -37,31 +36,17 @@ requires-python = ">=3.12"
 "Source Code" = "https://github.com/{{ github_user }}/{{ github_repo }}"
 
 [dependency-groups]
-build = ["check-wheel-contents", "hatch", "twine"]
-dev = ["icecream"]
-docs = [
-  "docstring-inheritance",
-  "griffe-fieldz",
-  "griffe-generics",
-  "griffe-inherited-docstrings",
-  "griffe-modernized-annotations",
-  "griffe-pydantic",
-  "griffe-warnings-deprecated",
-  "mdx-truly-sane-lists",
-  "mkdocs",
-  "mkdocs-api-autonav",
-  "mkdocs-autorefs",
-  "mkdocs-git-committers-plugin-2",
-  "mkdocs-git-revision-date-localized-plugin",
-  "mkdocs-include-markdown-plugin",
-  "mkdocs-material[imaging]",
-  "mkdocs-section-index",
-  "mkdocstrings",
-  "mkdocstrings-python",
-  "pymdown-extensions",
-  "ruff",
+build = ["check-wheel-contents>=0.6,<0.7", "hatch>=1,<2", "twine>=6,<7"]
+dev = ["icecream>=2,<3"]
+docs = ["liblaf-mkdocs-preset>=0.1,<0.2", "mkdocs>=1,<2"]
+test = [
+  "hypothesis>=6,<7",
+  "pytest-codspeed>=4,<5",
+  "pytest-cov>=6,<7",
+  "pytest-randomly>=3,<4",
+  "pytest-xdist>=3,<4",
+  "pytest>=8,<9",
 ]
-test = ["hypothesis", "pytest", "pytest-codspeed", "pytest-cov", "pytest-xdist"]
 
 [build-system]
 requires = ["hatch-vcs", "hatchling"]
@@ -109,7 +94,12 @@ exclude = ["**/.*", "**/__pycache__", "**/marimo", "**/node_modules"]
 extends = ".config/linters/pyrightconfig.json"
 
 [tool.pytest.ini_options]
-addopts = ["--showlocals", "--strict-config", "--strict-markers"]
+addopts = [
+  "--hypothesis-show-statistics",
+  "--showlocals",
+  "--strict-config",
+  "--strict-markers",
+]
 testpaths = ["benches", "tests"]
 
 [tool.ruff]
