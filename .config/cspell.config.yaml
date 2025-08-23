@@ -50,6 +50,7 @@ words:
   - pypi
   - pyplot
   - pyproject
+  - pyright
   - pyrightconfig
   - pytest
   - pytype
