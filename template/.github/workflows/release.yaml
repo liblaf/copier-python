@@ -55,7 +55,7 @@ jobs:
         uses: actions/download-artifact@v5
         with:
           name: ${{ needs.build.outputs.artifact-name }}
-          path: dist/
+          path: dist
       - name: Publish to PyPI
         uses: pypa/gh-action-pypi-publish@release/v1
 
@@ -79,7 +79,7 @@ jobs:
         uses: actions/download-artifact@v5
         with:
           name: ${{ needs.build.outputs.artifact-name }}
-          path: dist/
+          path: dist
       - name: Upload Release Assets
         uses: liblaf/actions-ts/release@dist
         with:

@@ -2,12 +2,9 @@
 # DO NOT EDIT!
 
 name: Docs
+
 on:
   push:
-    branches-ignore:
-      - assets**
-      - dist**
-      - gh-pages
   pull_request:
   workflow_dispatch:
 
