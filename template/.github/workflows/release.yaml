@@ -81,7 +81,7 @@ jobs:
           name: ${{ needs.build.outputs.artifact-name }}
           path: dist/
       - name: Upload Release Assets
-        uses: liblaf/actions/release@main
+        uses: liblaf/actions-ts/release@dist
         with:
           files: dist/*
           tag: ${{ github.ref_name }}

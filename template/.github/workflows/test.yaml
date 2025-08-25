@@ -61,7 +61,7 @@ jobs:
         with:
           fetch-depth: 0 # I don't know why, but it is present in the official example
       - name: Setup Python
-        uses: liblaf/actions/setup-python@main
+        uses: liblaf/actions-ts/setup-python@dist
       - name: Install Mise
         uses: jdx/mise-action@v3
       - name: Test
