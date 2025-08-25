@@ -40,14 +40,14 @@ theme:
     - content.tooltips
     # - header.autohide
     # - navigation.expand
-    # - navigation.footer
-    # - navigation.indexes
+    - navigation.footer
+    - navigation.indexes
     - navigation.instant
     - navigation.instant.prefetch
     - navigation.instant.progress
     - navigation.path
     # - navigation.prune
-    # - navigation.sections
+    - navigation.sections
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.top
@@ -98,11 +98,11 @@ plugins:
   # typeset: # sponsors only
 
   # ----------------- External plugins, schema provided by us ---------------- #
+  awesome-nav:
   git-committers:
     enabled: !ENV [READTHEDOCS, CI, false]
     repository: "{{ github_user }}/{{ github_repo }}"
     branch: main
-  section-index:
 
   # ----------- External plugins, schema provided by our community ----------- #
   include-markdown:
