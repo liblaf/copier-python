@@ -45,7 +45,7 @@ This repository provides a comprehensive Python project template with automated 
 To install `gh:liblaf/copier-python`, run the following command:
 
 ```bash
-$ copier copy --trust gh:liblaf/copier-python .
+copier copy --trust gh:liblaf/copier-python .
 ```
 
 <div align="right">
@@ -63,8 +63,8 @@ You can use Github Codespaces for online development:
 Or clone it for local development:
 
 ```bash
-$ git clone https://github.com/liblaf/copier-python.git
-$ cd copier-python
+git clone https://github.com/liblaf/copier-python.git
+cd copier-python
 ```
 
 <div align="right">
