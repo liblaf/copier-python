@@ -6,6 +6,9 @@ set -o nounset
 set -o pipefail
 
 function is-in-ci() {
+  if [[ -z ${CI:-} ]]; then
+    return 1
+  fi
   case "${CI,,}" in
     1 | on | true | y | yes) return 0 ;;
     0 | off | false | n | no | "") return 1 ;;
