@@ -94,10 +94,12 @@ addopts = [
   "--showlocals",
   "--strict-config",
   "--strict-markers",
+  "--suppress-no-test-exit-code",
 ]
 testpaths = ["benches", "src", "tests"]
 
 [tool.ruff]
+exclude = ["**/marimo/"]
 extend = ".config/linters/.ruff.toml"
 
 # %% if package_manager == "uv":
