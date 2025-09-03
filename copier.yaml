@@ -12,12 +12,14 @@ _envops:
   line_statement_prefix: "# %%"
 
 _migrations: &migrations
+  - rm --force --recursive --verbose '.config/copier/mise/tasks'
   - rm --force --verbose '__builtins__.pyi'
   - rm --force --verbose '.config/copier/direnv/00-python.sh'
   - rm --force --verbose '.config/copier/direnv/10-python.sh'
   - rm --force --verbose '.config/copier/mise/scripts/setup-python.sh'
   - rm --force --verbose '.config/copier/python.just'
   - rm --force --verbose '.config/mise/conf.d/00-python.toml'
+  - rm --force --verbose '.config/mise/conf.d/10-python.toml'
   - rm --force --verbose '.github/copier/.copier-answers.python.yaml'
   - rm --force --verbose '.github/copier/mkdocs.yaml'
   - rm --force --verbose '.github/linters/.ruff.toml'
@@ -38,12 +40,11 @@ _migrations: &migrations
 _skip_if_exists:
   - .config/mise/config.toml
   - .gitignore
-  - .ruff.toml
   - .vscode/settings.json
+  - docs/.nav.yml
   - docs/README.md
   - mkdocs.yaml
   - pyproject.toml
-  - pyrightconfig.json
   - README.md
   - src/
   - "!.config/copier/mkdocs.yaml"
