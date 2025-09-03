@@ -4,7 +4,7 @@
 
 [project]
 name = "{{ package_name }}"
-description = "TODO"
+description = ""
 readme = "README.md"
 requires-python = ">=3.12"
 license = "{{ license }}"
@@ -27,6 +27,7 @@ dependencies = ["lazy-loader>=0.4,<0.5", "loguru>=0.7,<0.8"]
 dynamic = ["version"]
 
 [project.urls]
+# ref: <https://packaging.python.org/en/latest/specifications/well-known-project-urls/#well-known-labels>
 "Changelog" = "https://github.com/{{ github_user }}/{{ github_repo }}/blob/main/CHANGELOG.md"
 "Documentation" = "https://{{ github_user }}.github.io/{{ github_repo }}/"
 "Funding" = "https://github.com/{{ github_user }}/{{ github_repo }}?sponsor=1"
@@ -39,14 +40,7 @@ dynamic = ["version"]
 build = ["check-wheel-contents>=0.6,<0.7", "hatch>=1,<2", "twine>=6,<7"]
 dev = ["icecream>=2,<3"]
 docs = ["liblaf-mkdocs-preset>=0.2,<0.3", "mkdocs>=1,<2"]
-test = [
-  "hypothesis>=6,<7",
-  "pytest-codspeed>=4,<5",
-  "pytest-cov>=6,<7",
-  "pytest-randomly>=3,<4",
-  "pytest-xdist>=3,<4",
-  "pytest>=8,<9",
-]
+test = ["liblaf-pytest-preset>=0.1,<0.2", "pytest>=8,<9"]
 
 [build-system]
 requires = ["hatch-vcs", "hatchling"]
@@ -95,12 +89,13 @@ extends = ".config/linters/pyrightconfig.json"
 
 [tool.pytest.ini_options]
 addopts = [
+  "--doctest-modules",
   "--hypothesis-show-statistics",
   "--showlocals",
   "--strict-config",
   "--strict-markers",
 ]
-testpaths = ["benches", "tests"]
+testpaths = ["benches", "src", "tests"]
 
 [tool.ruff]
 extend = ".config/linters/.ruff.toml"
