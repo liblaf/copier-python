@@ -41,3 +41,5 @@ jobs:
         with:
           run: mise run bench
           mode: instrumentation
+        env:
+          FORCE_COLOR: 1

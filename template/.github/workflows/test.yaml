@@ -44,6 +44,8 @@ jobs:
         uses: jdx/mise-action@v3
       - name: Test
         run: mise run test
+        env:
+          FORCE_COLOR: 1
       - name: Upload Coverage
         uses: codecov/codecov-action@v5
         with:
