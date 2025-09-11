@@ -23,7 +23,7 @@ classifiers = [
   "Programming Language :: Python :: 3.13",
   "Typing :: Typed",
 ]
-dependencies = ["lazy-loader>=0.4,<0.5", "loguru>=0.7,<0.8"]
+dependencies = []
 dynamic = ["version"]
 
 [project.urls]
@@ -84,7 +84,6 @@ linux = "6.12"
 # %% endif
 
 [tool.pyright]
-exclude = ["**/.*", "**/__pycache__", "**/marimo", "**/node_modules"]
 extends = ".config/linters/pyrightconfig.json"
 
 [tool.pytest.ini_options]
@@ -95,12 +94,10 @@ addopts = [
   "--showlocals",
   "--strict-config",
   "--strict-markers",
-  "--suppress-no-test-exit-code",
 ]
 testpaths = ["benches", "src", "tests"]
 
 [tool.ruff]
-exclude = ["**/marimo/"]
 extend = ".config/linters/.ruff.toml"
 
 # %% if package_manager == "uv":
