@@ -1,6 +1,6 @@
 # ref: <https://github.com/github/gitignore/blob/main/Python.gitignore>
 
-# shared
+# Globally Useful gitignores
 *.log
 *.log.*
 playground/
