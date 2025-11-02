@@ -12,9 +12,56 @@ on:
 
 jobs:
   mega-linter:
-    name: M
+    name: MegaLinter
     permissions:
       contents: write
       pull-requests: write
-    uses: liblaf/copier-shared/.github/workflows/callable-mega-linter.yaml@main
-    secrets: inherit
+    environment:
+      name: MegaLinter
+    runs-on: ubuntu-latest
+    steps:
+      - id: auth
+        name: Auth
+        uses: liblaf/actions/auth@dist
+        with:
+          app-id: ${{ vars.APP_ID }}
+          private-key: ${{ secrets.PRIVATE_KEY }}
+      - name: Checkout
+        uses: actions/checkout@v5
+      - id: lint
+        name: MegaLinter
+        uses: liblaf/actions/mega-linter@dist
+        with:
+          token: ${{ steps.auth.outputs.token }}
+      - if: success() || failure()
+        name: Upload Reports
+        uses: actions/upload-artifact@v5
+        with:
+          name: mega-linter-reports
+          path: |-
+            mega-linter.log
+            megalinter-reports
+          include-hidden-files: true
+      - if: success() || failure()
+        name: Remove MegaLinter Reports
+        run: |-
+          cp --target-directory='${{ runner.temp }}' --verbose 'megalinter-reports/megalinter-report.md'
+          sudo rm --force --recursive 'mega-linter.log' 'megalinter-reports'
+      - if: steps.lint.outputs.has-updated-sources > 0 && github.ref == 'refs/heads/main'
+        name: Create PR with Applied Fixes
+        uses: peter-evans/create-pull-request@v7
+        with:
+          commit-message: "chore(mega-linter): apply linters automatic fixes"
+          branch: mega-linter-fix/${{ github.ref_name }}
+          sign-commits: true
+          title: "chore(mega-linter): apply linters automatic fixes"
+          body-path: ${{ runner.temp }}/megalinter-report.md
+          labels: auto,automerge
+          assignees: ${{ github.repository_owner }}
+          reviewers: ${{ github.repository_owner }}
+      - if: steps.lint.outputs.has-updated-sources > 0 && github.ref != 'refs/heads/main'
+        name: Commit and Push Applied Linter Fixes
+        uses: liblaf/actions/commit@dist
+        with:
+          add-options: --verbose --update
+          message: "chore(mega-linter): apply linters automatic fixes"
