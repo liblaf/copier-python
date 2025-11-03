@@ -8,7 +8,11 @@ name: MegaLinter
 
 on:
   push:
+  pull_request:
   workflow_dispatch:
+
+env:
+  FORCE_COLOR: 1
 
 jobs:
   mega-linter:
@@ -16,9 +20,11 @@ jobs:
     permissions:
       contents: write
       pull-requests: write
+    # skip PR from the same repo, they will be handled by `push` event
+    if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name != github.repository
+    runs-on: ubuntu-latest
     environment:
       name: MegaLinter
-    runs-on: ubuntu-latest
     steps:
       - id: auth
         name: Auth
@@ -56,7 +62,7 @@ jobs:
           sign-commits: true
           title: "chore(mega-linter): apply linters automatic fixes"
           body-path: ${{ runner.temp }}/megalinter-report.md
-          labels: auto,automerge
+          labels: automerge,bot
           assignees: ${{ github.repository_owner }}
           reviewers: ${{ github.repository_owner }}
       - if: steps.lint.outputs.has-updated-sources > 0 && github.ref != 'refs/heads/main'
