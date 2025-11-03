@@ -24,6 +24,7 @@ _migrations: &migrations
   - rm --force --verbose '.github/copier/mkdocs.yaml'
   - rm --force --verbose '.github/linters/.ruff.toml'
   - rm --force --verbose '.github/linters/pyrightconfig.json'
+  - rm --force --verbose '.github/workflows/build.yaml' # TODO: remove this migration in future
   - rm --force --verbose '.github/workflows/docs-dev.yaml'
   - rm --force --verbose '.github/workflows/docs-stable.yaml'
   - rm --force --verbose '.github/workflows/docs-test.yaml'
