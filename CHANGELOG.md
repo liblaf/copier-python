@@ -7,6 +7,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Conventional Changelog](https://github.com/conventional-changelog/conventional-changelog-config-spec/blob/master/versions/2.2.0/README.md),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.1](https://github.com/liblaf/copier-python/releases/tag/v0.1.1) - 2025-11-03
+
+### 🐛 Bug Fixes
+
+- **(bench)** Remove unnecessary Python version matrix from benchmark workflow - [620c813](https://github.com/liblaf/copier-python/commit/620c8130698a564e5e6b4ceddd68d935007175a2) by [@liblaf](https://github.com/liblaf)
+
+### ❤️ Contributors
+
+- [@liblaf](https://github.com/liblaf) made their first contribution
+- [@liblaf[bot]](https://github.com/apps/liblaf) made their first contribution in [#21](https://github.com/liblaf/copier-python/pull/21)
+
 ## [0.1.0](https://github.com/liblaf/copier-python/releases/tag/v0.1.0) - 2025-11-03
 
 ### ✨ Features
@@ -173,7 +184,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### ❤️ Contributors
 
-- [@liblaf[bot]](https://github.com/apps/liblaf) made their first contribution in [#20](https://github.com/liblaf/copier-python/pull/20)
+- [@liblaf[bot]](https://github.com/apps/liblaf) made their first contribution in [#19](https://github.com/liblaf/copier-python/pull/19)
 - [@liblaf](https://github.com/liblaf) made their first contribution
 - [@copier-update[bot]](https://github.com/apps/copier-update) made their first contribution in [#14](https://github.com/liblaf/copier-python/pull/14)
 - [@renovate[bot]](https://github.com/apps/renovate) made their first contribution in [#13](https://github.com/liblaf/copier-python/pull/13)
