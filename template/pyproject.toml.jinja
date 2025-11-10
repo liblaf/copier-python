@@ -22,7 +22,7 @@ classifiers = [
   "Programming Language :: Python :: 3.12",
   "Programming Language :: Python :: 3.13",
   "Programming Language :: Python :: 3.14",
-  "Typing :: Typed",
+  "Typing :: Typed"
 ]
 dependencies = ["lazy-loader>=0.4,<0.5"]
 dynamic = ["version"]
@@ -38,10 +38,10 @@ dynamic = ["version"]
 "Source Code" = "https://github.com/{{ github_user }}/{{ github_repo }}"
 
 [dependency-groups]
-build = ["check-wheel-contents>=0.6,<0.7", "hatch>=1,<2", "twine>=6,<7"]
 dev = ["icecream>=2,<3"]
+build = ["check-wheel-contents>=0.6,<0.7", "hatch>=1,<2", "twine>=6,<7"]
 docs = ["liblaf-mkdocs-preset>=0.2,<0.3", "mkdocs>=1,<2"]
-test = ["liblaf-pytest-preset>=0.1,<0.2", "pytest>=8,<9"]
+test = ["liblaf-pytest-preset>=0.1,<0.2", "pytest>=9,<10"]
 
 [build-system]
 requires = ["hatch-vcs", "hatchling"]
@@ -87,15 +87,16 @@ linux = "6.12"
 [tool.pyright]
 extends = ".config/linters/pyrightconfig.json"
 
-[tool.pytest.ini_options]
+[tool.pytest]
 addopts = [
   "--doctest-modules",
   "--hypothesis-show-statistics",
   "--import-mode=importlib",
   "--showlocals",
   "--strict-config",
-  "--strict-markers",
+  "--strict-markers"
 ]
+strict = true
 testpaths = ["benches", "src", "tests"]
 
 [tool.ruff]
