@@ -7,23 +7,41 @@ All notable changes to this project will be documented in this file.
 The format is based on [Conventional Changelog](https://github.com/conventional-changelog/conventional-changelog-config-spec/blob/master/versions/2.2.0/README.md),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.1.1](https://github.com/liblaf/copier-python/releases/tag/v0.1.1) - 2025-11-03
+## [0.1.2](https://github.com/liblaf/copier-python/releases/tag/v0.1.2) - 2025-11-15
+
+### ✨ Features
+
+- **docs:** Enable MathJax physics package and clean up CSS - [4aa95ad](https://github.com/liblaf/copier-python/commit/4aa95ad7ab1bbd7e08f8736faed5d85600ff1dbe) by [@liblaf](https://github.com/liblaf)
 
 ### 🐛 Bug Fixes
 
-- **(bench)** Remove unnecessary Python version matrix from benchmark workflow - [620c813](https://github.com/liblaf/copier-python/commit/620c8130698a564e5e6b4ceddd68d935007175a2) by [@liblaf](https://github.com/liblaf)
+- **typings:** Improve `ic` debugger type hints to include `**kwargs` - [32fea88](https://github.com/liblaf/copier-python/commit/32fea888f44278eec7fb27b077ef9b439d5ef5e3) by [@liblaf](https://github.com/liblaf)
+
+### 🛠 Builds
+
+- **deps:** Upgrade pytest to v9 and refine configuration - [97e9a62](https://github.com/liblaf/copier-python/commit/97e9a6265c68d87324e40f2790b674a092183675) by [@liblaf](https://github.com/liblaf)
 
 ### ❤️ Contributors
 
 - [@liblaf](https://github.com/liblaf) made their first contribution
-- [@liblaf[bot]](https://github.com/apps/liblaf) made their first contribution in [#21](https://github.com/liblaf/copier-python/pull/21)
+
+## [0.1.1](https://github.com/liblaf/copier-python/releases/tag/v0.1.1) - 2025-11-04
+
+### 🐛 Bug Fixes
+
+- **bench:** Remove unnecessary Python version matrix from benchmark workflow - [620c813](https://github.com/liblaf/copier-python/commit/620c8130698a564e5e6b4ceddd68d935007175a2) by [@liblaf](https://github.com/liblaf)
+
+### ❤️ Contributors
+
+- [@liblaf[bot]](https://github.com/apps/liblaf)
+- [@liblaf](https://github.com/liblaf)
 
 ## [0.1.0](https://github.com/liblaf/copier-python/releases/tag/v0.1.0) - 2025-11-03
 
 ### ✨ Features
 
-- **(ci)** enhance testing workflow and add benchmarks - [e560ff7](https://github.com/liblaf/copier-python/commit/e560ff76bc13c4a4c3aa66e7c534f8e81753be05) by [@liblaf](https://github.com/liblaf)
-- **(docs)** integrate ReadTheDocs version selector - [edb209a](https://github.com/liblaf/copier-python/commit/edb209a93aa237e1a7f8ef7e9347583a43aee640) by [@liblaf](https://github.com/liblaf)
+- **ci:** enhance testing workflow and add benchmarks - [e560ff7](https://github.com/liblaf/copier-python/commit/e560ff76bc13c4a4c3aa66e7c534f8e81753be05) by [@liblaf](https://github.com/liblaf)
+- **docs:** integrate ReadTheDocs version selector - [edb209a](https://github.com/liblaf/copier-python/commit/edb209a93aa237e1a7f8ef7e9347583a43aee640) by [@liblaf](https://github.com/liblaf)
 - add project configuration options and pyproject.toml template - [b6c5d20](https://github.com/liblaf/copier-python/commit/b6c5d2008a3ef0b482e35cf8aa5713a1cf9c529c) by [@liblaf](https://github.com/liblaf)
 - add lazy loading support and icecream debug utility - [a7307ba](https://github.com/liblaf/copier-python/commit/a7307bab2abe4a7053bb33ac38b82f7ad85caf79) by [@liblaf](https://github.com/liblaf)
 - add package manager configuration and update environment setup - [546832a](https://github.com/liblaf/copier-python/commit/546832a2fe575daf13c9fa680e66e0d7e36628fb) by [@liblaf](https://github.com/liblaf)
@@ -42,18 +60,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### 🐛 Bug Fixes
 
-- **(ci)** Remove redundant checkout step in release workflow - [a01f7fd](https://github.com/liblaf/copier-python/commit/a01f7fdc0142b8781889b52c52f7e884eb28d595) by [@liblaf](https://github.com/liblaf)
-- **(ci/docs)** Separate build and deploy jobs for documentation - [1801b8a](https://github.com/liblaf/copier-python/commit/1801b8ae85c0a80bdb75bf8dfce67bb7f1e0eed3) by [@liblaf](https://github.com/liblaf)
-- **(copier)** Remove outdated build workflow from migrations - [d741019](https://github.com/liblaf/copier-python/commit/d74101917a76e951ef0d324716d94de0e681a890) by [@liblaf](https://github.com/liblaf)
-- **(docs)** exclude single underscore symbols from mkdocstrings - [4bb514a](https://github.com/liblaf/copier-python/commit/4bb514a710d9d6b5ea42dca1e601bc3d5913f39d) by [@liblaf](https://github.com/liblaf)
-- **(docs)** disable crashing griffe-generics extension - [20abf34](https://github.com/liblaf/copier-python/commit/20abf345d6e74256f283591cbe1e6930088b02dd) by [@liblaf](https://github.com/liblaf)
-- **(gen-init)** add --in-place flag to tangerine command for existing files - [33485af](https://github.com/liblaf/copier-python/commit/33485aff883e6ada348eaea5f8dcc25cdd2904f5) by [@liblaf](https://github.com/liblaf)
-- **(install)** improve package mirror URL replacement - [902ac38](https://github.com/liblaf/copier-python/commit/902ac38527ef7acb55173ab11140396aafd81e95) by [@liblaf](https://github.com/liblaf)
-- **(lint-toml)** improve file handling and whitespace robustness - [49711eb](https://github.com/liblaf/copier-python/commit/49711eb9f6bf8ba77b3c738662e7cd5ae7d986c9) by [@liblaf](https://github.com/liblaf)
-- **(mise-tasks)** handle unset CI variable in test script - [847d2ba](https://github.com/liblaf/copier-python/commit/847d2baf4fa3ee90d6d7a47d77dc520a3867c0c6) by [@liblaf](https://github.com/liblaf)
-- **(mise-tasks)** forward command-line arguments to package managers - [9ce7380](https://github.com/liblaf/copier-python/commit/9ce738044369828088476389aeadf7e0dec59523) by [@liblaf](https://github.com/liblaf)
-- **(template)** remove trailing comma in pyright config - [e09e15d](https://github.com/liblaf/copier-python/commit/e09e15d380f90da12d7aed0a90f64b0d1507f6c9) by [@liblaf](https://github.com/liblaf)
-- **(test)** Silence package import checks in GPU detection - [76f1295](https://github.com/liblaf/copier-python/commit/76f1295210e4067cf728e72b7fcac3e6ab5bb336) by [@liblaf](https://github.com/liblaf)
+- **ci:** Remove redundant checkout step in release workflow - [a01f7fd](https://github.com/liblaf/copier-python/commit/a01f7fdc0142b8781889b52c52f7e884eb28d595) by [@liblaf](https://github.com/liblaf)
+- **ci/docs:** Separate build and deploy jobs for documentation - [1801b8a](https://github.com/liblaf/copier-python/commit/1801b8ae85c0a80bdb75bf8dfce67bb7f1e0eed3) by [@liblaf](https://github.com/liblaf)
+- **copier:** Remove outdated build workflow from migrations - [d741019](https://github.com/liblaf/copier-python/commit/d74101917a76e951ef0d324716d94de0e681a890) by [@liblaf](https://github.com/liblaf)
+- **docs:** exclude single underscore symbols from mkdocstrings - [4bb514a](https://github.com/liblaf/copier-python/commit/4bb514a710d9d6b5ea42dca1e601bc3d5913f39d) by [@liblaf](https://github.com/liblaf)
+- **docs:** disable crashing griffe-generics extension - [20abf34](https://github.com/liblaf/copier-python/commit/20abf345d6e74256f283591cbe1e6930088b02dd) by [@liblaf](https://github.com/liblaf)
+- **gen-init:** add --in-place flag to tangerine command for existing files - [33485af](https://github.com/liblaf/copier-python/commit/33485aff883e6ada348eaea5f8dcc25cdd2904f5) by [@liblaf](https://github.com/liblaf)
+- **install:** improve package mirror URL replacement - [902ac38](https://github.com/liblaf/copier-python/commit/902ac38527ef7acb55173ab11140396aafd81e95) by [@liblaf](https://github.com/liblaf)
+- **lint-toml:** improve file handling and whitespace robustness - [49711eb](https://github.com/liblaf/copier-python/commit/49711eb9f6bf8ba77b3c738662e7cd5ae7d986c9) by [@liblaf](https://github.com/liblaf)
+- **mise-tasks:** handle unset CI variable in test script - [847d2ba](https://github.com/liblaf/copier-python/commit/847d2baf4fa3ee90d6d7a47d77dc520a3867c0c6) by [@liblaf](https://github.com/liblaf)
+- **mise-tasks:** forward command-line arguments to package managers - [9ce7380](https://github.com/liblaf/copier-python/commit/9ce738044369828088476389aeadf7e0dec59523) by [@liblaf](https://github.com/liblaf)
+- **template:** remove trailing comma in pyright config - [e09e15d](https://github.com/liblaf/copier-python/commit/e09e15d380f90da12d7aed0a90f64b0d1507f6c9) by [@liblaf](https://github.com/liblaf)
+- **test:** Silence package import checks in GPU detection - [76f1295](https://github.com/liblaf/copier-python/commit/76f1295210e4067cf728e72b7fcac3e6ab5bb336) by [@liblaf](https://github.com/liblaf)
 - correct typo in package manager variable name - [f762b0c](https://github.com/liblaf/copier-python/commit/f762b0cc69009083bb7c8167403f2468e8947abd) by [@liblaf](https://github.com/liblaf)
 - update pyproject.toml.jinja to use dynamic package name - [dee3223](https://github.com/liblaf/copier-python/commit/dee3223d33db38febbb08dde6541a255d20aaec1) by [@liblaf](https://github.com/liblaf)
 - resolve external CSS loading issues - [eda8274](https://github.com/liblaf/copier-python/commit/eda8274b8093c288c5605563fefae7533553cec1) by [@liblaf](https://github.com/liblaf)
@@ -70,9 +88,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### 📝 Documentation
 
-- **(mkdocs)** add smarty extension for improved typography - [2b2f61d](https://github.com/liblaf/copier-python/commit/2b2f61dfe34d3747f716663654bd7700002a20a3) by [@liblaf](https://github.com/liblaf)
-- **(template)** improve navigation in MkDocs configuration - [565e314](https://github.com/liblaf/copier-python/commit/565e314678b4cc43ddbc2abfbf57f6be38230f16) by [@liblaf](https://github.com/liblaf)
-- **(template)** Improve comment clarity in .gitignore - [93eb175](https://github.com/liblaf/copier-python/commit/93eb175adf52133d1282fd6807fc28860bfd4483) by [@liblaf](https://github.com/liblaf)
+- **mkdocs:** add smarty extension for improved typography - [2b2f61d](https://github.com/liblaf/copier-python/commit/2b2f61dfe34d3747f716663654bd7700002a20a3) by [@liblaf](https://github.com/liblaf)
+- **template:** improve navigation in MkDocs configuration - [565e314](https://github.com/liblaf/copier-python/commit/565e314678b4cc43ddbc2abfbf57f6be38230f16) by [@liblaf](https://github.com/liblaf)
+- **template:** Improve comment clarity in .gitignore - [93eb175](https://github.com/liblaf/copier-python/commit/93eb175adf52133d1282fd6807fc28860bfd4483) by [@liblaf](https://github.com/liblaf)
 - add comprehensive README for copier-python template - [70c3ff5](https://github.com/liblaf/copier-python/commit/70c3ff58b611807b8101c428eec4bbde18608418) by [@liblaf](https://github.com/liblaf)
 - update README with detailed descriptions for Copier templates - [4daff50](https://github.com/liblaf/copier-python/commit/4daff50834fdc5e184c29f3067d9f51d6c5cf945) by [@liblaf](https://github.com/liblaf)
 - update README to reflect enhanced project features and workflows - [94ad849](https://github.com/liblaf/copier-python/commit/94ad849b2fe6f2116f2f9fa1ef66c262b57d0b2a) by [@liblaf](https://github.com/liblaf)
@@ -93,18 +111,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### 💄 Styles
 
-- **(direnv)** improve string quoting and regex patterns - [8b5d82f](https://github.com/liblaf/copier-python/commit/8b5d82faec9879939fbef073c85a3940f449caa6) by [@liblaf](https://github.com/liblaf)
-- **(lint)** adjust ruff configuration - [6eda68d](https://github.com/liblaf/copier-python/commit/6eda68d2ecd548c3b12da7145caf6c1861abd040) by [@liblaf](https://github.com/liblaf)
-- **(lint)** configure pylint max-args rule - [bc2af86](https://github.com/liblaf/copier-python/commit/bc2af86f7672c5dced0f6a9f3198f49bc59944ce) by [@liblaf](https://github.com/liblaf)
+- **direnv:** improve string quoting and regex patterns - [8b5d82f](https://github.com/liblaf/copier-python/commit/8b5d82faec9879939fbef073c85a3940f449caa6) by [@liblaf](https://github.com/liblaf)
+- **lint:** adjust ruff configuration - [6eda68d](https://github.com/liblaf/copier-python/commit/6eda68d2ecd548c3b12da7145caf6c1861abd040) by [@liblaf](https://github.com/liblaf)
+- **lint:** configure pylint max-args rule - [bc2af86](https://github.com/liblaf/copier-python/commit/bc2af86f7672c5dced0f6a9f3198f49bc59944ce) by [@liblaf](https://github.com/liblaf)
 - update theme and font configurations - [c4dd786](https://github.com/liblaf/copier-python/commit/c4dd7861c5824e6ab6bd0e5bdf92df63524a2e1d) by [@liblaf](https://github.com/liblaf)
 - fix whitespace in copier.yaml template - [eedca76](https://github.com/liblaf/copier-python/commit/eedca76fd62ac62993ee3ea9207a6eb7e00b1897) by [@liblaf](https://github.com/liblaf)
 
 ### ♻ Code Refactoring
 
-- **(mise)** reorganize task configuration and update copier template - [d32acf9](https://github.com/liblaf/copier-python/commit/d32acf983d67e73f5ffee8cc0ad4ffabe08b77a2) by [@liblaf](https://github.com/liblaf)
-- **(pyright)** reorganize exclude patterns - [0eab90b](https://github.com/liblaf/copier-python/commit/0eab90b4c15f3aff0ed320351ff935ec9f941e54) by [@liblaf](https://github.com/liblaf)
-- **(templates)** update comment syntax to use Jinja2 style - [5ef2500](https://github.com/liblaf/copier-python/commit/5ef2500d32f6783e68e25aa00ad844253235b013) by [@liblaf](https://github.com/liblaf)
-- **(test)** standardize on codspeed for benchmarks - [04684b6](https://github.com/liblaf/copier-python/commit/04684b613feb480fca4dc3d880e91b178d91ebc6) by [@liblaf](https://github.com/liblaf)
+- **mise:** reorganize task configuration and update copier template - [d32acf9](https://github.com/liblaf/copier-python/commit/d32acf983d67e73f5ffee8cc0ad4ffabe08b77a2) by [@liblaf](https://github.com/liblaf)
+- **pyright:** reorganize exclude patterns - [0eab90b](https://github.com/liblaf/copier-python/commit/0eab90b4c15f3aff0ed320351ff935ec9f941e54) by [@liblaf](https://github.com/liblaf)
+- **templates:** update comment syntax to use Jinja2 style - [5ef2500](https://github.com/liblaf/copier-python/commit/5ef2500d32f6783e68e25aa00ad844253235b013) by [@liblaf](https://github.com/liblaf)
+- **test:** standardize on codspeed for benchmarks - [04684b6](https://github.com/liblaf/copier-python/commit/04684b613feb480fca4dc3d880e91b178d91ebc6) by [@liblaf](https://github.com/liblaf)
 - update linter configuration and alias mappings - [163a692](https://github.com/liblaf/copier-python/commit/163a692ce6ae73a6e03923900e75f3ae2f3e37d2) by [@liblaf](https://github.com/liblaf)
 - reorganize toolkit module for better modularity - [bfed6ec](https://github.com/liblaf/copier-python/commit/bfed6ece6fbd3bc2993547ae1e73877782fb0d60) by [@liblaf](https://github.com/liblaf)
 - update linter configuration and import aliases - [1e72f92](https://github.com/liblaf/copier-python/commit/1e72f92bb819915b8f650761b2b159b51b582246) by [@liblaf](https://github.com/liblaf)
@@ -128,7 +146,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### ⚡️ Performance Improvements
 
-- **(docs)** switch to minified CDN assets and improve documentation - [6335de1](https://github.com/liblaf/copier-python/commit/6335de1cdd4d10f101af12f2d38d879499fe3ac5) by [@liblaf](https://github.com/liblaf)
+- **docs:** switch to minified CDN assets and improve documentation - [6335de1](https://github.com/liblaf/copier-python/commit/6335de1cdd4d10f101af12f2d38d879499fe3ac5) by [@liblaf](https://github.com/liblaf)
 
 ### ✅ Tests
 
@@ -136,9 +154,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### 🛠 Builds
 
-- **(mkdocs)** improve configuration and fix paths - [ac54f26](https://github.com/liblaf/copier-python/commit/ac54f26790170e8dfb03fe1be9652105c4220202) by [@liblaf](https://github.com/liblaf)
-- **(pyproject)** update configuration and tool settings - [9973e22](https://github.com/liblaf/copier-python/commit/9973e22b55429170fe8f1ca74a7fb583cf778164) by [@liblaf](https://github.com/liblaf)
-- **(pytest)** set import mode to importlib - [bc8b857](https://github.com/liblaf/copier-python/commit/bc8b857d7389e43ae6b37c7cea7d7d3bad0c287e) by [@liblaf](https://github.com/liblaf)
+- **mkdocs:** improve configuration and fix paths - [ac54f26](https://github.com/liblaf/copier-python/commit/ac54f26790170e8dfb03fe1be9652105c4220202) by [@liblaf](https://github.com/liblaf)
+- **pyproject:** update configuration and tool settings - [9973e22](https://github.com/liblaf/copier-python/commit/9973e22b55429170fe8f1ca74a7fb583cf778164) by [@liblaf](https://github.com/liblaf)
+- **pytest:** set import mode to importlib - [bc8b857](https://github.com/liblaf/copier-python/commit/bc8b857d7389e43ae6b37c7cea7d7d3bad0c287e) by [@liblaf](https://github.com/liblaf)
 - clean dist directory before building - [7fc0f8c](https://github.com/liblaf/copier-python/commit/7fc0f8c4fe3f6674bcbfa574aa4895fa5a744a0a) by [@liblaf](https://github.com/liblaf)
 - restructure project configuration and templates - [f399d3a](https://github.com/liblaf/copier-python/commit/f399d3aeb21729a6be4bcbfbe6cfa1d37057cc96) by [@liblaf](https://github.com/liblaf)
 - migrate from just to mise for task management - [ef1ed9a](https://github.com/liblaf/copier-python/commit/ef1ed9a4e59054edbb204050e44053f5820c852e) by [@liblaf](https://github.com/liblaf)
@@ -146,14 +164,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### ⚙️ Continuous Integration
 
-- **(bench, test)** enable colored output in GitHub Actions workflows - [5f6ae09](https://github.com/liblaf/copier-python/commit/5f6ae090024ee4c79a6f74461c4e476763944994) by [@liblaf](https://github.com/liblaf)
-- **(docs)** update configuration and add template - [d55469f](https://github.com/liblaf/copier-python/commit/d55469f3c08ce5f50a6340aa7c15212c313e282b) by [@liblaf](https://github.com/liblaf)
-- **(docs)** allow pages setup to fail gracefully - [aa6b558](https://github.com/liblaf/copier-python/commit/aa6b558f6a1bfaae61598a5c692d096bf371d860) by [@liblaf](https://github.com/liblaf)
-- **(docs)** improve workflow concurrency control - [80f2362](https://github.com/liblaf/copier-python/commit/80f2362a11699b91d3390d98003a4b119cceb641) by [@liblaf](https://github.com/liblaf)
-- **(release)** simplify workflow by removing pre-job and conditionals - [377fe88](https://github.com/liblaf/copier-python/commit/377fe88b0fa72028c7849833d561bdd548960fd0) by [@liblaf](https://github.com/liblaf)
-- **(test)** improve test execution and workflow robustness - [007105e](https://github.com/liblaf/copier-python/commit/007105e2f3561401012f33374243060873141af9) by [@liblaf](https://github.com/liblaf)
-- **(workflows)** skip duplicate runs and update configurations - [eb0f91c](https://github.com/liblaf/copier-python/commit/eb0f91cc5cea80175f041af7cedb226c87579aea) by [@liblaf](https://github.com/liblaf)
-- **(workflows)** remove branch exclusions and fix artifact paths - [bc936fe](https://github.com/liblaf/copier-python/commit/bc936feda7b7b34c337009adc757ec7717a0f330) by [@liblaf](https://github.com/liblaf)
+- **bench, test:** enable colored output in GitHub Actions workflows - [5f6ae09](https://github.com/liblaf/copier-python/commit/5f6ae090024ee4c79a6f74461c4e476763944994) by [@liblaf](https://github.com/liblaf)
+- **docs:** update configuration and add template - [d55469f](https://github.com/liblaf/copier-python/commit/d55469f3c08ce5f50a6340aa7c15212c313e282b) by [@liblaf](https://github.com/liblaf)
+- **docs:** allow pages setup to fail gracefully - [aa6b558](https://github.com/liblaf/copier-python/commit/aa6b558f6a1bfaae61598a5c692d096bf371d860) by [@liblaf](https://github.com/liblaf)
+- **docs:** improve workflow concurrency control - [80f2362](https://github.com/liblaf/copier-python/commit/80f2362a11699b91d3390d98003a4b119cceb641) by [@liblaf](https://github.com/liblaf)
+- **release:** simplify workflow by removing pre-job and conditionals - [377fe88](https://github.com/liblaf/copier-python/commit/377fe88b0fa72028c7849833d561bdd548960fd0) by [@liblaf](https://github.com/liblaf)
+- **test:** improve test execution and workflow robustness - [007105e](https://github.com/liblaf/copier-python/commit/007105e2f3561401012f33374243060873141af9) by [@liblaf](https://github.com/liblaf)
+- **workflows:** skip duplicate runs and update configurations - [eb0f91c](https://github.com/liblaf/copier-python/commit/eb0f91cc5cea80175f041af7cedb226c87579aea) by [@liblaf](https://github.com/liblaf)
+- **workflows:** remove branch exclusions and fix artifact paths - [bc936fe](https://github.com/liblaf/copier-python/commit/bc936feda7b7b34c337009adc757ec7717a0f330) by [@liblaf](https://github.com/liblaf)
 - add GitHub workflows and configuration files - [b4da607](https://github.com/liblaf/copier-python/commit/b4da607a3ba04523ddb43a48c556fa9e18ec6c9d) by [@liblaf](https://github.com/liblaf)
 - add release workflow and VSCode settings - [7ba31d3](https://github.com/liblaf/copier-python/commit/7ba31d3f8a9fb1bbe238b135dce43c0255629aaa) by [@liblaf](https://github.com/liblaf)
 - streamline release workflow and improve environment setup - [74ea4ed](https://github.com/liblaf/copier-python/commit/74ea4ed83709dc5e350efc97f959eccdf2d02836) by [@liblaf](https://github.com/liblaf)
