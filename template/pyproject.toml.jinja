@@ -38,7 +38,7 @@ dynamic = ["version"]
 "Source Code" = "https://github.com/{{ github_user }}/{{ github_repo }}"
 
 [dependency-groups]
-dev = ["icecream>=2,<3"]
+dev = []
 build = ["check-wheel-contents>=0.6,<0.7", "hatch>=1,<2", "twine>=6,<7"]
 docs = ["liblaf-mkdocs-preset>=0.2,<0.3", "mkdocs>=1,<2"]
 test = ["liblaf-pytest-preset>=0.1,<0.2", "pytest>=9,<10"]
@@ -92,10 +92,9 @@ addopts = [
   "--doctest-modules",
   "--hypothesis-show-statistics",
   "--import-mode=importlib",
-  "--showlocals",
-  "--strict-config",
-  "--strict-markers"
+  "--showlocals"
 ]
+consider_namespace_packages = true
 strict = true
 testpaths = ["benches", "src", "tests"]
 
