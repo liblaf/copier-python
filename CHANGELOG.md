@@ -7,7 +7,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Conventional Changelog](https://github.com/conventional-changelog/conventional-changelog-config-spec/blob/master/versions/2.2.0/README.md),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.1.3](https://github.com/liblaf/copier-python/releases/tag/v0.1.3) - 2025-11-24
+## [0.1.4](https://github.com/liblaf/copier-python/releases/tag/v0.1.4) - 2025-12-01
+
+### ✨ Features
+
+- **docs:** improve mkdocstrings configuration - [2f8f2b7](https://github.com/liblaf/copier-python/commit/2f8f2b79986dc3314640ef4fb4e2bbc6f07d6581) by [@liblaf](https://github.com/liblaf)
+
+### ❤️ Contributors
+
+- [@liblaf](https://github.com/liblaf) made their first contribution
+
+## [0.1.3](https://github.com/liblaf/copier-python/releases/tag/v0.1.3) - 2025-11-30
 
 ### ⚙️ Continuous Integration
 
@@ -15,9 +25,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### ❤️ Contributors
 
-- [@liblaf](https://github.com/liblaf) made their first contribution
-- [@liblaf[bot]](https://github.com/apps/liblaf) made their first contribution in [#25](https://github.com/liblaf/copier-python/pull/25)
-- [@renovate[bot]](https://github.com/apps/renovate) made their first contribution in [#24](https://github.com/liblaf/copier-python/pull/24)
+- [@liblaf[bot]](https://github.com/apps/liblaf)
+- [@liblaf](https://github.com/liblaf)
+- [@renovate[bot]](https://github.com/apps/renovate)
 
 ## [0.1.2](https://github.com/liblaf/copier-python/releases/tag/v0.1.2) - 2025-11-16
 
