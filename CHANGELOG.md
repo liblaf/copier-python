@@ -7,6 +7,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Conventional Changelog](https://github.com/conventional-changelog/conventional-changelog-config-spec/blob/master/versions/2.2.0/README.md),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.5](https://github.com/liblaf/copier-python/releases/tag/v0.1.5) - 2025-12-02
+
+### 🐛 Bug Fixes
+
+- **test:** handle pytest collection exit code 5 as no tests found - [c3b13f6](https://github.com/liblaf/copier-python/commit/c3b13f621352e12a860978fb9c190c04ef56ee22) by [@liblaf](https://github.com/liblaf)
+
+### ❤️ Contributors
+
+- [@liblaf](https://github.com/liblaf) made their first contribution
+
 ## [0.1.4](https://github.com/liblaf/copier-python/releases/tag/v0.1.4) - 2025-12-01
 
 ### ✨ Features
@@ -15,7 +25,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### ❤️ Contributors
 
-- [@liblaf](https://github.com/liblaf) made their first contribution
+- [@liblaf[bot]](https://github.com/apps/liblaf)
+- [@liblaf](https://github.com/liblaf)
 
 ## [0.1.3](https://github.com/liblaf/copier-python/releases/tag/v0.1.3) - 2025-11-30
 
