@@ -38,7 +38,7 @@ build:
       # %% if package_manager == "pixi":
       - pixi install --frozen
       # %% elif package_manager == "uv":
-      - UV_PROJECT_ENVIRONMENT="${READTHEDOCS_VIRTUALENV_PATH}" uv sync --all-extras --all-groups --frozen --all-packages --link-mode copy
+      - UV_PROJECT_ENVIRONMENT="${READTHEDOCS_VIRTUALENV_PATH}" uv sync --frozen --all-packages --link-mode copy
       # %% endif
 
     pre_build:

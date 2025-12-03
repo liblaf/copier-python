@@ -18,5 +18,5 @@ fi
 if [[ -f 'uv.lock' ]]; then
   uv='uv'
   if has uv-wrapper.sh; then uv='uv-wrapper.sh'; fi
-  "$uv" sync --all-extras --all-groups "$@"
+  "$uv" sync "$@"
 fi

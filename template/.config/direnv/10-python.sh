@@ -21,7 +21,7 @@ fi
 if [[ -f 'uv.lock' ]]; then
   uv='uv'
   if has uv-wrapper.sh; then uv='uv-wrapper.sh'; fi
-  "$uv" sync --all-extras --all-groups
+  "$uv" sync
   sed --in-place --regexp-extended \
     's|\s*(include-system-site-packages)\s*=\s*.*\s*|\1 = true|' '.venv/pyvenv.cfg'
   # shellcheck disable=SC1091
