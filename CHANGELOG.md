@@ -7,6 +7,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Conventional Changelog](https://github.com/conventional-changelog/conventional-changelog-config-spec/blob/master/versions/2.2.0/README.md),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.10](https://github.com/liblaf/copier-python/releases/tag/v0.1.10) - 2025-12-06
+
+### 🐛 Bug Fixes
+
+- **docs:** Update `liblaf-mkdocs-preset` dependency - [ba4598f](https://github.com/liblaf/copier-python/commit/ba4598fa5de4a6b16df48c986d3106e25a1f8449) by [@liblaf](https://github.com/liblaf)
+
+### ❤️ Contributors
+
+- [@liblaf](https://github.com/liblaf) made their first contribution
+
 ## [0.1.9](https://github.com/liblaf/copier-python/releases/tag/v0.1.9) - 2025-12-06
 
 ### 🐛 Bug Fixes
@@ -15,7 +25,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### ❤️ Contributors
 
-- [@liblaf](https://github.com/liblaf) made their first contribution
+- [@liblaf[bot]](https://github.com/apps/liblaf)
+- [@liblaf](https://github.com/liblaf)
 
 ## [0.1.8](https://github.com/liblaf/copier-python/releases/tag/v0.1.8) - 2025-12-05
 
