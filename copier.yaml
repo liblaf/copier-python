@@ -48,6 +48,7 @@ _skip_if_exists:
   - pyproject.toml
   - README.md
   - src/
+  - "!.config/copier/mkdocs.yaml"
 
 _subdirectory: template
 
