@@ -7,6 +7,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Conventional Changelog](https://github.com/conventional-changelog/conventional-changelog-config-spec/blob/master/versions/2.2.0/README.md),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.12](https://github.com/liblaf/copier-python/releases/tag/v0.1.12) - 2026-01-04
+
+### 🐛 Bug Fixes
+
+- remove unnecessary migration for mise conf.d file - [e254ac2](https://github.com/liblaf/copier-python/commit/e254ac28893f6b473969632cd93d51191ae6cea2) by [@liblaf](https://github.com/liblaf)
+
+### ❤️ Contributors
+
+- [@liblaf](https://github.com/liblaf) made their first contribution
+
 ## [0.1.11](https://github.com/liblaf/copier-python/releases/tag/v0.1.11) - 2026-01-04
 
 ### 🐛 Bug Fixes
@@ -15,9 +25,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### ❤️ Contributors
 
-- [@liblaf](https://github.com/liblaf) made their first contribution
-- [@liblaf[bot]](https://github.com/apps/liblaf) made their first contribution in [#41](https://github.com/liblaf/copier-python/pull/41)
-- [@renovate[bot]](https://github.com/apps/renovate) made their first contribution in [#39](https://github.com/liblaf/copier-python/pull/39)
+- [@liblaf[bot]](https://github.com/apps/liblaf)
+- [@liblaf](https://github.com/liblaf)
+- [@renovate[bot]](https://github.com/apps/renovate)
 
 ## [0.1.10](https://github.com/liblaf/copier-python/releases/tag/v0.1.10) - 2025-12-07
 
