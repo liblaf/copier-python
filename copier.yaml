@@ -20,7 +20,6 @@ _migrations: &migrations
   - rm --force --verbose '.config/copier/python.just'
   - rm --force --verbose '.config/direnv/10-python.sh'
   - rm --force --verbose '.config/mise/conf.d/00-python.toml'
-  - rm --force --verbose '.config/mise/conf.d/10-python.toml'
   - rm --force --verbose '.github/copier/.copier-answers.python.yaml'
   - rm --force --verbose '.github/copier/mkdocs.yaml'
   - rm --force --verbose '.github/linters/.ruff.toml'
