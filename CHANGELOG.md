@@ -7,7 +7,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Conventional Changelog](https://github.com/conventional-changelog/conventional-changelog-config-spec/blob/master/versions/2.2.0/README.md),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.1.14](https://github.com/liblaf/copier-python/releases/tag/v0.1.14) - 2026-01-16
+## [0.1.15](https://github.com/liblaf/copier-python/releases/tag/v0.1.15) - 2026-01-25
+
+### 🐛 Bug Fixes
+
+- **ci/test:** correct codecov-action configuration for coverage and test results - [a00c83f](https://github.com/liblaf/copier-python/commit/a00c83f2ee0931be9f7bc6c1e7304c92a2dc8137) by [@liblaf](https://github.com/liblaf)
+
+### ❤️ Contributors
+
+- [@liblaf](https://github.com/liblaf) made their first contribution
+
+## [0.1.14](https://github.com/liblaf/copier-python/releases/tag/v0.1.14) - 2026-01-18
 
 ### 🐛 Bug Fixes
 
@@ -15,8 +25,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### ❤️ Contributors
 
-- [@liblaf](https://github.com/liblaf) made their first contribution
-- [@liblaf[bot]](https://github.com/apps/liblaf) made their first contribution in [#46](https://github.com/liblaf/copier-python/pull/46)
+- [@liblaf[bot]](https://github.com/apps/liblaf)
+- [@liblaf](https://github.com/liblaf)
 
 ## [0.1.13](https://github.com/liblaf/copier-python/releases/tag/v0.1.13) - 2026-01-04
 
