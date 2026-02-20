@@ -2,7 +2,10 @@
 # DO NOT EDIT!
 
 # ref: <https://github.com/ofek/hatch-vcs>
+# ref: <https://github.com/pypa/setuptools-scm/blob/58ed7d5dec0e3bc80190f73543cf4d8a6876ba8e/src/setuptools_scm/_integration/dump_version.py#L16-L51>
+__commit_id__: str | None
 __version__: str
 __version_tuple__: tuple[int | str, ...]
+commit_id: str | None
 version_tuple: tuple[int | str, ...]
 version: str
