@@ -7,7 +7,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Conventional Changelog](https://github.com/conventional-changelog/conventional-changelog-config-spec/blob/master/versions/2.2.0/README.md),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.1.16](https://github.com/liblaf/copier-python/releases/tag/v0.1.16) - 2026-02-20
+## [0.1.17](https://github.com/liblaf/copier-python/releases/tag/v0.1.17) - 2026-02-27
+
+### 💄 Styles
+
+- **template:** remove auto-generated headers from version stub - [ff36156](https://github.com/liblaf/copier-python/commit/ff36156a7d14a05ff2c8c839c73d4cfb0d3117e4) by [@liblaf](https://github.com/liblaf)
+
+### ❤️ Contributors
+
+- [@renovate[bot]](https://github.com/apps/renovate)
+- [@liblaf](https://github.com/liblaf)
+
+## [0.1.16](https://github.com/liblaf/copier-python/releases/tag/v0.1.16) - 2026-02-22
 
 ### ✨ Features
 
@@ -15,7 +26,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### ❤️ Contributors
 
-- [@liblaf](https://github.com/liblaf) made their first contribution
+- [@liblaf[bot]](https://github.com/apps/liblaf)
+- [@liblaf](https://github.com/liblaf)
 
 ## [0.1.15](https://github.com/liblaf/copier-python/releases/tag/v0.1.15) - 2026-02-01
 
