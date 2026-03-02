@@ -4,6 +4,7 @@
     "**/.cache/": true,
     "**/.codspeed/": true,
     "**/.coverage": true,
+    "**/.coverage.*": true,
     "**/.hypothesis/": true,
     "**/.pixi/": true,
     "**/.pytest_cache/": true,
