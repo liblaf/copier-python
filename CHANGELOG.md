@@ -7,7 +7,23 @@ All notable changes to this project will be documented in this file.
 The format is based on [Conventional Changelog](https://github.com/conventional-changelog/conventional-changelog-config-spec/blob/master/versions/2.2.0/README.md),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.1.17](https://github.com/liblaf/copier-python/releases/tag/v0.1.17) - 2026-02-27
+## [0.1.18](https://github.com/liblaf/copier-python/releases/tag/v0.1.18) - 2026-03-03
+
+### 🐛 Bug Fixes
+
+- **gitignore:** add coverage file pattern to ignore list - [a80c8e6](https://github.com/liblaf/copier-python/commit/a80c8e681c328f823a7a8541d8f7dffba945f1db) by [@liblaf](https://github.com/liblaf)
+
+### ♻ Code Refactoring
+
+- **template:** update top-level metadata exports - [07f2a49](https://github.com/liblaf/copier-python/commit/07f2a49187dfcfb9c2eb7a622b93d8130cf245e4) by [@liblaf](https://github.com/liblaf)
+
+### ❤️ Contributors
+
+- [@liblaf](https://github.com/liblaf)
+- [@renovate[bot]](https://github.com/apps/renovate)
+- [@liblaf[bot]](https://github.com/apps/liblaf)
+
+## [0.1.17](https://github.com/liblaf/copier-python/releases/tag/v0.1.17) - 2026-03-01
 
 ### 💄 Styles
 
@@ -15,6 +31,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### ❤️ Contributors
 
+- [@liblaf[bot]](https://github.com/apps/liblaf)
 - [@renovate[bot]](https://github.com/apps/renovate)
 - [@liblaf](https://github.com/liblaf)
 
