@@ -7,6 +7,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Conventional Changelog](https://github.com/conventional-changelog/conventional-changelog-config-spec/blob/master/versions/2.2.0/README.md),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.20](https://github.com/liblaf/copier-python/releases/tag/v0.1.20) - 2026-03-22
+
+### ♻ Code Refactoring
+
+- **template:** remove pixi-specific template paths and normalize mise task locking - [24181e4](https://github.com/liblaf/copier-python/commit/24181e498f6e7d7371715ff9b80d9c7840e6740a) by [@liblaf](https://github.com/liblaf)
+
+### ❤️ Contributors
+
+- [@liblaf](https://github.com/liblaf)
+
 ## [0.1.19](https://github.com/liblaf/copier-python/releases/tag/v0.1.19) - 2026-03-22
 
 ### ♻ Code Refactoring
@@ -15,8 +25,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### ❤️ Contributors
 
-- [@liblaf](https://github.com/liblaf)
 - [@liblaf[bot]](https://github.com/apps/liblaf)
+- [@liblaf](https://github.com/liblaf)
 - [@renovate[bot]](https://github.com/apps/renovate)
 
 ## [0.1.18](https://github.com/liblaf/copier-python/releases/tag/v0.1.18) - 2026-03-08
