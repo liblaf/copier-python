@@ -67,24 +67,6 @@ packages = ["src/{{ wheel_package_dir }}"]
 [tool.hatch.version]
 source = "vcs"
 
-# %% if package_manager == "pixi":
-[tool.pixi.environments]
-default = { features = ["build", "dev", "docs", "test"] }
-
-[tool.pixi.project]
-channel-priority = "disabled"
-channels = ["conda-forge"]
-platforms = ["linux-64"]
-
-[tool.pixi.pypi-dependencies]
-"{{ package_name }}" = { editable = true, path = "." }
-
-[tool.pixi.system-requirements]
-cuda = "12"
-libc = { family = "glibc", version = "2.42" }
-linux = "6.12"
-# %% endif
-
 [tool.pytest]
 addopts = ["--doctest-modules", "--import-mode=importlib", "--showlocals"]
 consider_namespace_packages = true
@@ -97,7 +79,5 @@ extend = ".config/linters/.ruff.toml"
 [tool.ty.environment]
 python = ".venv"  # ty-vscode does not work without this
 
-# %% if package_manager == "uv":
 [tool.uv]
 default-groups = "all"
-# %% endif

@@ -13,9 +13,10 @@ _envops:
 
 _migrations: &migrations
   - rm --force --recursive --verbose '.config/copier/mise/tasks'
-  - rm --force --verbose '__builtins__.pyi'
   - rm --force --verbose '.config/copier/direnv/00-python.sh'
   - rm --force --verbose '.config/copier/direnv/10-python.sh'
+  - rm --force --verbose '.config/copier/mise-tasks/bench.sh'
+  - rm --force --verbose '.config/copier/mise-tasks/test.sh'
   - rm --force --verbose '.config/copier/mise/scripts/setup-python.sh'
   - rm --force --verbose '.config/copier/python.just'
   - rm --force --verbose '.config/direnv/10-python.sh'
@@ -37,6 +38,7 @@ _migrations: &migrations
   - rm --force --verbose 'docs/javascript/mathjax.js'
   - rm --force --verbose 'docs/scripts/gen-ref-pages.py'
   - rm --force --verbose 'docs/SUMMARY.md'
+  - rm --force --verbose 'typings/__builtins__.pyi'
 
 _skip_if_exists:
   - .config/mise/config.toml
@@ -124,10 +126,3 @@ wheel_package_dir:
   help: e.g. "namespace/", "project_name_slug/"
   default: |-
     {{ package_dir.split('/') | first }}
-
-package_manager:
-  type: str
-  choices:
-    - pixi
-    - uv
-  default: uv

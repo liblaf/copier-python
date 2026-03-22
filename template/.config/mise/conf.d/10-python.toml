@@ -3,4 +3,4 @@
 # DO NOT EDIT!
 
 [hooks]
-enter = "mise run install"
+enter = { task = "install" }

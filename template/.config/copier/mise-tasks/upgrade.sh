@@ -11,9 +11,10 @@ function has() {
 }
 
 function lock() {
-  local -r name="$(basename -- "$PWD")"
+  local -r git_root="$(git rev-parse --show-toplevel)"
+  local -r name="$(basename -- "$git_root")"
   mkdir --parents --verbose '/tmp/mise-flock'
-  flock --nonblock "/tmp/mise-flock/$name.lock" "$@"
+  flock --nonblock --verbose "/tmp/mise-flock/$name.lock" "$@"
 }
 
 if [[ -f 'pixi.lock' ]]; then
