@@ -7,6 +7,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Conventional Changelog](https://github.com/conventional-changelog/conventional-changelog-config-spec/blob/master/versions/2.2.0/README.md),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.21](https://github.com/liblaf/copier-python/releases/tag/v0.1.21) - 2026-03-22
+
+### ♻ Code Refactoring
+
+- **template:** remove pixi-specific Read the Docs setup - [9379dab](https://github.com/liblaf/copier-python/commit/9379dabfe29c8c68ece9e7cb9d703f8fd0ec8042) by [@liblaf](https://github.com/liblaf)
+
+### ❤️ Contributors
+
+- [@liblaf](https://github.com/liblaf)
+
 ## [0.1.20](https://github.com/liblaf/copier-python/releases/tag/v0.1.20) - 2026-03-22
 
 ### ♻ Code Refactoring
@@ -15,6 +25,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### ❤️ Contributors
 
+- [@liblaf[bot]](https://github.com/apps/liblaf)
 - [@liblaf](https://github.com/liblaf)
 
 ## [0.1.19](https://github.com/liblaf/copier-python/releases/tag/v0.1.19) - 2026-03-22
