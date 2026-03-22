@@ -11,6 +11,7 @@ __pycache__/
 dist/
 
 # Unit test / coverage reports
+.nox/
 .cache/
 .coverage
 .coverage.*
@@ -24,7 +25,7 @@ dist/
 .venv/
 
 # mkdocs documentation
-site/
+/site/
 
 # Ruff stuff:
 .ruff_cache/

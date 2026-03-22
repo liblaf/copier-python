@@ -7,13 +7,10 @@ cache:
 caseSensitive: false
 enableGlobDot: true
 ignorePaths:
-  - .cspell.*
   - .git/
-  - "*-lock.*"
-  - "*.lock"
   - cspell.*
-  - go.sum
 ignoreRandomStrings: true
+maxFileSize: 500KB
 useGitignore: true
 words:
   - arithmatex
@@ -27,11 +24,13 @@ words:
   - getattr
   - hynek
   - inlinehilite
+  - kwargs
   - libc
   - liblaf
   - mathjax
   - mkdocs
   - mkdocstrings
+  - noxfile
   - numprocesses
   - numpy
   - pycache
@@ -45,13 +44,11 @@ words:
   - pyproject
   - pyrightconfig
   - pytest
-  - pyvenv
   - pyvista
   - sdist
   - strftime
   - tombi
   - trimesh
-  - unshallow
   - uuidgen
   - venv
   - virtualenv

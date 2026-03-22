@@ -10,14 +10,20 @@ function has() {
   type "$@" &> /dev/null
 }
 
+function lock() {
+  local -r name="$(basename -- "$PWD")"
+  mkdir --parents --verbose '/tmp/mise-flock'
+  flock --nonblock "/tmp/mise-flock/$name.lock" "$@"
+}
+
 if [[ -f 'pixi.lock' ]]; then
   pixi='pixi'
   if has pixi-wrapper.sh; then pixi='pixi-wrapper.sh'; fi
-  "$pixi" upgrade "$@"
+  lock "$pixi" upgrade "$@"
 fi
 
 if [[ -f 'uv.lock' ]]; then
   uv_sync=(uv sync)
   if has uv-sync.sh; then uv_sync=(uv-sync.sh); fi
-  "${uv_sync[@]}" --upgrade "$@"
+  lock "${uv_sync[@]}" --upgrade "$@"
 fi

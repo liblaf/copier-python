@@ -24,7 +24,7 @@ classifiers = [
   "Programming Language :: Python :: 3.14",
   "Typing :: Typed"
 ]
-dependencies = ["lazy-loader>=0.4,<0.5"]
+dependencies = ["lazy-loader>=0.1"]
 dynamic = ["version"]
 
 [project.urls]
@@ -39,9 +39,10 @@ dynamic = ["version"]
 
 [dependency-groups]
 dev = []
-build = ["check-wheel-contents>=0.6,<0.7", "hatch>=1,<2", "twine>=6,<7"]
-docs = ["liblaf-mkdocs-preset>=0.3,<0.4", "mkdocs>=1,<2"]
-test = ["liblaf-pytest-preset>=0.1,<0.2", "pytest>=9,<10"]
+build = ["check-wheel-contents>=0.6", "hatch>=1", "twine>=6"]
+docs = ["liblaf-mkdocs-preset>=0.3", "mkdocs>=1,<2"]
+nox = ["liblaf-nox-recipes>=0.1", "nox>=2026", "nox-uv>=0.7"]
+test = ["liblaf-pytest-preset>=0.1", "pytest>=9"]
 
 [build-system]
 requires = ["hatch-vcs", "hatchling"]
@@ -84,22 +85,17 @@ libc = { family = "glibc", version = "2.42" }
 linux = "6.12"
 # %% endif
 
-[tool.pyright]
-extends = ".config/linters/pyrightconfig.json"
-
 [tool.pytest]
-addopts = [
-  "--doctest-modules",
-  "--hypothesis-explain",
-  "--import-mode=importlib",
-  "--showlocals"
-]
+addopts = ["--doctest-modules", "--import-mode=importlib", "--showlocals"]
 consider_namespace_packages = true
 strict = true
 testpaths = ["benches", "src", "tests"]
 
 [tool.ruff]
 extend = ".config/linters/.ruff.toml"
+
+[tool.ty.environment]
+python = ".venv"  # ty-vscode does not work without this
 
 # %% if package_manager == "uv":
 [tool.uv]

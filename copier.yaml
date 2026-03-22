@@ -45,6 +45,7 @@ _skip_if_exists:
   - docs/.nav.yml
   - docs/README.md
   - mkdocs.yaml
+  - noxfile.py
   - pyproject.toml
   - README.md
   - src/
