@@ -7,6 +7,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Conventional Changelog](https://github.com/conventional-changelog/conventional-changelog-config-spec/blob/master/versions/2.2.0/README.md),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.22](https://github.com/liblaf/copier-python/releases/tag/v0.1.22) - 2026-03-22
+
+### 🐛 Bug Fixes
+
+- **nox:** restore tagged test resolution variants - [f79723f](https://github.com/liblaf/copier-python/commit/f79723f9f60c5b10542683fae18291ed6df160fb) by [@liblaf](https://github.com/liblaf)
+
+### ❤️ Contributors
+
+- [@liblaf](https://github.com/liblaf)
+
 ## [0.1.21](https://github.com/liblaf/copier-python/releases/tag/v0.1.21) - 2026-03-22
 
 ### ♻ Code Refactoring
@@ -15,6 +25,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### ❤️ Contributors
 
+- [@liblaf[bot]](https://github.com/apps/liblaf)
 - [@liblaf](https://github.com/liblaf)
 
 ## [0.1.20](https://github.com/liblaf/copier-python/releases/tag/v0.1.20) - 2026-03-22
