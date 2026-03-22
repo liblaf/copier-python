@@ -19,36 +19,18 @@ build:
 
     # ref: <https://docs.readthedocs.com/platform/stable/build-customization.html#install-dependencies-with-uv>
     pre_create_environment:
-      # %% if package_manager == "pixi":
-      - asdf plugin add pixi
-      - asdf install pixi latest
-      - asdf global pixi latest
-      # %% elif package_manager == "uv":
       - asdf plugin add uv
       - asdf install uv latest
       - asdf global uv latest
-      # %% endif
 
-    # %% if package_manager == "uv":
     create_environment:
       - uv venv "${READTHEDOCS_VIRTUALENV_PATH}"
-    # %% endif
 
     install:
-      # %% if package_manager == "pixi":
-      - pixi install --frozen
-      # %% elif package_manager == "uv":
       - UV_PROJECT_ENVIRONMENT="${READTHEDOCS_VIRTUALENV_PATH}" uv sync --frozen --all-packages --link-mode copy
-      # %% endif
 
     pre_build:
       - if test -f 'docs/scripts/pre-build.sh'; then bash 'docs/scripts/pre-build.sh'; fi
-
-    # %% if package_manager == "pixi":
-    build:
-      html:
-        - pixi run mkdocs build --site-dir "$READTHEDOCS_OUTPUT/html/"
-    # %% endif
 
 mkdocs:
   configuration: mkdocs.yaml
