@@ -21,9 +21,9 @@ def bench(s: nox.Session) -> None:
 @nox.parametrize(
     "resolution",
     [
-        nox.param(Resolution.HIGHEST, id="highest"),
-        # nox.param(Resolution.LOWEST, id="lowest"),
-        nox.param(Resolution.LOWEST_DIRECT, id="lowest-direct"),
+        nox.param(Resolution.HIGHEST, id="highest", tags=["highest"]),
+        nox.param(Resolution.LOWEST, id="lowest", tags=["lowest"]),
+        nox.param(Resolution.LOWEST_DIRECT, id="lowest-direct", tags=["lowest-direct"]),
     ],
 )
 def test(s: nox.Session, resolution: Resolution | None) -> None:
