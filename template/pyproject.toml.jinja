@@ -38,11 +38,11 @@ dynamic = ["version"]
 "Source Code" = "https://github.com/{{ github_user }}/{{ github_repo }}"
 
 [dependency-groups]
-dev = []
 build = ["check-wheel-contents>=0.6", "hatch>=1", "twine>=6"]
 docs = ["liblaf-mkdocs-preset>=0.3", "mkdocs>=1,<2"]
-nox = ["liblaf-nox-recipes>=0.1", "nox>=2026", "nox-uv>=0.7"]
-test = ["liblaf-pytest-preset>=0.1", "pytest>=9"]
+lint = ["import-linter[ui]>=2", "ruff>=0.15"]
+nox = ["liblaf-nox-recipes>=0.1", "nox>=2026"]
+test = ["pytest>=9", "pytest-cov>=7", "pytest-randomly>=4"]
 
 [build-system]
 requires = ["hatch-vcs", "hatchling"]
@@ -67,9 +67,23 @@ packages = ["src/{{ wheel_package_dir }}"]
 [tool.hatch.version]
 source = "vcs"
 
+[tool.importlinter]
+root_package = "{{ module_name }}"
+
+[[tool.importlinter.contracts]]
+ancestors = ["{{ module_name }}"]
+name = "Acyclic siblings"
+type = "acyclic_siblings"
+
 [tool.pytest]
-addopts = ["--doctest-modules", "--import-mode=importlib", "--showlocals"]
+addopts = [
+  "--doctest-modules",
+  "--import-mode=importlib",
+  "--junitxml=junit.xml",
+  "--showlocals"
+]
 consider_namespace_packages = true
+junit_family = "legacy"
 strict = true
 testpaths = ["benches", "src", "tests"]
 

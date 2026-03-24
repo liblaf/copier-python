@@ -121,6 +121,12 @@ package_name:
       {{ project_name_slug | replace('_', '-') }}
     {%- endif -%}
 
+module_name:
+  type: str
+  help: e.g. "namespace.project_name_slug", "project_name_slug"
+  default: |-
+    {{ package_dir | replace('/', '.') }}
+
 wheel_package_dir:
   type: str
   help: e.g. "namespace/", "project_name_slug/"

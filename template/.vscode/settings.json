@@ -3,9 +3,11 @@
     "**/__pycache__/": true,
     "**/.cache/": true,
     "**/.codspeed/": true,
-    "**/.coverage.*": true,
     "**/.coverage": true,
+    "**/.coverage.*": true,
+    "**/.grimp_cache/": true,
     "**/.hypothesis/": true,
+    "**/.import_lint_cache/": true,
     "**/.nox/": true,
     "**/.pixi/": true,
     "**/.pytest_cache/": true,
@@ -16,12 +18,7 @@
     "**/site/": true
   },
   "python.analysis.diagnosticMode": "workspace",
-  "python.testing.pytestArgs": [
-    "--color=yes",
-    "--cov",
-    "--numprocesses",
-    "auto"
-  ],
+  "python.testing.pytestArgs": ["--color=yes", "--cov"],
   "python.testing.pytestEnabled": true,
   "python.testing.unittestEnabled": false,
   "yaml.customTags": [
