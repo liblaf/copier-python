@@ -41,7 +41,7 @@ dynamic = ["version"]
 build = ["check-wheel-contents>=0.6", "hatch>=1", "twine>=6"]
 docs = ["liblaf-mkdocs-preset>=0.3", "mkdocs>=1,<2"]
 lint = ["import-linter[ui]>=2", "ruff>=0.15"]
-nox = ["liblaf-nox-recipes>=0.1", "nox>=2026"]
+nox = ["liblaf-nox-recipes>=0.1", "nox>=2026", "nox-uv>=0.7"]
 test = ["pytest>=9", "pytest-cov>=7", "pytest-randomly>=4"]
 
 [build-system]
@@ -89,9 +89,6 @@ testpaths = ["benches", "src", "tests"]
 
 [tool.ruff]
 extend = ".config/linters/.ruff.toml"
-
-[tool.ty.environment]
-python = ".venv"  # ty-vscode does not work without this
 
 [tool.uv]
 default-groups = "all"

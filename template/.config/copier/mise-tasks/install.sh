@@ -10,20 +10,26 @@ function has() {
 }
 
 function lock() {
-  local -r git_root="$(git rev-parse --show-toplevel)"
-  local -r name="$(basename -- "$git_root")"
+  local -r root="${MISE_PROJECT_ROOT:-"$PWD"}"
+  local -r name="$(basename -- "${root}")"
   mkdir --parents --verbose '/tmp/mise-flock'
   flock --nonblock --verbose "/tmp/mise-flock/$name.lock" "$@"
 }
 
 if [[ -f 'pixi.lock' ]]; then
-  pixi='pixi'
-  if has pixi-wrapper.sh; then pixi='pixi-wrapper.sh'; fi
-  lock "$pixi" install "$@"
+  if has pypi-lock-wrapper.sh; then
+    pixi=(pypi-lock-wrapper.sh pixi)
+  else
+    pixi=(pixi)
+  fi
+  lock "${pixi[@]}" install "$@"
 fi
 
 if [[ -f 'uv.lock' ]]; then
-  uv_sync=(uv sync)
-  if has uv-sync.sh; then uv_sync=(uv-sync.sh); fi
+  if has uv-sync.py; then
+    uv_sync=(uv-sync.py)
+  else
+    uv_sync=(uv sync)
+  fi
   lock "${uv_sync[@]}" "$@"
 fi

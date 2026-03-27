@@ -16,6 +16,8 @@ _migrations: &migrations
   - rm --force --verbose '.config/copier/direnv/00-python.sh'
   - rm --force --verbose '.config/copier/direnv/10-python.sh'
   - rm --force --verbose '.config/copier/mise-tasks/bench.sh'
+  - rm --force --verbose '.config/copier/mise-tasks/gen/_default'
+  - rm --force --verbose '.config/copier/mise-tasks/gen/init.sh'
   - rm --force --verbose '.config/copier/mise-tasks/test.sh'
   - rm --force --verbose '.config/copier/mise/scripts/setup-python.sh'
   - rm --force --verbose '.config/copier/python.just'
