@@ -7,6 +7,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Conventional Changelog](https://github.com/conventional-changelog/conventional-changelog-config-spec/blob/master/versions/2.2.0/README.md),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.24](https://github.com/liblaf/copier-python/releases/tag/v0.1.24) - 2026-03-27
+
+### 🐛 Bug Fixes
+
+- **template:** use python shebang for init generator - [99bbe79](https://github.com/liblaf/copier-python/commit/99bbe79ada9716fc2b12ff5c18bd993c00fbb133) by [@liblaf](https://github.com/liblaf)
+
+### ❤️ Contributors
+
+- [@liblaf](https://github.com/liblaf)
+
 ## [0.1.23](https://github.com/liblaf/copier-python/releases/tag/v0.1.23) - 2026-03-27
 
 ### ♻ Code Refactoring
@@ -15,6 +25,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### ❤️ Contributors
 
+- [@liblaf[bot]](https://github.com/apps/liblaf)
 - [@liblaf](https://github.com/liblaf)
 - [@renovate[bot]](https://github.com/apps/renovate)
 
