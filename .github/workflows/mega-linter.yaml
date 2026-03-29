@@ -11,20 +11,24 @@ on:
     branches:
       - main
   pull_request:
-  workflow_dispatch:
+    branches:
+      - main
 
 env:
   FORCE_COLOR: 1
+  GIT_COMMIT_MESSAGE: "chore(mega-linter): apply linters automatic fixes"
 
 jobs:
   mega-linter:
     name: MegaLinter
     permissions:
       contents: write
+      issues: write
       pull-requests: write
     runs-on: ubuntu-latest
     environment:
       name: MegaLinter
+      deployment: false
     steps:
       - id: auth
         name: Auth
@@ -34,8 +38,6 @@ jobs:
           private-key: ${{ secrets.PRIVATE_KEY }}
       - name: Checkout
         uses: actions/checkout@v6
-        with:
-          ref: ${{ github.head_ref || github.ref }}
       - id: lint
         name: MegaLinter
         uses: liblaf/actions/mega-linter@v1
@@ -56,20 +58,24 @@ jobs:
           cp --target-directory='${{ runner.temp }}' --verbose 'megalinter-reports/megalinter-report.md'
           sudo rm --force --recursive 'mega-linter.log' 'megalinter-reports'
       - if: steps.lint.outputs.has-updated-sources > 0 && github.ref == 'refs/heads/main'
-        name: Create PR with Applied Fixes
+        name: Create PR
         uses: peter-evans/create-pull-request@v8
         with:
-          commit-message: "chore(mega-linter): apply linters automatic fixes"
-          branch: mega-linter-fix/${{ github.ref_name }}
+          token: ${{ steps.auth.outputs.token }}
+          commit-message: ${{ env.GIT_COMMIT_MESSAGE }}
+          branch: mega-linter/${{ github.ref_name }}
           sign-commits: true
-          title: "chore(mega-linter): apply linters automatic fixes"
+          title: ${{ env.GIT_COMMIT_MESSAGE }}
           body-path: ${{ runner.temp }}/megalinter-report.md
-          labels: automerge,bot
+          labels: |-
+            automerge
+            mega-linter
           assignees: ${{ github.repository_owner }}
           reviewers: ${{ github.repository_owner }}
       - if: steps.lint.outputs.has-updated-sources > 0 && github.ref != 'refs/heads/main'
-        name: Commit and Push Applied Linter Fixes
-        uses: liblaf/actions/commit@v1
+        name: Commit
+        uses: suzuki-shunsuke/commit-action@v0.1.1
         with:
-          add-options: --verbose --update
-          message: "chore(mega-linter): apply linters automatic fixes"
+          github_token: ${{ steps.auth.outputs.token }}
+          commit_message: ${{ env.GIT_COMMIT_MESSAGE }}
+          fail_on_self_push: false
