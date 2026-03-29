@@ -29,21 +29,21 @@ jobs:
     steps:
       - id: auth
         name: Auth
-        uses: liblaf/actions/auth@v1
+        uses: liblaf/actions/auth@c0ddb2356ceaa62ed3108a073f2e2a303264afa6 # v1
         with:
           app-id: ${{ vars.APP_ID }}
           private-key: ${{ secrets.PRIVATE_KEY }}
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
         with:
           fetch-depth: 0
       - name: Install git-cliff
-        uses: taiki-e/install-action@v2
+        uses: taiki-e/install-action@fd0f63e180a477d7434580b6d80817978b9ff2b8 # v2
         with:
           tool: git-cliff
       - id: version
         name: Next version
-        uses: liblaf/actions/next-version@v1
+        uses: liblaf/actions/next-version@c0ddb2356ceaa62ed3108a073f2e2a303264afa6 # v1
       - if: steps.version.outputs.bumped == 'true'
         name: Generate changelog
         run: |-
@@ -66,7 +66,7 @@ jobs:
           GITHUB_TOKEN: ${{ steps.auth.outputs.token }}
       - if: steps.version.outputs.bumped == 'true'
         name: Create PR
-        uses: peter-evans/create-pull-request@v8
+        uses: peter-evans/create-pull-request@c0f553fe549906ede9cf27b5156039d195d2ece0 # v8
         with:
           token: ${{ steps.auth.outputs.token }}
           commit-message: "chore(release): ${{ steps.version.outputs.tag }}"
