@@ -3,7 +3,7 @@
 
 # ref: <https://docs.codecov.com/docs/test-analytics>
 
-name: Python > Test
+name: Python / Test
 
 on:
   push:
