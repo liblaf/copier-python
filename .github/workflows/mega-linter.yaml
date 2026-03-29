@@ -32,20 +32,20 @@ jobs:
     steps:
       - id: auth
         name: Auth
-        uses: liblaf/actions/auth@v1
+        uses: liblaf/actions/auth@c0ddb2356ceaa62ed3108a073f2e2a303264afa6 # v1
         with:
           app-id: ${{ vars.APP_ID }}
           private-key: ${{ secrets.PRIVATE_KEY }}
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
       - id: lint
         name: MegaLinter
-        uses: liblaf/actions/mega-linter@v1
+        uses: liblaf/actions/mega-linter@c0ddb2356ceaa62ed3108a073f2e2a303264afa6 # v1
         with:
           token: ${{ steps.auth.outputs.token }}
       - if: success() || failure()
         name: Upload Reports
-        uses: actions/upload-artifact@v7
+        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7
         with:
           name: mega-linter-reports
           path: |-
@@ -59,7 +59,7 @@ jobs:
           sudo rm --force --recursive 'mega-linter.log' 'megalinter-reports'
       - if: steps.lint.outputs.has-updated-sources > 0 && github.ref == 'refs/heads/main'
         name: Create PR
-        uses: peter-evans/create-pull-request@v8
+        uses: peter-evans/create-pull-request@c0f553fe549906ede9cf27b5156039d195d2ece0 # v8
         with:
           token: ${{ steps.auth.outputs.token }}
           commit-message: ${{ env.GIT_COMMIT_MESSAGE }}
@@ -74,7 +74,7 @@ jobs:
           reviewers: ${{ github.repository_owner }}
       - if: steps.lint.outputs.has-updated-sources > 0 && github.ref != 'refs/heads/main'
         name: Commit
-        uses: suzuki-shunsuke/commit-action@v0.1.1
+        uses: suzuki-shunsuke/commit-action@f12e2d628a4ab72dcefe7890ae07e8dbf1e201b9 # v0.1.1
         with:
           github_token: ${{ steps.auth.outputs.token }}
           commit_message: ${{ env.GIT_COMMIT_MESSAGE }}
