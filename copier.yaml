@@ -9,45 +9,21 @@ _external_data:
 
 _envops:
   comment_start_string: "# {#"
-  line_statement_prefix: "# %%"
 
-_migrations: &migrations
-  - rm --force --recursive --verbose '.config/copier/mise/tasks'
-  - rm --force --verbose '.config/copier/direnv/00-python.sh'
-  - rm --force --verbose '.config/copier/direnv/10-python.sh'
-  - rm --force --verbose '.config/copier/mise-tasks/bench.sh'
-  - rm --force --verbose '.config/copier/mise-tasks/gen/_default'
-  - rm --force --verbose '.config/copier/mise-tasks/gen/init.sh'
-  - rm --force --verbose '.config/copier/mise-tasks/test.sh'
-  - rm --force --verbose '.config/copier/mise/scripts/setup-python.sh'
-  - rm --force --verbose '.config/copier/python.just'
-  - rm --force --verbose '.config/direnv/10-python.sh'
-  - rm --force --verbose '.config/mise/conf.d/00-python.toml'
-  - rm --force --verbose '.github/copier/.copier-answers.python.yaml'
-  - rm --force --verbose '.github/copier/mkdocs.yaml'
-  - rm --force --verbose '.github/linters/.ruff.toml'
-  - rm --force --verbose '.github/linters/pyrightconfig.json'
-  - rm --force --verbose '.github/workflows/build.yaml' # TODO: remove this migration in future
-  - rm --force --verbose '.github/workflows/docs-dev.yaml'
-  - rm --force --verbose '.github/workflows/docs-stable.yaml'
-  - rm --force --verbose '.github/workflows/docs-test.yaml'
-  - rm --force --verbose '.github/workflows/shared-docs.yaml'
-  - rm --force --verbose '.github/workflows/shared-release.yaml'
-  - rm --force --verbose 'docs/css/fonts.css'
-  - rm --force --verbose 'docs/css/mkdocstrings/api-autonav.css'
-  - rm --force --verbose 'docs/css/mkdocstrings/material.css'
-  - rm --force --verbose 'docs/css/mkdocstrings/syntax-highlight-in-signatures.css'
-  - rm --force --verbose 'docs/javascript/mathjax.js'
-  - rm --force --verbose 'docs/scripts/gen-ref-pages.py'
-  - rm --force --verbose 'docs/SUMMARY.md'
-  - rm --force --verbose 'typings/__builtins__.pyi'
+_migrations:
+  - command: rm --force '.github/workflows/bench.yaml'
+    version: v0.2.0
+  - command: rm --force '.github/workflows/docs.yaml'
+    version: v0.2.0
+  - command: rm --force '.github/workflows/release.yaml'
+    version: v0.2.0
+  - command: rm --force '.github/workflows/test.yaml'
+    version: v0.2.0
 
 _skip_if_exists:
-  - .config/mise/config.toml
   - .gitignore
   - .vscode/settings.json
-  - docs/.nav.yml
-  - docs/README.md
+  - docs/
   - mkdocs.yaml
   - noxfile.py
   - pyproject.toml
@@ -56,8 +32,6 @@ _skip_if_exists:
   - "!.config/copier/mkdocs.yaml"
 
 _subdirectory: template
-
-_tasks: *migrations
 
 answers_file_shared:
   type: str
