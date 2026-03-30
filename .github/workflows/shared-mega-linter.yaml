@@ -4,7 +4,7 @@
 # ref: <https://github.com/oxsecurity/megalinter/blob/main/mega-linter-runner/generators/mega-linter/templates/mega-linter.yml>
 # ref: <https://megalinter.io>
 
-name: MegaLinter
+name: Shared / MegaLinter
 
 on:
   push:
@@ -29,6 +29,8 @@ jobs:
     environment:
       name: MegaLinter
       deployment: false
+    outputs:
+      pull-request-url: ${{ steps.pr.outputs.pull-request-url }}
     steps:
       - id: auth
         name: Auth
@@ -40,11 +42,12 @@ jobs:
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
       - id: lint
         name: MegaLinter
-        uses: liblaf/actions/mega-linter@1f83732587ff97f1babbe9218fdc5436dda1a16f # v1
-        with:
-          token: ${{ steps.auth.outputs.token }}
+        uses: liblaf/megalinter-custom-flavor-all@4c245a0bdb312d24c66108433d4d701fb0875746 # main
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          MEGALINTER_CONFIG: https://raw.githubusercontent.com/liblaf/megalinter-custom-flavor-all/refs/heads/main/.mega-linter.yml
       - if: success() || failure()
-        name: Upload Reports
+        name: Upload reports
         uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7
         with:
           name: mega-linter-reports
@@ -53,17 +56,19 @@ jobs:
             megalinter-reports
           include-hidden-files: true
       - if: success() || failure()
-        name: Remove MegaLinter Reports
+        name: Remove MegaLinter reports
         run: |-
           cp --target-directory='${{ runner.temp }}' --verbose 'megalinter-reports/megalinter-report.md'
           sudo rm --force --recursive 'mega-linter.log' 'megalinter-reports'
-      - if: steps.lint.outputs.has-updated-sources > 0 && github.ref == 'refs/heads/main'
+      - id: pr
+        if: steps.lint.outputs.has-updated-sources == 1 && (github.event_name == 'push' || github.event.pull_request.head.repo.full_name == github.repository)
         name: Create PR
         uses: peter-evans/create-pull-request@c0f553fe549906ede9cf27b5156039d195d2ece0 # v8
         with:
           token: ${{ steps.auth.outputs.token }}
           commit-message: ${{ env.GIT_COMMIT_MESSAGE }}
-          branch: mega-linter/${{ github.ref_name }}
+          branch: mega-linter/${{ github.head_ref || github.ref_name }}
+          delete-branch: true
           sign-commits: true
           title: ${{ env.GIT_COMMIT_MESSAGE }}
           body-path: ${{ runner.temp }}/megalinter-report.md
@@ -72,10 +77,21 @@ jobs:
             mega-linter
           assignees: ${{ github.repository_owner }}
           reviewers: ${{ github.repository_owner }}
-      - if: steps.lint.outputs.has-updated-sources > 0 && github.ref != 'refs/heads/main'
-        name: Commit
-        uses: suzuki-shunsuke/commit-action@f12e2d628a4ab72dcefe7890ae07e8dbf1e201b9 # v0.1.1
+
+  review:
+    name: Review
+    permissions:
+      pull-requests: write
+    needs:
+      - mega-linter
+    if: needs.mega-linter.outputs.pull-request-url
+    runs-on: ubuntu-latest
+    environment:
+      name: Review
+      deployment: false
+    steps:
+      - name: Review
+        uses: liblaf/actions/review@1f83732587ff97f1babbe9218fdc5436dda1a16f # v1
         with:
-          github_token: ${{ steps.auth.outputs.token }}
-          commit_message: ${{ env.GIT_COMMIT_MESSAGE }}
-          fail_on_self_push: false
+          pull: ${{ needs.mega-linter.outputs.pull-request-url }}
+          review-token: ${{ secrets.REVIEW_TOKEN }}
