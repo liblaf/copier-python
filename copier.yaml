@@ -10,31 +10,31 @@ _external_data:
 _envops:
   comment_start_string: "# {#"
 
-_migrations:
-  - command: rm --force '.github/workflows/bench.yaml'
-    version: v0.2.0
-  - command: rm --force '.github/workflows/docs.yaml'
-    version: v0.2.0
-  - command: rm --force '.github/workflows/release.yaml'
-    version: v0.2.0
-  - command: rm --force '.github/workflows/test.yaml'
-    version: v0.2.0
-
 _skip_if_exists:
   - .gitignore
   - .vscode/settings.json
   - docs/
-  - mkdocs.yaml
   - noxfile.py
   - pyproject.toml
   - README.md
   - src/
-  - "!.config/copier/mkdocs.yaml"
+  - zensical.toml
 
 _subdirectory: template
 
+_tasks:
+  - rm --force --recursive '.config/copier/mise-tasks'
+  - rm --force '.config/copier/mkdocs.yaml'
+  - rm --force '.config/linters/pyrightconfig.json'
+  - rm --force '.config/mise/conf.d/10-python.toml'
+  - rm --force '.github/workflows/bench.yaml'
+  - rm --force '.github/workflows/docs.yaml'
+  - rm --force '.github/workflows/release.yaml'
+  - rm --force '.github/workflows/test.yaml'
+
 answers_file_shared:
   type: str
+  help: Path to the shared Copier answers file used to preload project metadata.
   default: .config/copier/.copier-answers.shared.yaml
 
 project_name:
@@ -74,37 +74,37 @@ github_repo:
 
 namespace:
   type: str
-  help: e.g. "namespace", ""
+  help: Python package namespace to prepend to the project package. Leave empty for a top-level package.
   default: "{{ github_user }}"
 
-package_dir:
+distribution_name:
   type: str
-  help: e.g. "namespace/project_name_slug/", "project_name_slug/"
+  help: Distribution name used for publishing and installation, such as the PyPI project name.
   default: |-
     {%- if namespace -%}
-      {{ namespace | replace('.', '/') | replace('-', '_') }}/{{ project_name_slug | replace('-', '_') }}
+      {{ namespace | replace('.', '-') | replace('/', '-') }}-{{ project_name_slug }}
     {%- else -%}
-      {{ project_name_slug | replace('-', '_') }}
+      {{ project_name_slug }}
     {%- endif -%}
 
 package_name:
   type: str
-  help: e.g. "namespace-project-name-slug", "project-name-slug"
+  help: Importable Python package name. Use dots to separate namespace packages.
   default: |-
     {%- if namespace -%}
-      {{ namespace | replace('.', '-') | replace('/', '-') }}-{{ project_name_slug | replace('_', '-') }}
+      {{ namespace | replace('-', '_') }}.{{ project_name_slug | replace('-', '_') }}
     {%- else -%}
-      {{ project_name_slug | replace('_', '-') }}
+      {{ project_name_slug | replace('-', '_') }}
     {%- endif -%}
 
-module_name:
+package_dir:
   type: str
-  help: e.g. "namespace.project_name_slug", "project_name_slug"
+  help: Directory under src/ that contains the package code.
   default: |-
-    {{ package_dir | replace('/', '.') }}
+    {{ package_name | replace('.', '/') }}
 
 wheel_package_dir:
   type: str
-  help: e.g. "namespace/", "project_name_slug/"
+  help: Top-level directory under src/ to include in the built wheel.
   default: |-
     {{ package_dir.split('/') | first }}
