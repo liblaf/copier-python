@@ -29,12 +29,12 @@ build:
     install:
       - UV_PROJECT_ENVIRONMENT="${READTHEDOCS_VIRTUALENV_PATH}" uv sync --frozen --all-packages --link-mode copy
 
+    pre_build:
+      - sed --in-place "s|__SITE_URL__|$READTHEDOCS_CANONICAL_URL|g" 'zensical.toml'
+
     build:
       html:
-        - |-
-          config_file="$(mktemp --suffix='.toml')"
-          sed "s|__SITE_URL__|$READTHEDOCS_CANONICAL_URL|g" 'zensical.toml' > "$config_file"
-          zensical build --config-file "$config_file"
+        - zensical build
 
     post_build:
       - mkdir --parents --verbose "$READTHEDOCS_OUTPUT/html/"

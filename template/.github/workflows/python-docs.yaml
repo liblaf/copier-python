@@ -34,11 +34,10 @@ jobs:
           activate-environment: true
       - name: Install dependencies
         run: uv sync --active --frozen --all-packages
+      - name: Set site url
+        run: sed --in-place 's|__SITE_URL__|${{ steps.config.outputs.base_url }}|g' 'zensical.toml'
       - name: Build
-        run: |-
-          config_file="$(mktemp --suffix='.toml')"
-          sed 's|__SITE_URL__|${{ steps.config.outputs.base_url }}|g' 'zensical.toml' > "$config_file"
-          zensical build --config-file "$config_file"
+        run: zensical build
       - name: Upload Github Pages artifact
         uses: actions/upload-pages-artifact@7b1f4a764d45c48632c6b24a0339c27f5614fb0b # v4
         with:
