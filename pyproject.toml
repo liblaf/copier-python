@@ -1,0 +1,14 @@
+#:schema https://raw.githubusercontent.com/SchemaStore/schemastore/master/src/schemas/json/pyproject.json
+
+[tool.ruff.lint]
+ignore = ["N999"]
+
+[tool.tombi]
+files.include = ["**/*.toml", "**/*.toml.jinja"]
+
+[[tool.tombi.overrides]]
+files.include = ["template/pyproject.toml.jinja"]
+lint.enabled = false
+
+[tool.ty.rules]
+unresolved-import = "ignore"

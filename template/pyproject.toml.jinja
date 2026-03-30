@@ -1,9 +1,9 @@
 # {#- -*- mode: toml; -*- -#}
-#:schema https://json.schemastore.org/pyproject.json
+#:schema https://raw.githubusercontent.com/SchemaStore/schemastore/master/src/schemas/json/pyproject.json
 # ref: <https://packaging.python.org/en/latest/specifications/pyproject-toml/>
 
 [project]
-name = "{{ package_name }}"
+name = "{{ distribution_name }}"
 description = ""
 readme = "README.md"
 requires-python = ">=3.12"
@@ -39,7 +39,14 @@ dynamic = ["version"]
 
 [dependency-groups]
 build = ["check-wheel-contents>=0.6", "hatch>=1", "twine>=6"]
-docs = ["liblaf-mkdocs-preset>=0.3", "mkdocs>=1,<2"]
+docs = [
+  "griffe-fieldz>=0.5",
+  "griffe-inherited-docstrings>=1",
+  "griffe-pydantic>=1",
+  "griffe-warnings-deprecated>=1",
+  "mkdocstrings[python]>=1",
+  "zensical>=0.0.30"
+]
 lint = ["import-linter[ui]>=2", "ruff>=0.15"]
 nox = ["liblaf-nox-recipes>=0.1", "nox>=2026", "nox-uv>=0.7"]
 test = ["pytest>=9", "pytest-cov>=7", "pytest-randomly>=4"]

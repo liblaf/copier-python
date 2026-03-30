@@ -34,11 +34,11 @@ jobs:
           activate-environment: true
       - name: Install dependencies
         run: uv sync --active --frozen --all-packages
-      - if: hashFiles('docs/scripts/pre-build.sh') != ''
-        name: Pre-build
-        run: docs/scripts/pre-build.sh
       - name: Build
-        run: mkdocs build
+        run: |-
+          config_file="$(mktemp --suffix='.toml')"
+          sed 's|__SITE_URL__|${{ steps.config.outputs.base_url }}|g' 'zensical.toml' > "$config_file"
+          zensical build --config-file "$config_file"
       - name: Upload Github Pages artifact
         uses: actions/upload-pages-artifact@7b1f4a764d45c48632c6b24a0339c27f5614fb0b # v4
         with:

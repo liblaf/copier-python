@@ -15,27 +15,26 @@ useGitignore: true
 words:
   - arithmatex
   - chtml
-  - cuda
   - direnv
-  - elif
   - envops
   - envrc
   - fieldz
-  - getattr
+  - grimp
   - hynek
   - inlinehilite
   - kwargs
-  - libc
   - liblaf
-  - mathjax
+  - linenums
+  - lucide
   - mkdocs
   - mkdocstrings
   - noxfile
-  - numprocesses
   - numpy
+  - pipx
   - pycache
   - pydantic
   - pydocstyle
+  - pygments
   - pylint
   - pymdownx
   - pypa
@@ -47,8 +46,10 @@ words:
   - pyvista
   - sdist
   - strftime
+  - taiki
   - tombi
   - trimesh
-  - uuidgen
+  - twemoji
   - venv
   - virtualenv
+  - zensical
