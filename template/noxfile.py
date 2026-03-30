@@ -22,7 +22,7 @@ def bench(s: nox.Session) -> None:
     "resolution",
     [
         nox.param(Resolution.HIGHEST, id="highest", tags=["highest"]),
-        nox.param(Resolution.LOWEST, id="lowest", tags=["lowest"]),
+        # nox.param(Resolution.LOWEST, id="lowest", tags=["lowest"]),
         nox.param(Resolution.LOWEST_DIRECT, id="lowest-direct", tags=["lowest-direct"]),
     ],
 )
