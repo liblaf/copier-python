@@ -44,7 +44,7 @@ jobs:
         name: MegaLinter
         uses: liblaf/megalinter-custom-flavor-all@4c245a0bdb312d24c66108433d4d701fb0875746 # main
         env:
-          GITHUB_TOKEN: ${{ github.token }}
+          GITHUB_TOKEN: ${{ steps.auth.outputs.token }}
           MEGALINTER_CONFIG: https://raw.githubusercontent.com/liblaf/megalinter-custom-flavor-all/refs/heads/main/.mega-linter.yml
       - if: success() || failure()
         name: Upload reports
