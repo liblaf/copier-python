@@ -7,6 +7,22 @@ All notable changes to this project will be documented in this file.
 The format is based on [Conventional Changelog](https://github.com/conventional-changelog/conventional-changelog-config-spec/blob/master/versions/2.2.0/README.md),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v0.1.28](https://github.com/liblaf/copier-python/releases/tag/v0.1.28) - 2026-03-31
+
+### ✨ Features
+
+- **(mise)** detect lazy loader from project dependencies - [80b0bef](https://github.com/liblaf/copier-python/commit/80b0bef69593903728db8440da88a0001297a5a1) by [@liblaf](https://github.com/liblaf)
+
+### 🐛 Bug Fixes
+
+- **(mise)** load lint:toml task script via file - [4472105](https://github.com/liblaf/copier-python/commit/44721053c8370738a6f66cd347b1a4f97a378a35) by [@liblaf](https://github.com/liblaf)
+- **(ruff)** remove skip-magic-trailing-comma setting - [f4c2cee](https://github.com/liblaf/copier-python/commit/f4c2cee0531c82adb4b6b24da4acce57eebd5b09) by [@liblaf](https://github.com/liblaf)
+
+### ❤️ Contributors
+
+- [@liblaf](https://github.com/liblaf)
+- [@renovate[bot]](https://github.com/apps/renovate)
+
 ## [v0.1.27](https://github.com/liblaf/copier-python/releases/tag/v0.1.27) - 2026-03-30
 
 ### ⚙️ Continuous Integrations
@@ -15,6 +31,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### ❤️ Contributors
 
+- [@liblaf-release-please[bot]](https://github.com/apps/liblaf-release-please)
 - [@liblaf](https://github.com/liblaf)
 
 ## [v0.1.26](https://github.com/liblaf/copier-python/releases/tag/v0.1.26) - 2026-03-30
