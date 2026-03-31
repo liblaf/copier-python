@@ -36,9 +36,7 @@ run = ["lint-imports", "ruff check --fix", "ruff format"]
 
 [tasks."lint:toml"]
 description = "Sort, format, and lint TOML files"
-run = [
-  "https://raw.githubusercontent.com/liblaf/copier-python/refs/heads/main/mise-tasks/lint/toml.sh"
-]
+file = "https://raw.githubusercontent.com/liblaf/copier-python/refs/heads/main/mise-tasks/lint/toml.sh"
 
 [tasks.upgrade]
 description = "Upgrade project dependencies from lockfiles"
