@@ -9,7 +9,6 @@ show-fixes = true
 
 [format]
 docstring-code-format = true
-skip-magic-trailing-comma = true
 
 [lint]
 explicit-preview-rules = true
