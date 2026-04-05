@@ -18,12 +18,12 @@ jobs:
     if: startsWith(github.head_ref, 'release-please/') && github.event.pull_request.merged
     runs-on: ubuntu-latest
     environment:
-      name: Release Please
+      name: release-please
       deployment: false
     steps:
       - id: auth
         name: Auth
-        uses: liblaf/actions/auth@1f83732587ff97f1babbe9218fdc5436dda1a16f # v1
+        uses: liblaf/actions/auth@12ffbdf8f37ab1ff07565b44b643fd8433621cd7 # v1
         with:
           app-id: ${{ vars.APP_ID }}
           private-key: ${{ secrets.PRIVATE_KEY }}

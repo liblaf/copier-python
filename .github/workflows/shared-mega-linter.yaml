@@ -16,7 +16,6 @@ on:
 
 env:
   FORCE_COLOR: 1
-  GIT_COMMIT_MESSAGE: "chore(mega-linter): apply linters automatic fixes"
 
 jobs:
   mega-linter:
@@ -27,7 +26,7 @@ jobs:
       pull-requests: write
     runs-on: ubuntu-latest
     environment:
-      name: MegaLinter
+      name: mega-linter
       deployment: false
     outputs:
       pull-request-url: ${{ steps.pr.outputs.pull-request-url }}
@@ -66,20 +65,19 @@ jobs:
         uses: peter-evans/create-pull-request@c0f553fe549906ede9cf27b5156039d195d2ece0 # v8
         with:
           token: ${{ steps.auth.outputs.token }}
-          commit-message: ${{ env.GIT_COMMIT_MESSAGE }}
+          commit-message: "chore(mega-linter): apply linters automatic fixes"
           branch: mega-linter/${{ github.head_ref || github.ref_name }}
           delete-branch: true
           sign-commits: true
-          title: ${{ env.GIT_COMMIT_MESSAGE }}
+          title: "chore(mega-linter): apply linters automatic fixes"
           body-path: ${{ runner.temp }}/megalinter-report.md
           labels: |-
             automerge
             mega-linter
           assignees: ${{ github.repository_owner }}
-          reviewers: ${{ github.repository_owner }}
 
-  review:
-    name: Review
+  approve:
+    name: Approve
     permissions:
       pull-requests: write
     needs:
@@ -87,11 +85,17 @@ jobs:
     if: needs.mega-linter.outputs.pull-request-url
     runs-on: ubuntu-latest
     environment:
-      name: Review
+      name: approve
       deployment: false
     steps:
-      - name: Review
-        uses: liblaf/actions/review@1f83732587ff97f1babbe9218fdc5436dda1a16f # v1
+      - id: auth
+        name: Auth
+        uses: liblaf/actions/auth@12ffbdf8f37ab1ff07565b44b643fd8433621cd7 # v1
         with:
+          app-id: ${{ vars.APP_ID }}
+          private-key: ${{ secrets.PRIVATE_KEY }}
+      - name: Approve
+        uses: liblaf/actions/approve@12ffbdf8f37ab1ff07565b44b643fd8433621cd7 # v1
+        with:
+          approve-token: ${{ steps.auth.outputs.token }}
           pull: ${{ needs.mega-linter.outputs.pull-request-url }}
-          review-token: ${{ secrets.REVIEW_TOKEN }}
