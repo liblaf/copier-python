@@ -15,7 +15,7 @@ jobs:
       contents: write
     runs-on: ubuntu-latest
     environment:
-      name: Release Please
+      name: release-please
       deployment: false
     steps:
       - id: auth
@@ -27,5 +27,5 @@ jobs:
       - name: Publish drafts
         uses: liblaf/actions/publish-drafts@1f83732587ff97f1babbe9218fdc5436dda1a16f # v1
         with:
-          older-than: 6h
+          older-than: 6hr
           token: ${{ steps.auth.outputs.token }}
