@@ -7,6 +7,22 @@ All notable changes to this project will be documented in this file.
 The format is based on [Conventional Changelog](https://github.com/conventional-changelog/conventional-changelog-config-spec/blob/master/versions/2.2.0/README.md),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v0.1.29](https://github.com/liblaf/copier-python/releases/tag/v0.1.29) - 2026-04-05
+
+### ⚙️ Continuous Integrations
+
+- **(deps)** update codspeedhq/action digest to d872884 (#82) - [fd347fc](https://github.com/liblaf/copier-python/commit/fd347fce4c54e82053aeae4156631d40be617b78) by [@renovate[bot]](https://github.com/apps/renovate) in [#82](https://github.com/liblaf/copier-python/pull/82)
+- **(deps)** update taiki-e/install-action digest to 6ef672e (#80) - [d9f3d53](https://github.com/liblaf/copier-python/commit/d9f3d53cf541cdd6410cc8d36486d3c23f0aa389) by [@renovate[bot]](https://github.com/apps/renovate) in [#80](https://github.com/liblaf/copier-python/pull/80)
+- **(deps)** update taiki-e/install-action digest to bfadeab (#84) - [0c46abf](https://github.com/liblaf/copier-python/commit/0c46abf569149f0fef3c136964e8d1b3f7eb3248) by [@renovate[bot]](https://github.com/apps/renovate) in [#84](https://github.com/liblaf/copier-python/pull/84)
+- **(deps)** update taiki-e/install-action digest to a1df912 (#85) - [426c33e](https://github.com/liblaf/copier-python/commit/426c33ec280c2094b7d988f706981b0d4119585a) by [@renovate[bot]](https://github.com/apps/renovate) in [#85](https://github.com/liblaf/copier-python/pull/85)
+- **(deps)** update taiki-e/install-action digest to 0cccd59 (#86) - [2e922ea](https://github.com/liblaf/copier-python/commit/2e922ea0cb2c3012cc6fcc4d0c0b3a9dc1d20db0) by [@renovate[bot]](https://github.com/apps/renovate) in [#86](https://github.com/liblaf/copier-python/pull/86)
+- **(deps)** update taiki-e/install-action digest to d858f81 (#87) - [bcdc0c1](https://github.com/liblaf/copier-python/commit/bcdc0c1645a05b50d4df739e1e0a0641826a9fac) by [@renovate[bot]](https://github.com/apps/renovate) in [#87](https://github.com/liblaf/copier-python/pull/87)
+
+### ❤️ Contributors
+
+- [@liblaf-copier[bot]](https://github.com/apps/liblaf-copier) made their first contribution in [#88](https://github.com/liblaf/copier-python/pull/88)
+- [@renovate[bot]](https://github.com/apps/renovate)
+
 ## [v0.1.28](https://github.com/liblaf/copier-python/releases/tag/v0.1.28) - 2026-03-31
 
 ### ✨ Features
@@ -20,6 +36,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### ❤️ Contributors
 
+- [@liblaf-release-please[bot]](https://github.com/apps/liblaf-release-please)
 - [@liblaf](https://github.com/liblaf)
 - [@renovate[bot]](https://github.com/apps/renovate)
 
