@@ -7,6 +7,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Conventional Changelog](https://github.com/conventional-changelog/conventional-changelog-config-spec/blob/master/versions/2.2.0/README.md),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v0.1.30](https://github.com/liblaf/copier-python/releases/tag/v0.1.30) - 2026-04-05
+
+### ⚙️ Continuous Integrations
+
+- **(release)** normalize PyPI environment and gate verbose logs - [8f37e0f](https://github.com/liblaf/copier-python/commit/8f37e0f8cc3ef7e1426bee9319d47490680f758d) by [@liblaf](https://github.com/liblaf)
+
+### ❤️ Contributors
+
+- [@liblaf](https://github.com/liblaf)
+
 ## [v0.1.29](https://github.com/liblaf/copier-python/releases/tag/v0.1.29) - 2026-04-05
 
 ### ⚙️ Continuous Integrations
@@ -20,6 +30,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### ❤️ Contributors
 
+- [@liblaf-release-please[bot]](https://github.com/apps/liblaf-release-please)
 - [@liblaf-copier[bot]](https://github.com/apps/liblaf-copier) made their first contribution in [#88](https://github.com/liblaf/copier-python/pull/88)
 - [@renovate[bot]](https://github.com/apps/renovate)
 
