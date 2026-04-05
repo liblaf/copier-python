@@ -17,9 +17,6 @@ ci:
     # package, and the `additional_dependencies` configuration option is not
     # supported in the CI environment.
     - biome-check
-    # Skip dotenv-linter in CI because pre-commit.ci does not support
-    # Docker-based hooks.
-    - dotenv-linter
 
 repos:
   - repo: https://github.com/astral-sh/ruff-pre-commit
@@ -34,10 +31,6 @@ repos:
     hooks:
       - id: biome-check
         exclude: \.jsonc?$
-  - repo: https://github.com/dotenv-linter/dotenv-linter
-    rev: v4.0.0
-    hooks:
-      - id: dotenv-linter
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v6.0.0
     hooks:
