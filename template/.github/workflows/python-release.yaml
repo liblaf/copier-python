@@ -40,7 +40,7 @@ jobs:
       - build
     runs-on: ubuntu-latest
     environment:
-      name: PyPI
+      name: pypi
       url: https://pypi.org/project/${{ needs.build.outputs.package-name }}/${{ needs.build.outputs.package-version }}/
     steps:
       - name: Download artifacts
@@ -51,7 +51,7 @@ jobs:
       - name: Publish to PyPI
         uses: pypa/gh-action-pypi-publish@ed0c53931b1dc9bd32cbe73a98c7f6766f8a527e # release/v1
         with:
-          verbose: true
+          verbose: ${{ runner.debug == '1' }}
           print-hash: true
           attestations: true
 
