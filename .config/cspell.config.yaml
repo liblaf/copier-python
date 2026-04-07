@@ -14,11 +14,14 @@ maxFileSize: 500KB
 useGitignore: true
 words:
   - arithmatex
+  - bfadeab
   - chtml
+  - codspeedhq
   - direnv
   - envops
   - envrc
   - fieldz
+  - fspath
   - grimp
   - hynek
   - inlinehilite
@@ -26,6 +29,7 @@ words:
   - liblaf
   - linenums
   - lucide
+  - mergery
   - mkdocs
   - mkdocstrings
   - noxfile
@@ -44,6 +48,7 @@ words:
   - pyrightconfig
   - pytest
   - pyvista
+  - rumdl
   - sdist
   - strftime
   - taiki

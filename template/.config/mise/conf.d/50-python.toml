@@ -19,11 +19,15 @@ description = "Serve the documentation site locally"
 run = ["rm --force --recursive '{{ config_root }}/.cache'", "zensical serve"]
 
 [tasks."gen:init"]
-description = "Generate __init__.py files from __init__.pyi stubs"
+description = "Generate lazy-loading __init__.py files from __init__.pyi stubs"
 file = "https://raw.githubusercontent.com/liblaf/copier-python/refs/heads/main/mise-tasks/gen/init.py"
 
+[tasks."gen:ref-pages"]
+description = "Generate API reference pages from public Python modules"
+file = "https://raw.githubusercontent.com/liblaf/copier-python/refs/heads/main/mise-tasks/gen/ref-pages.py"
+
 [tasks.install]
-description = "Install project dependencies from lockfiles"
+description = "Install project dependencies from pixi.lock or uv.lock"
 file = "https://raw.githubusercontent.com/liblaf/copier-python/refs/heads/main/mise-tasks/install.sh"
 
 [tasks.lint]
@@ -35,9 +39,9 @@ description = "Lint and format Python files"
 run = ["lint-imports", "ruff check --fix", "ruff format"]
 
 [tasks."lint:toml"]
-description = "Sort, format, and lint TOML files"
+description = "Sort, format, and lint TOML files with toml-sort and tombi"
 file = "https://raw.githubusercontent.com/liblaf/copier-python/refs/heads/main/mise-tasks/lint/toml.sh"
 
 [tasks.upgrade]
-description = "Upgrade project dependencies from lockfiles"
+description = "Upgrade project dependencies from pixi.lock or uv.lock"
 file = "https://raw.githubusercontent.com/liblaf/copier-python/refs/heads/main/mise-tasks/upgrade.sh"
