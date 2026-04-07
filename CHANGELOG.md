@@ -7,6 +7,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Conventional Changelog](https://github.com/conventional-changelog/conventional-changelog-config-spec/blob/master/versions/2.2.0/README.md),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v0.1.31](https://github.com/liblaf/copier-python/releases/tag/v0.1.31) - 2026-04-07
+
+### ✨ Features
+
+- **(template)** generate API reference pages from modules - [5ed31ec](https://github.com/liblaf/copier-python/commit/5ed31ec21a322b131666f5bcdcd25f42df271bc8) by [@liblaf](https://github.com/liblaf)
+
+### ❤️ Contributors
+
+- [@liblaf](https://github.com/liblaf)
+- [@liblaf-copier[bot]](https://github.com/apps/liblaf-copier)
+
 ## [v0.1.30](https://github.com/liblaf/copier-python/releases/tag/v0.1.30) - 2026-04-05
 
 ### ⚙️ Continuous Integrations
@@ -15,6 +26,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### ❤️ Contributors
 
+- [@github-actions[bot]](https://github.com/apps/github-actions) made their first contribution in [#89](https://github.com/liblaf/copier-python/pull/89)
 - [@liblaf](https://github.com/liblaf)
 
 ## [v0.1.29](https://github.com/liblaf/copier-python/releases/tag/v0.1.29) - 2026-04-05
