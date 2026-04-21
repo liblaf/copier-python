@@ -36,7 +36,7 @@ depends = ["lint:python", "lint:toml"]
 
 [tasks."lint:python"]
 description = "Lint and format Python files"
-run = ["lint-imports", "ruff check --fix", "ruff format"]
+run = ["lint-imports", "ruff check --fix", "ruff format", "ty check --fix"]
 
 [tasks."lint:toml"]
 description = "Sort, format, and lint TOML files with toml-sort and tombi"
