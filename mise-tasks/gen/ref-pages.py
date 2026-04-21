@@ -11,6 +11,7 @@ from __future__ import annotations
 import argparse
 import dataclasses
 import os
+import shutil
 from collections.abc import Sequence
 from pathlib import Path
 from typing import Any
@@ -80,6 +81,7 @@ def parse_args() -> Args:
 def main() -> None:
     args: Args = parse_args()
     nav = Nav()
+    shutil.rmtree(args.docs_dir / args.api_root, ignore_errors=True)
     for path in args.src.rglob("*.py"):
         relative: Path = path.relative_to(args.src)
         module_path: Path = relative.with_suffix("")
