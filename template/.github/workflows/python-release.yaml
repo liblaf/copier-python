@@ -4,9 +4,10 @@
 name: Python / Release
 
 on:
-  push:
-    tags:
-      - "v[0-9]*"
+  # Trigger only when a GitHub Release is published, so the release exists before assets are uploaded.
+  release:
+    types:
+      - published
 
 env:
   FORCE_COLOR: 1
