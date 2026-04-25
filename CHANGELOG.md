@@ -7,6 +7,32 @@ All notable changes to this project will be documented in this file.
 The format is based on [Conventional Changelog](https://github.com/conventional-changelog/conventional-changelog-config-spec/blob/master/versions/2.2.0/README.md),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v0.1.32](https://github.com/liblaf/copier-python/releases/tag/v0.1.32) - 2026-04-25
+
+### 🐛 Bug Fixes
+
+- **(docs)** remove stale API pages before regeneration - [7b0d9ca](https://github.com/liblaf/copier-python/commit/7b0d9ca94b64c3b306815a9b57506c48ae3b1390) by [@liblaf](https://github.com/liblaf)
+
+### 🛠 Builds
+
+- **(mise)** add ty check to python lint task - [9afc269](https://github.com/liblaf/copier-python/commit/9afc269a27a8bb632d63939fce97509dbec9ce00) by [@liblaf](https://github.com/liblaf)
+
+### ⚙️ Continuous Integrations
+
+- **(deps)** update pypa/gh-action-pypi-publish digest to cef2210 (#92) - [1ea185d](https://github.com/liblaf/copier-python/commit/1ea185d2722d6a76cb30040da71461ffc394dca6) by [@renovate[bot]](https://github.com/apps/renovate)
+- **(deps)** update codspeedhq/action digest to db35df7 (#94) - [13455f1](https://github.com/liblaf/copier-python/commit/13455f198e1e9c72e8efcd95d5180a7b0c254b13) by [@renovate[bot]](https://github.com/apps/renovate)
+- **(deps)** update softprops/action-gh-release digest to 3bb1273 (#95) - [595d78a](https://github.com/liblaf/copier-python/commit/595d78af57c3e1d6488b6dda5597595b4b3757ae) by [@renovate[bot]](https://github.com/apps/renovate)
+- **(deps)** update softprops/action-gh-release action to v3 (#96) - [983dada](https://github.com/liblaf/copier-python/commit/983dadac0c0b231ac98141b9e94d32f78f2917ab) by [@renovate[bot]](https://github.com/apps/renovate)
+- **(deps)** update actions/upload-pages-artifact action to v5 (#97) - [bf78685](https://github.com/liblaf/copier-python/commit/bf786853656c751982696b6bf23ca254d6af4159) by [@renovate[bot]](https://github.com/apps/renovate)
+- **(deps)** update codspeedhq/action digest to 658a901 (#99) - [6ac43f8](https://github.com/liblaf/copier-python/commit/6ac43f8b34b9b24e296207b8db5079502f9e5ce8) by [@renovate[bot]](https://github.com/apps/renovate)
+- **(deps)** update astral-sh/setup-uv action to v8 (#98) - [5d6ed6f](https://github.com/liblaf/copier-python/commit/5d6ed6f6a5bb27364a14a61833aee70b1c56c070) by [@renovate[bot]](https://github.com/apps/renovate)
+- trigger Python release from GitHub releases - [05a54fb](https://github.com/liblaf/copier-python/commit/05a54fb957f128db7ff77cf8dcb7a4d39d88e4b2) by [@liblaf](https://github.com/liblaf)
+
+### ❤️ Contributors
+
+- [@liblaf](https://github.com/liblaf)
+- [@renovate[bot]](https://github.com/apps/renovate)
+
 ## [v0.1.31](https://github.com/liblaf/copier-python/releases/tag/v0.1.31) - 2026-04-07
 
 ### ✨ Features
@@ -15,6 +41,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### ❤️ Contributors
 
+- [@liblaf-release-please[bot]](https://github.com/apps/liblaf-release-please)
 - [@liblaf](https://github.com/liblaf)
 - [@liblaf-copier[bot]](https://github.com/apps/liblaf-copier)
 
@@ -33,12 +60,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### ⚙️ Continuous Integrations
 
-- **(deps)** update codspeedhq/action digest to d872884 (#82) - [fd347fc](https://github.com/liblaf/copier-python/commit/fd347fce4c54e82053aeae4156631d40be617b78) by [@renovate[bot]](https://github.com/apps/renovate) in [#82](https://github.com/liblaf/copier-python/pull/82)
-- **(deps)** update taiki-e/install-action digest to 6ef672e (#80) - [d9f3d53](https://github.com/liblaf/copier-python/commit/d9f3d53cf541cdd6410cc8d36486d3c23f0aa389) by [@renovate[bot]](https://github.com/apps/renovate) in [#80](https://github.com/liblaf/copier-python/pull/80)
-- **(deps)** update taiki-e/install-action digest to bfadeab (#84) - [0c46abf](https://github.com/liblaf/copier-python/commit/0c46abf569149f0fef3c136964e8d1b3f7eb3248) by [@renovate[bot]](https://github.com/apps/renovate) in [#84](https://github.com/liblaf/copier-python/pull/84)
-- **(deps)** update taiki-e/install-action digest to a1df912 (#85) - [426c33e](https://github.com/liblaf/copier-python/commit/426c33ec280c2094b7d988f706981b0d4119585a) by [@renovate[bot]](https://github.com/apps/renovate) in [#85](https://github.com/liblaf/copier-python/pull/85)
-- **(deps)** update taiki-e/install-action digest to 0cccd59 (#86) - [2e922ea](https://github.com/liblaf/copier-python/commit/2e922ea0cb2c3012cc6fcc4d0c0b3a9dc1d20db0) by [@renovate[bot]](https://github.com/apps/renovate) in [#86](https://github.com/liblaf/copier-python/pull/86)
-- **(deps)** update taiki-e/install-action digest to d858f81 (#87) - [bcdc0c1](https://github.com/liblaf/copier-python/commit/bcdc0c1645a05b50d4df739e1e0a0641826a9fac) by [@renovate[bot]](https://github.com/apps/renovate) in [#87](https://github.com/liblaf/copier-python/pull/87)
+- **(deps)** update codspeedhq/action digest to d872884 (#82) - [fd347fc](https://github.com/liblaf/copier-python/commit/fd347fce4c54e82053aeae4156631d40be617b78) by [@renovate[bot]](https://github.com/apps/renovate)
+- **(deps)** update taiki-e/install-action digest to 6ef672e (#80) - [d9f3d53](https://github.com/liblaf/copier-python/commit/d9f3d53cf541cdd6410cc8d36486d3c23f0aa389) by [@renovate[bot]](https://github.com/apps/renovate)
+- **(deps)** update taiki-e/install-action digest to bfadeab (#84) - [0c46abf](https://github.com/liblaf/copier-python/commit/0c46abf569149f0fef3c136964e8d1b3f7eb3248) by [@renovate[bot]](https://github.com/apps/renovate)
+- **(deps)** update taiki-e/install-action digest to a1df912 (#85) - [426c33e](https://github.com/liblaf/copier-python/commit/426c33ec280c2094b7d988f706981b0d4119585a) by [@renovate[bot]](https://github.com/apps/renovate)
+- **(deps)** update taiki-e/install-action digest to 0cccd59 (#86) - [2e922ea](https://github.com/liblaf/copier-python/commit/2e922ea0cb2c3012cc6fcc4d0c0b3a9dc1d20db0) by [@renovate[bot]](https://github.com/apps/renovate)
+- **(deps)** update taiki-e/install-action digest to d858f81 (#87) - [bcdc0c1](https://github.com/liblaf/copier-python/commit/bcdc0c1645a05b50d4df739e1e0a0641826a9fac) by [@renovate[bot]](https://github.com/apps/renovate)
 
 ### ❤️ Contributors
 
