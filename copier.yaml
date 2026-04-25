@@ -7,9 +7,6 @@ _answers_file: .config/copier/.copier-answers.python.yaml
 _external_data:
   shared: "{{ answers_file_shared }}"
 
-_envops:
-  comment_start_string: "# {#"
-
 _skip_if_exists:
   - .gitignore
   - .vscode/settings.json
@@ -23,14 +20,14 @@ _skip_if_exists:
 _subdirectory: template
 
 _tasks:
-  - rm --force --recursive '.config/copier/mise-tasks'
-  - rm --force '.config/copier/mkdocs.yaml'
-  - rm --force '.config/linters/pyrightconfig.json'
-  - rm --force '.config/mise/conf.d/10-python.toml'
-  - rm --force '.github/workflows/bench.yaml'
-  - rm --force '.github/workflows/docs.yaml'
-  - rm --force '.github/workflows/release.yaml'
-  - rm --force '.github/workflows/test.yaml'
+  - rm --force --recursive --verbose '.config/copier/mise-tasks'
+  - rm --force --verbose '.config/copier/mkdocs.yaml'
+  - rm --force --verbose '.config/linters/pyrightconfig.json'
+  - rm --force --verbose '.config/mise/conf.d/10-python.toml'
+  - rm --force --verbose '.github/workflows/bench.yaml'
+  - rm --force --verbose '.github/workflows/docs.yaml'
+  - rm --force --verbose '.github/workflows/release.yaml'
+  - rm --force --verbose '.github/workflows/test.yaml'
 
 answers_file_shared:
   type: str

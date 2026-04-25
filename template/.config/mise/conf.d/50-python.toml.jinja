@@ -5,6 +5,7 @@
 [hooks.enter]
 task = "install"
 
+# {%- raw %}
 [tasks."docs:build"]
 description = "Build the documentation site"
 run = [
@@ -17,18 +18,19 @@ run = [
 [tasks."docs:serve"]
 description = "Serve the documentation site locally"
 run = ["rm --force --recursive '{{ config_root }}/.cache'", "zensical serve"]
+# {%- endraw %}
 
 [tasks."gen:init"]
 description = "Generate lazy-loading __init__.py files from __init__.pyi stubs"
-file = "https://raw.githubusercontent.com/liblaf/copier-python/refs/heads/main/mise-tasks/gen/init.py"
+file = "https://raw.githubusercontent.com/liblaf/copier-python/{{ _copier_conf.vcs_ref_hash }}/mise-tasks/gen/init.py"
 
 [tasks."gen:ref-pages"]
 description = "Generate API reference pages from public Python modules"
-file = "https://raw.githubusercontent.com/liblaf/copier-python/refs/heads/main/mise-tasks/gen/ref-pages.py"
+file = "https://raw.githubusercontent.com/liblaf/copier-python/{{ _copier_conf.vcs_ref_hash }}/mise-tasks/gen/ref-pages.py"
 
 [tasks.install]
 description = "Install project dependencies from pixi.lock or uv.lock"
-file = "https://raw.githubusercontent.com/liblaf/copier-python/refs/heads/main/mise-tasks/install.sh"
+file = "https://raw.githubusercontent.com/liblaf/copier-python/{{ _copier_conf.vcs_ref_hash }}/mise-tasks/install.sh"
 
 [tasks.lint]
 description = "Run all linters"
@@ -40,8 +42,8 @@ run = ["lint-imports", "ruff check --fix", "ruff format", "ty check --fix"]
 
 [tasks."lint:toml"]
 description = "Sort, format, and lint TOML files with toml-sort and tombi"
-file = "https://raw.githubusercontent.com/liblaf/copier-python/refs/heads/main/mise-tasks/lint/toml.sh"
+file = "https://raw.githubusercontent.com/liblaf/copier-python/{{ _copier_conf.vcs_ref_hash }}/mise-tasks/lint/toml.sh"
 
 [tasks.upgrade]
 description = "Upgrade project dependencies from pixi.lock or uv.lock"
-file = "https://raw.githubusercontent.com/liblaf/copier-python/refs/heads/main/mise-tasks/upgrade.sh"
+file = "https://raw.githubusercontent.com/liblaf/copier-python/{{ _copier_conf.vcs_ref_hash }}/mise-tasks/upgrade.sh"

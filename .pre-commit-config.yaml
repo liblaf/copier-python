@@ -13,24 +13,25 @@ ci:
   autoupdate_commit_msg: |-
     chore(pre-commit): pre-commit autoupdate
   skip:
-    # Skip biome-check in CI because `biome.jsonc` may extend from an NPM
-    # package, and the `additional_dependencies` configuration option is not
-    # supported in the CI environment.
-    - biome-check
+    - oxfmt
+    - oxlint
 
 repos:
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.15.8
+    rev: v0.15.11
     hooks:
       - id: ruff-check
         args:
           - --fix
       - id: ruff-format
-  - repo: https://github.com/biomejs/pre-commit
-    rev: v2.4.9
+  - repo: https://github.com/oxc-project/mirrors-oxfmt
+    rev: v0.45.0
     hooks:
-      - id: biome-check
-        exclude: \.jsonc?$
+      - id: oxfmt
+  - repo: https://github.com/oxc-project/mirrors-oxlint
+    rev: v1.60.0
+    hooks:
+      - id: oxlint
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v6.0.0
     hooks:
@@ -46,8 +47,12 @@ repos:
       - id: fix-byte-order-marker
       - id: mixed-line-ending
       - id: trailing-whitespace
+  - repo: https://github.com/rhysd/actionlint
+    rev: v1.7.12
+    hooks:
+      - id: actionlint
   - repo: https://github.com/rvben/rumdl-pre-commit
-    rev: v0.1.62
+    rev: v0.1.80
     hooks:
       - id: rumdl-fmt
   - repo: https://github.com/shellcheck-py/shellcheck-py

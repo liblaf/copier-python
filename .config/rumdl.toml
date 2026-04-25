@@ -3,4 +3,7 @@
 
 [global]
 extend-enable = ["MD060"]
-extend-disable = ["MD001", "MD013", "MD024", "MD033", "MD036", "MD041"]
+extend-disable = ["MD001", "MD013", "MD033", "MD036", "MD041"]
+
+[per-file-flavor]
+"docs/**/*.md" = "mkdocs"

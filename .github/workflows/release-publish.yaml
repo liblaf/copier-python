@@ -4,15 +4,20 @@
 name: Release / Publish
 
 on:
-  schedule:
-    - cron: "0 * * * *" # Runs every hour
-  workflow_dispatch:
+  pull_request:
+    branches:
+      - main
+    types:
+      - closed
 
 jobs:
-  release-publish:
-    name: Publish Release
+  release-draft:
+    name: Create Release
     permissions:
       contents: write
+    if: >-
+      startsWith(github.head_ref, 'release-please/') &&
+      github.event.pull_request.merged
     runs-on: ubuntu-latest
     environment:
       name: release-please
@@ -20,12 +25,30 @@ jobs:
     steps:
       - id: auth
         name: Auth
-        uses: liblaf/actions/auth@1f83732587ff97f1babbe9218fdc5436dda1a16f # v1
+        uses: liblaf/actions/auth@d510a5eaa5206b30ed1009660d04ef8082daf2d9 # v2
         with:
-          app-id: ${{ vars.APP_ID }}
-          private-key: ${{ secrets.PRIVATE_KEY }}
-      - name: Publish drafts
-        uses: liblaf/actions/publish-drafts@1f83732587ff97f1babbe9218fdc5436dda1a16f # v1
+          client-id: ${{ vars.APP_CLIENT_ID }}
+          private-key: ${{ secrets.APP_PRIVATE_KEY }}
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
         with:
-          older-than: 6hr
+          token: ${{ steps.auth.outputs.token }}
+      - id: version
+        name: Get version
+        run: |-
+          tag="$(awk '{ print $NF }' <<< "$TITLE")"
+          version="${tag#'v'}"
+          echo "tag=$tag" >> "$GITHUB_OUTPUT"
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+        env:
+          TITLE: ${{ github.event.pull_request.title }}
+      - name: Create tag
+        run: |-
+          git tag '${{ steps.version.outputs.tag }}'
+          git push origin tag '${{ steps.version.outputs.tag }}'
+      - name: Create release
+        uses: softprops/action-gh-release@b4309332981a82ec1c5618f44dd2e27cc8bfbfda # v3
+        with:
+          body: ${{ github.event.pull_request.body }}
+          tag_name: ${{ steps.version.outputs.tag }}
           token: ${{ steps.auth.outputs.token }}
