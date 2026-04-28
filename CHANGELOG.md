@@ -7,6 +7,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Conventional Changelog](https://github.com/conventional-changelog/conventional-changelog-config-spec/blob/master/versions/2.2.0/README.md),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v0.1.33](https://github.com/liblaf/copier-python/releases/tag/v0.1.33) - 2026-04-28
+
+### ⚙️ Continuous Integrations
+
+- **(deps)** update codspeedhq/action digest to c381be0 (#101) - [4e6fb87](https://github.com/liblaf/copier-python/commit/4e6fb879dd7121f4337c557241555aa0e6922a48) by [@renovate[bot]](https://github.com/apps/renovate)
+
+### ❤️ Contributors
+
+- [@renovate[bot]](https://github.com/apps/renovate)
+
 ## [v0.1.32](https://github.com/liblaf/copier-python/releases/tag/v0.1.32) - 2026-04-25
 
 ### 🐛 Bug Fixes
@@ -26,12 +36,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **(deps)** update actions/upload-pages-artifact action to v5 (#97) - [bf78685](https://github.com/liblaf/copier-python/commit/bf786853656c751982696b6bf23ca254d6af4159) by [@renovate[bot]](https://github.com/apps/renovate)
 - **(deps)** update codspeedhq/action digest to 658a901 (#99) - [6ac43f8](https://github.com/liblaf/copier-python/commit/6ac43f8b34b9b24e296207b8db5079502f9e5ce8) by [@renovate[bot]](https://github.com/apps/renovate)
 - **(deps)** update astral-sh/setup-uv action to v8 (#98) - [5d6ed6f](https://github.com/liblaf/copier-python/commit/5d6ed6f6a5bb27364a14a61833aee70b1c56c070) by [@renovate[bot]](https://github.com/apps/renovate)
+- **(deps)** update codspeedhq/action digest to db35df7 (#100) - [a144f38](https://github.com/liblaf/copier-python/commit/a144f387c9f419574619548c6d44c15e4fffef35) by [@renovate[bot]](https://github.com/apps/renovate)
 - trigger Python release from GitHub releases - [05a54fb](https://github.com/liblaf/copier-python/commit/05a54fb957f128db7ff77cf8dcb7a4d39d88e4b2) by [@liblaf](https://github.com/liblaf)
 
 ### ❤️ Contributors
 
-- [@liblaf](https://github.com/liblaf)
+- [@liblaf-release-please[bot]](https://github.com/apps/liblaf-release-please)
 - [@renovate[bot]](https://github.com/apps/renovate)
+- [@liblaf](https://github.com/liblaf)
 
 ## [v0.1.31](https://github.com/liblaf/copier-python/releases/tag/v0.1.31) - 2026-04-07
 
