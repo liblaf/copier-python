@@ -23,30 +23,26 @@ MODULE_SYMBOL: str = '<code class="doc-symbol doc-symbol-toc doc-symbol-module">
 
 
 class Args(argparse.Namespace):
+    src: Path
     api_root: Path
     docs_dir: Path
     print_nav: bool
-    src: Path
 
 
 @dataclasses.dataclass
 class Nav:
-    module_path: str = ""
+    module: str = ""
     index: str | None = None
     children: dict[str, Nav] = dataclasses.field(default_factory=dict)
 
     def add(self, parts: Sequence[str], full_doc_path: Path) -> None:
         if not parts:
-            self.index = os.fspath(full_doc_path)
+            self.index: str = os.fspath(full_doc_path)
             return
         if parts[0] in self.children:
-            child = self.children[parts[0]]
+            child: Nav = self.children[parts[0]]
         else:
-            child = type(self)(
-                module_path=f"{self.module_path}.{parts[0]}"
-                if self.module_path
-                else parts[0]
-            )
+            child: Nav = type(self)(module=parts[0])
             self.children[parts[0]] = child
         child.add(parts[1:], full_doc_path)
 
@@ -58,7 +54,7 @@ class Nav:
             children.append(child.dump())
         if len(children) == 1:
             return children[0]
-        return {f"{MODULE_SYMBOL} {self.module_path}": children}
+        return {f"{MODULE_SYMBOL} {self.module}": children}
 
 
 def is_public(part: str) -> bool:
