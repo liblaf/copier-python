@@ -7,6 +7,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Conventional Changelog](https://github.com/conventional-changelog/conventional-changelog-config-spec/blob/master/versions/2.2.0/README.md),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v0.1.35](https://github.com/liblaf/copier-python/releases/tag/v0.1.35) - 2026-05-05
+
+### 🐛 Bug Fixes
+
+- **(template)** inherit \_IceCreamDebugger from Protocol - [00929f6](https://github.com/liblaf/copier-python/commit/00929f6fcabfe6a43c9a0027d3d2c942fa7a76e3) by [@liblaf](https://github.com/liblaf)
+
+### ❤️ Contributors
+
+- [@liblaf](https://github.com/liblaf)
+
 ## [v0.1.34](https://github.com/liblaf/copier-python/releases/tag/v0.1.34) - 2026-05-05
 
 ### 🎨 Styles
@@ -15,6 +25,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### ❤️ Contributors
 
+- [@liblaf-release-please[bot]](https://github.com/apps/liblaf-release-please)
 - [@liblaf](https://github.com/liblaf)
 
 ## [v0.1.33](https://github.com/liblaf/copier-python/releases/tag/v0.1.33) - 2026-05-05
