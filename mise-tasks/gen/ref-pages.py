@@ -91,7 +91,7 @@ def main() -> None:
         full_doc_path.parent.mkdir(parents=True, exist_ok=True)
         full_doc_path.write_text(MARKDOWN_TEMPLATE.format(module_path=".".join(parts)))
         nav.add(parts, doc_path)
-    print(tomlkit.dumps(nav.dump()))
+    print(tomlkit.dumps({"API Reference": nav.dump()}))
 
 
 if __name__ == "__main__":

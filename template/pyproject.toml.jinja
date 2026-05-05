@@ -74,10 +74,10 @@ packages = ["src/{{ wheel_package_dir }}"]
 source = "vcs"
 
 [tool.importlinter]
-root_package = "{{ module_name }}"
+root_package = "{{ package_name }}"
 
 [[tool.importlinter.contracts]]
-ancestors = ["{{ module_name }}"]
+ancestors = ["{{ package_name }}"]
 name = "Acyclic siblings"
 type = "acyclic_siblings"
 
