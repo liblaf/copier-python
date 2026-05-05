@@ -18,7 +18,7 @@ from typing import Any
 
 import tomlkit
 
-MARKDOWN_TEMPLATE: str = "::: {module_path}"
+MARKDOWN_TEMPLATE: str = "::: {module_path}\n"
 MODULE_SYMBOL: str = '<code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>'
 
 
