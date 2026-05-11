@@ -7,6 +7,22 @@ All notable changes to this project will be documented in this file.
 The format is based on [Conventional Changelog](https://github.com/conventional-changelog/conventional-changelog-config-spec/blob/master/versions/2.2.0/README.md),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v0.1.36](https://github.com/liblaf/copier-python/releases/tag/v0.1.36) - 2026-05-11
+
+### 🐛 Bug Fixes
+
+- use correct template variable for importlinter config and wrap nav under API Reference key - [dc82f2f](https://github.com/liblaf/copier-python/commit/dc82f2f5543a0da31d858af577beba9688609e09) by [@liblaf](https://github.com/liblaf)
+
+### ⚙️ Continuous Integrations
+
+- **(deps)** update codspeedhq/action digest to 3194d9a (#106) - [cf219ae](https://github.com/liblaf/copier-python/commit/cf219aea3ca710755e1e19e8b046a859f1a57f9a) by [@renovate[bot]](https://github.com/apps/renovate)
+- **(deps)** update hynek/build-and-inspect-python-package digest to d44ca7d (#107) - [d4c859d](https://github.com/liblaf/copier-python/commit/d4c859db82dd3141e3b8cb9c3364137d978a90b0) by [@renovate[bot]](https://github.com/apps/renovate)
+
+### ❤️ Contributors
+
+- [@renovate[bot]](https://github.com/apps/renovate)
+- [@liblaf](https://github.com/liblaf)
+
 ## [v0.1.35](https://github.com/liblaf/copier-python/releases/tag/v0.1.35) - 2026-05-05
 
 ### 🐛 Bug Fixes
@@ -15,6 +31,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### ❤️ Contributors
 
+- [@liblaf-release-please[bot]](https://github.com/apps/liblaf-release-please)
 - [@liblaf](https://github.com/liblaf)
 
 ## [v0.1.34](https://github.com/liblaf/copier-python/releases/tag/v0.1.34) - 2026-05-05
