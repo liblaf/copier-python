@@ -1,5 +1,3 @@
-from liblaf.lazy_loader import attach_stub
+from ._version import __commit_id__, __version__, __version_tuple__
 
-__getattr__, __dir__, __all__ = attach_stub(__name__, __package__, __file__)
-
-del attach_stub
+__all__ = ["__commit_id__", "__version__", "__version_tuple__"]
