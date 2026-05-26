@@ -7,6 +7,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Conventional Changelog](https://github.com/conventional-changelog/conventional-changelog-config-spec/blob/master/versions/2.2.0/README.md),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v0.1.37](https://github.com/liblaf/copier-python/releases/tag/v0.1.37) - 2026-05-26
+
+### 🐛 Bug Fixes
+
+- update Copier templates and generated config - [826bf91](https://github.com/liblaf/copier-python/commit/826bf91996b6658d845f8fc5933a6ce3b1f47b81) by [@liblaf](https://github.com/liblaf)
+
+### ⚙️ Continuous Integrations
+
+- **(deps)** update codecov/codecov-action digest to e79a696 (#108) - [97a41a8](https://github.com/liblaf/copier-python/commit/97a41a82bb63d1541abbf67367d8f411a5984982) by [@renovate[bot]](https://github.com/apps/renovate)
+
+### ❤️ Contributors
+
+- [@liblaf](https://github.com/liblaf)
+- [@renovate[bot]](https://github.com/apps/renovate)
+
 ## [v0.1.36](https://github.com/liblaf/copier-python/releases/tag/v0.1.36) - 2026-05-11
 
 ### 🐛 Bug Fixes
@@ -20,6 +35,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### ❤️ Contributors
 
+- [@liblaf-release-please[bot]](https://github.com/apps/liblaf-release-please)
 - [@renovate[bot]](https://github.com/apps/renovate)
 - [@liblaf](https://github.com/liblaf)
 
@@ -27,7 +43,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### 🐛 Bug Fixes
 
-- **(template)** inherit \_IceCreamDebugger from Protocol - [00929f6](https://github.com/liblaf/copier-python/commit/00929f6fcabfe6a43c9a0027d3d2c942fa7a76e3) by [@liblaf](https://github.com/liblaf)
+- **(template)** inherit _IceCreamDebugger from Protocol - [00929f6](https://github.com/liblaf/copier-python/commit/00929f6fcabfe6a43c9a0027d3d2c942fa7a76e3) by [@liblaf](https://github.com/liblaf)
 
 ### ❤️ Contributors
 
