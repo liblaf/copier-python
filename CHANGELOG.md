@@ -7,6 +7,24 @@ All notable changes to this project will be documented in this file.
 The format is based on [Conventional Changelog](https://github.com/conventional-changelog/conventional-changelog-config-spec/blob/master/versions/2.2.0/README.md),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v0.1.38](https://github.com/liblaf/copier-python/releases/tag/v0.1.38) - 2026-06-07
+
+### 🛠 Builds
+
+- update template dependencies - [8d11bcd](https://github.com/liblaf/copier-python/commit/8d11bcda985b5c01767bb479f3909b1e4a9c76ac) by [@liblaf](https://github.com/liblaf)
+
+### ⚙️ Continuous Integrations
+
+- **(deps)** update codspeedhq/action digest to 9d332c4 (#111) - [00f639d](https://github.com/liblaf/copier-python/commit/00f639d1062913752cb2656e526f2cd3be7b31c0) by [@renovate[bot]](https://github.com/apps/renovate)
+- **(deps)** update actions/checkout digest to df4cb1c (#113) - [f267d8c](https://github.com/liblaf/copier-python/commit/f267d8cd150210780ba8ad20a221ff37be2fe59a) by [@renovate[bot]](https://github.com/apps/renovate)
+- **(deps)** update astral-sh/setup-uv action to v8.2.0 (#114) - [6f3c98a](https://github.com/liblaf/copier-python/commit/6f3c98ada863bdfa07362dd86070dc1fd129b4cc) by [@renovate[bot]](https://github.com/apps/renovate)
+- **(deps)** update codecov/codecov-action action to v7 (#116) - [884890e](https://github.com/liblaf/copier-python/commit/884890e009b2b90ae95a4e1038191fdf780972cb) by [@renovate[bot]](https://github.com/apps/renovate)
+
+### ❤️ Contributors
+
+- [@liblaf](https://github.com/liblaf)
+- [@renovate[bot]](https://github.com/apps/renovate)
+
 ## [v0.1.37](https://github.com/liblaf/copier-python/releases/tag/v0.1.37) - 2026-05-26
 
 ### 🐛 Bug Fixes
@@ -19,6 +37,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### ❤️ Contributors
 
+- [@liblaf-release-please[bot]](https://github.com/apps/liblaf-release-please)
 - [@liblaf](https://github.com/liblaf)
 - [@renovate[bot]](https://github.com/apps/renovate)
 
