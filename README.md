@@ -97,7 +97,7 @@ Edit files under [`template/`](https://github.com/liblaf/copier-python/tree/main
 
 ---
 
-#### 📝 License
+### 📝 License
 
 Copyright © 2024 [liblaf](https://github.com/liblaf). <br />
 This project is [MIT](https://github.com/liblaf/copier-python/blob/main/LICENSE) licensed.
