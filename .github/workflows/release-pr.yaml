@@ -10,6 +10,8 @@ on:
 
 env:
   GIT_CLIFF_CONFIG_URL: https://raw.githubusercontent.com/liblaf/copier-release/refs/heads/main/cliff.toml
+  GIT_LFS_SKIP_PUSH: true
+  GIT_LFS_SKIP_SMUDGE: true
 
 concurrency:
   group: ${{ github.workflow }} @ ${{ github.ref }}
