@@ -10,6 +10,8 @@ on:
 
 env:
   GIT_CLIFF_CONFIG_URL: https://raw.githubusercontent.com/liblaf/copier-release/refs/heads/main/cliff.toml
+  GIT_LFS_SKIP_PUSH: true
+  GIT_LFS_SKIP_SMUDGE: true
 
 concurrency:
   group: ${{ github.workflow }} @ ${{ github.ref }}
@@ -28,16 +30,16 @@ jobs:
       version: ${{ steps.version.outputs.version }}
     steps:
       - name: Checkout
-        uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7
         with:
           fetch-depth: 0
       - name: Install git-cliff
-        uses: taiki-e/install-action@0631aa6515c7d545823c67cfae7ef4fc7f490154 # v2
+        uses: taiki-e/install-action@bffeee26d4db9be238a4ea78d8826604ebcb594d # v2
         with:
           tool: git-cliff
       - id: version
         name: Next version
-        uses: liblaf/actions/next-version@512d1652c6a71a8f141d1901f50994afaddc925e # v3
+        uses: liblaf/actions/next-version@ce9dc3a1daa92e93ddfe62d8378b93cedaa5056c # v3
         env:
           GIT_CLIFF_CONFIG_URL: ${{ env.GIT_CLIFF_CONFIG_URL }}
           GITHUB_TOKEN: ${{ github.token }}
@@ -58,12 +60,12 @@ jobs:
     steps:
       - id: auth
         name: Auth
-        uses: liblaf/actions/auth@512d1652c6a71a8f141d1901f50994afaddc925e # v3
+        uses: liblaf/actions/auth@ce9dc3a1daa92e93ddfe62d8378b93cedaa5056c # v3
         with:
           client-id: ${{ vars.APP_CLIENT_ID }}
           private-key: ${{ secrets.APP_PRIVATE_KEY }}
       - name: Checkout
-        uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7
         with:
           fetch-depth: 0
       - name: Install rumdl
