@@ -34,12 +34,12 @@ jobs:
         with:
           fetch-depth: 0
       - name: Install git-cliff
-        uses: taiki-e/install-action@bffeee26d4db9be238a4ea78d8826604ebcb594d # v2
+        uses: taiki-e/install-action@c93ccc03e00cd0e08e494f5fd058a6c55a6a1907 # v2
         with:
           tool: git-cliff
       - id: version
         name: Next version
-        uses: liblaf/actions/next-version@ce9dc3a1daa92e93ddfe62d8378b93cedaa5056c # v3
+        uses: liblaf/actions/next-version@9b52184f36acd04a347cbb92fe4155c42a753b4a # v3
         env:
           GIT_CLIFF_CONFIG_URL: ${{ env.GIT_CLIFF_CONFIG_URL }}
           GITHUB_TOKEN: ${{ github.token }}
@@ -60,7 +60,7 @@ jobs:
     steps:
       - id: auth
         name: Auth
-        uses: liblaf/actions/auth@ce9dc3a1daa92e93ddfe62d8378b93cedaa5056c # v3
+        uses: liblaf/actions/auth@9b52184f36acd04a347cbb92fe4155c42a753b4a # v3
         with:
           client-id: ${{ vars.APP_CLIENT_ID }}
           private-key: ${{ secrets.APP_PRIVATE_KEY }}
