@@ -7,7 +7,32 @@ All notable changes to this project will be documented in this file.
 The format is based on [Conventional Changelog](https://github.com/conventional-changelog/conventional-changelog-config-spec/blob/master/versions/2.2.0/README.md),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [v0.1.42](https://github.com/liblaf/copier-python/releases/tag/v0.1.42) - 2026-06-24
+## [v0.1.43](https://github.com/liblaf/copier-python/releases/tag/v0.1.43) - 2026-07-21
+
+### 🛠 Builds
+
+- refresh Copier templates and dependency pins - [598d4af](https://github.com/liblaf/copier-python/commit/598d4af5a88673348f2c3fb0979604da391504a4) by [@liblaf](https://github.com/liblaf)
+
+### ⚙️ Continuous Integrations
+
+- **(deps)** update astral-sh/setup-uv action to v8.3.0 (#127) - [35a9268](https://github.com/liblaf/copier-python/commit/35a9268f6f2dac6665b331c7395321b300dcbe0e) by [@renovate[bot]](https://github.com/apps/renovate)
+- **(deps)** update astral-sh/setup-uv action to v8.3.1 (#129) - [c19c471](https://github.com/liblaf/copier-python/commit/c19c471175b6794dab922e1154cc7ab2e911fd08) by [@renovate[bot]](https://github.com/apps/renovate)
+- **(deps)** update codspeedhq/action digest to 4e96933 (#130) - [d48ef73](https://github.com/liblaf/copier-python/commit/d48ef73fcde2811b1963d519be919e65071dee0a) by [@renovate[bot]](https://github.com/apps/renovate)
+- **(deps)** update astral-sh/setup-uv action to v8.3.2 (#131) - [1cb223f](https://github.com/liblaf/copier-python/commit/1cb223fcd6bd5bd67a3c53c3e068c8623f0b3138) by [@renovate[bot]](https://github.com/apps/renovate)
+- **(deps)** update codspeedhq/action digest to 9f3a37e (#132) - [55d2e3f](https://github.com/liblaf/copier-python/commit/55d2e3fdf7153eca43568a14f0cc77dd60e2bc22) by [@renovate[bot]](https://github.com/apps/renovate)
+- **(deps)** update codspeedhq/action digest to f99becd (#133) - [4240d37](https://github.com/liblaf/copier-python/commit/4240d37ce56ece29a3e97e77ccde9b11da261cbf) by [@renovate[bot]](https://github.com/apps/renovate)
+- **(deps)** update softprops/action-gh-release digest to 3d0d988 (#135) - [35f446f](https://github.com/liblaf/copier-python/commit/35f446ffef423cdd26407f049e6b0e54f7731a61) by [@renovate[bot]](https://github.com/apps/renovate)
+- **(deps)** update pypa/gh-action-pypi-publish digest to ba38be9 (#137) - [8033b11](https://github.com/liblaf/copier-python/commit/8033b113df761b09c9ea9fc36a9df283afd9078e) by [@renovate[bot]](https://github.com/apps/renovate)
+- **(deps)** update actions/checkout digest to 3d3c42e (#138) - [10d405e](https://github.com/liblaf/copier-python/commit/10d405ebc3bf4cd3cb8fef94e1168c9256832fa5) by [@renovate[bot]](https://github.com/apps/renovate)
+- **(deps)** update astral-sh/setup-uv action to v9 (#139) - [bca6c38](https://github.com/liblaf/copier-python/commit/bca6c386e98dd6ebe00c3c0acccf535510f2f318) by [@renovate[bot]](https://github.com/apps/renovate)
+
+### ❤️ Contributors
+
+- [@renovate[bot]](https://github.com/apps/renovate)
+- [@liblaf](https://github.com/liblaf)
+- [@liblaf-copier[bot]](https://github.com/apps/liblaf-copier)
+
+## [v0.1.42](https://github.com/liblaf/copier-python/releases/tag/v0.1.42) - 2026-06-28
 
 ### ⚙️ Continuous Integrations
 
@@ -15,6 +40,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### ❤️ Contributors
 
+- [@liblaf-release-please[bot]](https://github.com/apps/liblaf-release-please)
 - [@renovate[bot]](https://github.com/apps/renovate)
 
 ## [v0.1.41](https://github.com/liblaf/copier-python/releases/tag/v0.1.41) - 2026-06-21
