@@ -7,7 +7,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Conventional Changelog](https://github.com/conventional-changelog/conventional-changelog-config-spec/blob/master/versions/2.2.0/README.md),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [v0.1.43](https://github.com/liblaf/copier-python/releases/tag/v0.1.43) - 2026-07-21
+## [v0.1.44](https://github.com/liblaf/copier-python/releases/tag/v0.1.44) - 2026-07-30
+
+### ⚙️ Continuous Integrations
+
+- **(deps)** update codspeedhq/action digest to f22792b (#140) - [c1e05b1](https://github.com/liblaf/copier-python/commit/c1e05b151104fb0933468d22e400274a63df4ef4) by [@renovate[bot]](https://github.com/apps/renovate)
+- **(deps)** update codspeedhq/action action to v5 (#142) - [30fde2a](https://github.com/liblaf/copier-python/commit/30fde2ad78333525063a9dc552213be43204eb0f) by [@renovate[bot]](https://github.com/apps/renovate)
+- **(deps)** update pypa/gh-action-pypi-publish digest to dc37677 (#143) - [1458d02](https://github.com/liblaf/copier-python/commit/1458d02470395876188b664197505183cbbdcd5a) by [@renovate[bot]](https://github.com/apps/renovate)
+- **(deps)** update hynek/build-and-inspect-python-package action to v3 (#144) - [89a15b5](https://github.com/liblaf/copier-python/commit/89a15b58dc26edaa351eb8ede7a798b23e9ea9e9) by [@renovate[bot]](https://github.com/apps/renovate)
+
+### ❤️ Contributors
+
+- [@renovate[bot]](https://github.com/apps/renovate)
+
+## [v0.1.43](https://github.com/liblaf/copier-python/releases/tag/v0.1.43) - 2026-07-26
 
 ### 🛠 Builds
 
@@ -28,6 +41,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### ❤️ Contributors
 
+- [@liblaf-release-please[bot]](https://github.com/apps/liblaf-release-please)
 - [@renovate[bot]](https://github.com/apps/renovate)
 - [@liblaf](https://github.com/liblaf)
 - [@liblaf-copier[bot]](https://github.com/apps/liblaf-copier)
