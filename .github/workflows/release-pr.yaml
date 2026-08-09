@@ -30,16 +30,16 @@ jobs:
       version: ${{ steps.version.outputs.version }}
     steps:
       - name: Checkout
-        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
           fetch-depth: 0
       - name: Install git-cliff
-        uses: taiki-e/install-action@07b4745e0c39a41822af610387492e3e53aa222b # v2
+        uses: taiki-e/install-action@1beb33eee6d086258184383af9a538940be190ed # v2
         with:
           tool: git-cliff
       - id: version
         name: Next version
-        uses: liblaf/actions/next-version@ba7e8a8be5abc0d1e1bac89ccc58f86204c06a20 # v3
+        uses: liblaf/actions/next-version@f53e930a3c8515151fc60ca60623e766c0c85643 # v3
         env:
           GIT_CLIFF_CONFIG_URL: ${{ env.GIT_CLIFF_CONFIG_URL }}
           GITHUB_TOKEN: ${{ github.token }}
@@ -60,12 +60,12 @@ jobs:
     steps:
       - id: auth
         name: Auth
-        uses: liblaf/actions/auth@ba7e8a8be5abc0d1e1bac89ccc58f86204c06a20 # v3
+        uses: liblaf/actions/auth@f53e930a3c8515151fc60ca60623e766c0c85643 # v3
         with:
           client-id: ${{ vars.APP_CLIENT_ID }}
           private-key: ${{ secrets.APP_PRIVATE_KEY }}
       - name: Checkout
-        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
           fetch-depth: 0
       - name: Install rumdl
