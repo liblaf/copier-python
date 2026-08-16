@@ -7,7 +7,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Conventional Changelog](https://github.com/conventional-changelog/conventional-changelog-config-spec/blob/master/versions/2.2.0/README.md),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [v0.1.44](https://github.com/liblaf/copier-python/releases/tag/v0.1.44) - 2026-07-30
+## [v0.1.45](https://github.com/liblaf/copier-python/releases/tag/v0.1.45) - 2026-08-14
+
+### ⚙️ Continuous Integrations
+
+- **(deps)** update codspeedhq/action digest to 0ca9cbb (#146) - [a79b957](https://github.com/liblaf/copier-python/commit/a79b9577d131219b99603db853bc97bd6f6e1ad9) by [@renovate[bot]](https://github.com/apps/renovate)
+- **(deps)** update codspeedhq/action digest to 4296e51 (#148) - [494022e](https://github.com/liblaf/copier-python/commit/494022eb61ed046989784bc2c99c4cb103f96b43) by [@renovate[bot]](https://github.com/apps/renovate)
+- **(deps)** update astral-sh/setup-uv action to v10 (#149) - [1426f8f](https://github.com/liblaf/copier-python/commit/1426f8fdf71af4c0d74838b49d44e5a133a48a1a) by [@renovate[bot]](https://github.com/apps/renovate)
+- **(deps)** update astral-sh/setup-uv action to v10.0.1 (#150) - [f40fdaa](https://github.com/liblaf/copier-python/commit/f40fdaa3c9ef87f3866eb6bdc47de3b22d6298e2) by [@renovate[bot]](https://github.com/apps/renovate)
+
+### ❤️ Contributors
+
+- [@renovate[bot]](https://github.com/apps/renovate)
+- [@liblaf-copier[bot]](https://github.com/apps/liblaf-copier)
+
+## [v0.1.44](https://github.com/liblaf/copier-python/releases/tag/v0.1.44) - 2026-08-02
 
 ### ⚙️ Continuous Integrations
 
@@ -18,6 +32,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### ❤️ Contributors
 
+- [@liblaf-release-please[bot]](https://github.com/apps/liblaf-release-please)
 - [@renovate[bot]](https://github.com/apps/renovate)
 
 ## [v0.1.43](https://github.com/liblaf/copier-python/releases/tag/v0.1.43) - 2026-07-26
