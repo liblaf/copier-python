@@ -7,5 +7,5 @@
 
 [tasks.copier-update]
 description = "Reapply all Copier templates using their saved answers"
-file = "https://cdn.jsdelivr.net/gh/liblaf/copier-shared@065e35a2e53df85a160950c67df0b33f09aed064/mise-tasks/copier-update.sh"
+file = "https://cdn.jsdelivr.net/gh/liblaf/copier-shared@c16a68aa0b1965187a18551f3d22f591ee4377ae/mise-tasks/copier-update.sh"
 interactive = true
