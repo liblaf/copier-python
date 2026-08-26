@@ -14,7 +14,6 @@ ignoreRandomStrings: true
 maxFileSize: 32KB
 useGitignore: true
 words:
-  - arithmatex
   - chtml
   - fieldz
   - fspath
@@ -22,7 +21,6 @@ words:
   - hynek
   - inlinehilite
   - liblaf
-  - linenums
   - lucide
   - mergery
   - mkdocs
@@ -30,15 +28,12 @@ words:
   - noxfile
   - numpy
   - orhun
-  - oxfmt
-  - oxlint
   - pipx
   - pycache
   - pydantic
   - pydocstyle
   - pygments
   - pylint
-  - pymdownx
   - pypa
   - pypi
   - pyplot
@@ -53,4 +48,3 @@ words:
   - trimesh
   - twemoji
   - venv
-  - virtualenv

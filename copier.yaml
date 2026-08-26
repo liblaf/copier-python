@@ -22,6 +22,7 @@ _subdirectory: template
 _tasks:
   - rm --force --recursive --verbose '.config/copier/mise-tasks'
   - rm --force --verbose '.config/copier/mkdocs.yaml'
+  - rm --force --verbose '.config/linters/.ruff.toml'
   - rm --force --verbose '.config/linters/pyrightconfig.json'
   - rm --force --verbose '.config/mise/conf.d/10-python.toml'
   - rm --force --verbose '.github/workflows/bench.yaml'

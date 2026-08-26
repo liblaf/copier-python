@@ -38,14 +38,7 @@ dynamic = ["version"]
 
 [dependency-groups]
 build = ["check-wheel-contents>=0.6", "hatch>=1", "twine>=6"]
-docs = [
-  "griffe-fieldz>=0.5",
-  "griffe-inherited-docstrings>=1",
-  "griffe-pydantic>=1",
-  "griffe-warnings-deprecated>=1",
-  "mkdocstrings[python]>=1",
-  "zensical>=0.0.44"
-]
+docs = ["griffe-fieldz>=0.5", "griffe-inherited-docstrings>=1", "griffe-pydantic>=1", "griffe-warnings-deprecated>=1", "mkdocstrings[python]>=1", "zensical>=0.0.44"]
 lint = ["import-linter[ui]>=2", "ruff>=0.15", "ty>=0.0.40"]
 nox = ["liblaf-nox-recipes>=0.1", "nox>=2026", "nox-uv>=0.7"]
 test = ["pytest>=9", "pytest-cov>=7", "pytest-randomly>=4"]
@@ -82,12 +75,7 @@ name = "Acyclic siblings"
 type = "acyclic_siblings"
 
 [tool.pytest]
-addopts = [
-  "--doctest-modules",
-  "--import-mode=importlib",
-  "--junitxml=junit.xml",
-  "--showlocals"
-]
+addopts = ["--doctest-modules", "--import-mode=importlib", "--junitxml=junit.xml", "--showlocals"]
 consider_namespace_packages = true
 junit_family = "legacy"
 strict = true
