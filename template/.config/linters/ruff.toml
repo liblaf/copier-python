@@ -18,6 +18,9 @@ select = ["ALL"]
 [lint.flake8-annotations]
 allow-star-arg-any = true
 
+[lint.flake8-errmsg]
+max-string-length = 20
+
 [lint.flake8-import-conventions.extend-aliases]
 "jax.numpy" = "jnp"
 "jax.typing" = "jxt"
