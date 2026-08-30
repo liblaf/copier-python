@@ -7,7 +7,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Conventional Changelog](https://github.com/conventional-changelog/conventional-changelog-config-spec/blob/master/versions/2.2.0/README.md),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [v0.1.45](https://github.com/liblaf/copier-python/releases/tag/v0.1.45) - 2026-08-14
+## [v0.1.46](https://github.com/liblaf/copier-python/releases/tag/v0.1.46) - 2026-08-28
+
+### ⚙️ Continuous Integrations
+
+- **(deps)** update codspeedhq/action digest to 373d686 (#152) - [7e2f1da](https://github.com/liblaf/copier-python/commit/7e2f1daa0fece756001a46b24f13c72a9960ff70) by [@renovate[bot]](https://github.com/apps/renovate)
+
+### ❤️ Contributors
+
+- [@liblaf](https://github.com/liblaf)
+- [@renovate[bot]](https://github.com/apps/renovate)
+- [@liblaf-copier[bot]](https://github.com/apps/liblaf-copier)
+
+## [v0.1.45](https://github.com/liblaf/copier-python/releases/tag/v0.1.45) - 2026-08-16
 
 ### ⚙️ Continuous Integrations
 
@@ -18,6 +30,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### ❤️ Contributors
 
+- [@liblaf-release-please[bot]](https://github.com/apps/liblaf-release-please)
 - [@renovate[bot]](https://github.com/apps/renovate)
 - [@liblaf-copier[bot]](https://github.com/apps/liblaf-copier)
 
