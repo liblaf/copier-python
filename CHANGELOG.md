@@ -7,7 +7,22 @@ All notable changes to this project will be documented in this file.
 The format is based on [Conventional Changelog](https://github.com/conventional-changelog/conventional-changelog-config-spec/blob/master/versions/2.2.0/README.md),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [v0.1.46](https://github.com/liblaf/copier-python/releases/tag/v0.1.46) - 2026-08-28
+## [v0.1.47](https://github.com/liblaf/copier-python/releases/tag/v0.1.47) - 2026-08-31
+
+### 🛠 Builds
+
+- **(template)** replace Nox recipe helpers with native sessions - [3b0ec19](https://github.com/liblaf/copier-python/commit/3b0ec19cb40bcccd2e2b9165b94b358de3ccd42b) by [@liblaf](https://github.com/liblaf)
+
+### ⚙️ Continuous Integrations
+
+- **(deps)** update softprops/action-gh-release digest to efb3536 (#155) - [db8ab34](https://github.com/liblaf/copier-python/commit/db8ab346363d24a6f80269d14b42d951a7bd3131) by [@renovate[bot]](https://github.com/apps/renovate)
+
+### ❤️ Contributors
+
+- [@liblaf](https://github.com/liblaf)
+- [@renovate[bot]](https://github.com/apps/renovate)
+
+## [v0.1.46](https://github.com/liblaf/copier-python/releases/tag/v0.1.46) - 2026-08-30
 
 ### ⚙️ Continuous Integrations
 
@@ -15,6 +30,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### ❤️ Contributors
 
+- [@liblaf-release-please[bot]](https://github.com/apps/liblaf-release-please)
 - [@liblaf](https://github.com/liblaf)
 - [@renovate[bot]](https://github.com/apps/renovate)
 - [@liblaf-copier[bot]](https://github.com/apps/liblaf-copier)
