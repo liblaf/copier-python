@@ -20,10 +20,6 @@ description = "Serve the documentation site locally"
 run = ["rm --force --recursive '{{ config_root }}/.cache'", "zensical serve"]
 # {%- endraw %}
 
-[tasks."gen:init"]
-description = "Generate lazy-loading __init__.py files from __init__.pyi stubs"
-file = "https://cdn.jsdelivr.net/gh/liblaf/copier-python@{{ _copier_conf.vcs_ref_hash }}/mise-tasks/gen/init.py"
-
 [tasks."gen:ref-pages"]
 description = "Generate API reference pages from public Python modules"
 file = "https://cdn.jsdelivr.net/gh/liblaf/copier-python@{{ _copier_conf.vcs_ref_hash }}/mise-tasks/gen/ref-pages.py"
