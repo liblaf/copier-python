@@ -7,6 +7,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Conventional Changelog](https://github.com/conventional-changelog/conventional-changelog-config-spec/blob/master/versions/2.2.0/README.md),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v0.1.48](https://github.com/liblaf/copier-python/releases/tag/v0.1.48) - 2026-09-02
+
+### ⚙️ Continuous Integrations
+
+- **(deps)** update actions/deploy-pages digest to 368f825 (#157) - [1d522e9](https://github.com/liblaf/copier-python/commit/1d522e90a8562f2ab3e575aec0074ecf959c53f8) by [@renovate[bot]](https://github.com/apps/renovate)
+
+### ❤️ Contributors
+
+- [@renovate[bot]](https://github.com/apps/renovate)
+
 ## [v0.1.47](https://github.com/liblaf/copier-python/releases/tag/v0.1.47) - 2026-08-31
 
 ### 🛠 Builds
@@ -19,6 +29,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### ❤️ Contributors
 
+- [@liblaf-release-please[bot]](https://github.com/apps/liblaf-release-please)
 - [@liblaf](https://github.com/liblaf)
 - [@renovate[bot]](https://github.com/apps/renovate)
 
