@@ -7,7 +7,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Conventional Changelog](https://github.com/conventional-changelog/conventional-changelog-config-spec/blob/master/versions/2.2.0/README.md),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [v0.1.50](https://github.com/liblaf/copier-python/releases/tag/v0.1.50) - 2026-09-17
+## [v0.1.51](https://github.com/liblaf/copier-python/releases/tag/v0.1.51) - 2026-09-22
+
+### ⚙️ Continuous Integrations
+
+- **(deps)** update astral-sh/setup-uv action to v10.2.0 (#164) - [032b095](https://github.com/liblaf/copier-python/commit/032b09541427029b1908d6ca01d68b935374d056) by [@renovate[bot]](https://github.com/apps/renovate)
+
+### ❤️ Contributors
+
+- [@renovate[bot]](https://github.com/apps/renovate)
+
+## [v0.1.50](https://github.com/liblaf/copier-python/releases/tag/v0.1.50) - 2026-09-20
 
 ### ⚙️ Continuous Integrations
 
@@ -16,6 +26,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### ❤️ Contributors
 
+- [@liblaf-release-please[bot]](https://github.com/apps/liblaf-release-please)
 - [@renovate[bot]](https://github.com/apps/renovate)
 
 ## [v0.1.49](https://github.com/liblaf/copier-python/releases/tag/v0.1.49) - 2026-09-13
