@@ -33,7 +33,7 @@ jobs:
     steps:
       - id: auth
         name: Auth
-        uses: liblaf/actions/auth@2d37965c7d54a87b668ea9eba3ee0d7a0a6cc8b1 # v3
+        uses: liblaf/actions/auth@73cad6439f8583d4bac35cdbdc6541aa0b6395c3 # v3
         with:
           client-id: ${{ vars.APP_CLIENT_ID }}
           private-key: ${{ secrets.APP_PRIVATE_KEY }}
@@ -60,7 +60,7 @@ jobs:
           cp --target-directory='${{ runner.temp }}' --verbose 'megalinter-reports/megalinter-report.md'
           sudo rm --force --recursive 'mega-linter.log' 'megalinter-reports'
       - id: pr
-        if: steps.lint.outputs.has-updated-sources == 1 && (github.event_name == 'push' || github.event.pull_request.head.repo.full_name == github.repository)
+        if: steps.lint.outputs.has_updated_sources == 1 && (github.event_name == 'push' || github.event.pull_request.head.repo.full_name == github.repository)
         name: Create PR
         uses: peter-evans/create-pull-request@5f6978faf089d4d20b00c7766989d076bb2fc7f1 # v8
         with:
@@ -90,12 +90,12 @@ jobs:
     steps:
       - id: auth
         name: Auth
-        uses: liblaf/actions/auth@2d37965c7d54a87b668ea9eba3ee0d7a0a6cc8b1 # v3
+        uses: liblaf/actions/auth@73cad6439f8583d4bac35cdbdc6541aa0b6395c3 # v3
         with:
           client-id: ${{ vars.APP_CLIENT_ID }}
           private-key: ${{ secrets.APP_PRIVATE_KEY }}
       - name: Approve
-        uses: liblaf/actions/approve@2d37965c7d54a87b668ea9eba3ee0d7a0a6cc8b1 # v3
+        uses: liblaf/actions/approve@73cad6439f8583d4bac35cdbdc6541aa0b6395c3 # v3
         with:
           approve-token: ${{ steps.auth.outputs.token }}
           pull: ${{ needs.mega-linter.outputs.pull-request-url }}
