@@ -7,7 +7,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Conventional Changelog](https://github.com/conventional-changelog/conventional-changelog-config-spec/blob/master/versions/2.2.0/README.md),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [v0.1.53](https://github.com/liblaf/copier-python/releases/tag/v0.1.53) - 2026-10-14
+## [v0.1.54](https://github.com/liblaf/copier-python/releases/tag/v0.1.54) - 2026-10-23
+
+### ⚙️ Continuous Integrations
+
+- **(deps)** update pypa/gh-action-pypi-publish digest to 7245906 (#174) - [3b385d2](https://github.com/liblaf/copier-python/commit/3b385d2280d980ef9513381178f607a1a8a72b82) by [@renovate[bot]](https://github.com/apps/renovate)
+- **(deps)** update hynek/build-and-inspect-python-package action to v3.0.2 (#176) - [df81235](https://github.com/liblaf/copier-python/commit/df8123539f263bcb7ee2e6d176821363027b9c84) by [@renovate[bot]](https://github.com/apps/renovate)
+- **(deps)** update astral-sh/setup-uv action to v10.3.1 (#177) - [998446a](https://github.com/liblaf/copier-python/commit/998446ab679d9c659aceac12416e5a40850dca72) by [@renovate[bot]](https://github.com/apps/renovate)
+- **(deps)** update codspeedhq/action digest to 78102a4 (#178) - [e8972db](https://github.com/liblaf/copier-python/commit/e8972db1c04f0a04e065a1ac5e468ae9e978eb58) by [@renovate[bot]](https://github.com/apps/renovate)
+- **(deps)** update astral-sh/setup-uv action to v10.3.2 (#179) - [e014c07](https://github.com/liblaf/copier-python/commit/e014c0742944f4f0ce1132d6cbfe429461aac625) by [@renovate[bot]](https://github.com/apps/renovate)
+
+### ❤️ Contributors
+
+- [@renovate[bot]](https://github.com/apps/renovate)
+
+## [v0.1.53](https://github.com/liblaf/copier-python/releases/tag/v0.1.53) - 2026-10-18
 
 ### ⚙️ Continuous Integrations
 
@@ -15,6 +29,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### ❤️ Contributors
 
+- [@liblaf-release-please[bot]](https://github.com/apps/liblaf-release-please)
 - [@renovate[bot]](https://github.com/apps/renovate)
 
 ## [v0.1.52](https://github.com/liblaf/copier-python/releases/tag/v0.1.52) - 2026-10-11
