@@ -7,7 +7,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Conventional Changelog](https://github.com/conventional-changelog/conventional-changelog-config-spec/blob/master/versions/2.2.0/README.md),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [v0.1.54](https://github.com/liblaf/copier-python/releases/tag/v0.1.54) - 2026-10-23
+## [v0.1.55](https://github.com/liblaf/copier-python/releases/tag/v0.1.55) - 2026-10-30
+
+### ⚙️ Continuous Integrations
+
+- **(deps)** update astral-sh/setup-uv action to v10.3.3 (#180) - [b8bdc2b](https://github.com/liblaf/copier-python/commit/b8bdc2bdd9b9b2443632deadc0cf57d7f8b293c0) by [@renovate[bot]](https://github.com/apps/renovate)
+- **(deps)** update codspeedhq/action digest to 61efe07 (#182) - [9ad3581](https://github.com/liblaf/copier-python/commit/9ad3581d92e4f486388a857b0bb6fd6f59cb16c9) by [@renovate[bot]](https://github.com/apps/renovate)
+
+### ❤️ Contributors
+
+- [@renovate[bot]](https://github.com/apps/renovate)
+
+## [v0.1.54](https://github.com/liblaf/copier-python/releases/tag/v0.1.54) - 2026-10-25
 
 ### ⚙️ Continuous Integrations
 
@@ -19,6 +30,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### ❤️ Contributors
 
+- [@liblaf-release-please[bot]](https://github.com/apps/liblaf-release-please)
 - [@renovate[bot]](https://github.com/apps/renovate)
 
 ## [v0.1.53](https://github.com/liblaf/copier-python/releases/tag/v0.1.53) - 2026-10-18
