@@ -55,7 +55,7 @@ jobs:
       - name: Install dependencies
         run: uv sync --active --frozen --all-packages
       - name: Bench
-        uses: CodSpeedHQ/action@61efe07e57e55bedeab750c434504de272a56e8c # v5
+        uses: CodSpeedHQ/action@af75f77f17a054769abefaa42fe8dc2975469b5f # v5
         with:
           run: nox --tags 'bench'
           mode: simulation,walltime,memory
