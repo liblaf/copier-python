@@ -4,10 +4,10 @@ import ast
 import enum
 import os
 import subprocess
+import tomllib
 from pathlib import Path
 from typing import Any, Never
 
-import tomllib
 from packaging.requirements import Requirement
 
 
