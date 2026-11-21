@@ -23,7 +23,7 @@ jobs:
     steps:
       - id: auth
         name: Auth
-        uses: liblaf/actions/auth@3760e21400b668f031c052478945ea3555a1c39d # v3
+        uses: liblaf/actions/auth@9fd2d15e0a9630dc702d355704d8dfdd3e37cae4 # v3
         with:
           client-id: ${{ vars.APP_CLIENT_ID }}
           private-key: ${{ secrets.APP_PRIVATE_KEY }}
@@ -41,7 +41,7 @@ jobs:
         env:
           TITLE: ${{ github.event.pull_request.title }}
       - name: Create release
-        uses: softprops/action-gh-release@efb35369e0ad2afab669f228072c1b0d510eae64 # v3
+        uses: softprops/action-gh-release@8a0cd651e5b2365bd640854a3fa5dfc70e4875f3 # v3
         with:
           body: ${{ github.event.pull_request.body }}
           tag_name: ${{ steps.version.outputs.tag }}
